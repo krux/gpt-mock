@@ -17,11 +17,11 @@ describe('ResponseInformation', () => {
       expect(info).to.have.property('creativeId', creativeId);
       expect(info).to.have.property('labelIds', labelIds);
 
-      expect(() => info.advertiserId = 'cannot').to.throwError();
-      expect(() => info.campaignId = 'cannot').to.throwError();
-      expect(() => info.lineItemId = 0).to.throwError();
-      expect(() => info.creativeId = 0).to.throwError();
-      expect(() => info.labelIds = []).to.throwError();
+      expect(() => { info.advertiserId = 'cannot'; }).to.throwError();
+      expect(() => { info.campaignId = 'cannot'; }).to.throwError();
+      expect(() => { info.lineItemId = 0; }).to.throwError();
+      expect(() => { info.creativeId = 0; }).to.throwError();
+      expect(() => { info.labelIds = []; }).to.throwError();
     });
   });
 });
