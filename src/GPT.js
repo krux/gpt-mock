@@ -6,7 +6,7 @@ import SizeMappingBuilder from './SizeMappingBuilder';
 import CommandArray from './CommandArray';
 
 /**
- * This is the global namespace that the Google Publisher Tag uses for its API.
+ * This is the global namespace that the GPT uses for its API.
  *
  * For details on this API, see https://developers.google.com/doubleclick-gpt/reference.
  *
@@ -39,9 +39,9 @@ import CommandArray from './CommandArray';
  * the page.
  *
  */
-export default class GoogleTag {
+export default class GPT {
   /**
-   * Creates a new GoogleTag instance.
+   * Creates a new GPT instance.
    */
   constructor() {
     this.apiReady = void 0;
@@ -188,12 +188,12 @@ export default class GoogleTag {
   }
 
   /**
-   * Opens the Google Publisher Console.
+   * Opens the Console.
    */
   openConsole() {}
 
   /**
-   * Disables the Google Publisher Console.
+   * Disables the Console.
    */
   disablePublisherConsole() {}
 

@@ -7,7 +7,7 @@ export default class CompanionAdsService extends Service {
   /**
    * Creates a new CompanionAdsService.
    *
-   * @param {GoogleTag} gt The containing GoogleTag instance.
+   * @param {GPT} gt The containing GPT instance.
    */
   constructor(gt) {
     super(gt, CompanionAdsService._name);
@@ -23,7 +23,7 @@ export default class CompanionAdsService extends Service {
 
   /**
    * Enables the service implementation to be loaded synchronously. This needs
-   * to be called before {@link GoogleTag#enableServices()}.
+   * to be called before {@link GPT#enableServices()}.
    *
    * Note: this call can be only used if gpt.js is also loaded synchronously,
    * for example, by using a script element. If called when GPT is loaded

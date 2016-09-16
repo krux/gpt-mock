@@ -7,7 +7,7 @@ export default class ContentService extends Service {
   /**
    * Creates a new ContentService.
    *
-   * @param {GoogleTag} gt The containing GoogleTag instance.
+   * @param {GPT} gt The containing GPT instance.
    */
   constructor(gt) {
     super(gt, ContentService._name);

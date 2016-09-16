@@ -8,7 +8,7 @@ export default class PubAdsService extends Service {
   /**
    * Creates a new PubAdsService.
    *
-   * @param {GoogleTag} gt The containing GoogleTag instance.
+   * @param {GPT} gt The containing GPT instance.
    */
   constructor(gt) {
     super(gt, PubAdsService._name);
@@ -137,7 +137,7 @@ export default class PubAdsService extends Service {
 
   /**
    * Disables requests for ads on page load, but allows ads to be requested with
-   * a GoogleTag#pubads().refresh() call. This should be set prior to enabling
+   * a GPT#pubads().refresh() call. This should be set prior to enabling
    * the service. Async mode must be used; otherwise it will be impossible to
    * request ads using `refresh`.
    */

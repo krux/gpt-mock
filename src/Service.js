@@ -5,7 +5,7 @@ export default class Service {
   /**
    * Creates a new Service.
    *
-   * @param {GoogleTag} gt The containing GoogleTag instance.
+   * @param {GPT} gt The containing GPT instance.
    * @param {string} name The name of the service
    */
   constructor(gt, name) {
