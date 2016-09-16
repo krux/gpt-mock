@@ -85,8 +85,10 @@ export default class Service {
    * Registers a listener that allows you to set up and call a JavaScript
    * function when a specific GPT event happens on the page. The following
    * events are supported:
-   * * googletag.events.SlotRenderEndedEvent
    * * googletag.events.ImpressionViewableEvent
+   * * googletag.events.SlotOnloadEvent
+   * * googletag.events.SlotRenderEndedEvent
+   * * googletag.events.SlotVisibilityChangedEvent
    *
    * An object of the appropriate event type is passed to the listener when it is called.
    *
@@ -99,6 +101,12 @@ export default class Service {
     this._listeners[eventType] = this._listeners[eventType] || [];
     this._listeners[eventType].push(listener);
     return this;
+  }
+
+  _fireEvent(event) {
+    for (let listener of (this._listeners[event.name] || [])) {
+      listener(event);
+    }
   }
 
   /**

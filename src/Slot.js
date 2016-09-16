@@ -1,5 +1,9 @@
 import * as GeneralSize from './GeneralSize';
 import * as SizeMappingArray from './SizeMappingArray';
+import ImpressionViewableEvent from './events/ImpressionViewableEvent';
+import SlotOnloadEvent from './events/SlotOnloadEvent';
+import SlotRenderEndedEvent from './events/SlotRenderEndedEvent';
+import SlotVisibilityChangedEvent from './events/SlotVisibilityChangedEvent';
 
 /**
  * Slot is an object representing single ad slot on a page.
@@ -88,7 +92,20 @@ export default class Slot {
    * Initiates rendering of this slot.
    */
   display() {
+    this._options.fetched = true;
     this._options.displayed = true;
+    const isEmpty = this._options.content == null;
+    const lineItemId = this._responseInformation != null ? this._responseInformation.lineItemId : null;
+    const creativeId = this._responseInformation != null ? this._responseInformation.creativeId : null;
+    const size = this.getSizes()[0];
+
+    for (let service of this._services) {
+      service._fireEvent(new ImpressionViewableEvent(service.getName(), this));
+      service._fireEvent(new SlotOnloadEvent(service.getName(), this));
+      service._fireEvent(new SlotRenderEndedEvent(service.getName(), this,
+        creativeId, lineItemId, isEmpty, size));
+      service._fireEvent(new SlotVisibilityChangedEvent(service.getName(), this, 100));
+    }
   }
 
   /**

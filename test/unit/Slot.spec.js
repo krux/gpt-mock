@@ -74,6 +74,31 @@ describe('Slot', () => {
       slot.display();
       expect(slot._options.displayed).to.be(true);
     });
+
+    it('fires event listeners', () => {
+      const service = new Service(gt, 'test');
+      const onImpressionViewableEvent = sinon.spy();
+      const onSlotOnloadEvent = sinon.spy();
+      const onSlotRenderEndedEvent = sinon.spy();
+      const onSlotVisibilityChangedEvent = sinon.spy();
+
+      service.addEventListener('googletag.events.ImpressionViewableEvent',
+        onImpressionViewableEvent);
+      service.addEventListener('googletag.events.SlotOnloadEvent',
+        onSlotOnloadEvent);
+      service.addEventListener('googletag.events.SlotRenderEndedEvent',
+        onSlotRenderEndedEvent);
+      service.addEventListener('googletag.events.SlotVisibilityChangedEvent',
+        onSlotVisibilityChangedEvent);
+
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+
+      slot.display();
+      expect(onImpressionViewableEvent.calledOnce).to.be(true);
+      expect(onSlotOnloadEvent.calledOnce).to.be(true);
+      expect(onSlotRenderEndedEvent.calledOnce).to.be(true);
+      expect(onSlotVisibilityChangedEvent.calledOnce).to.be(true);
+    });
   });
 
   describe('#getAttributeKeys', () => {
