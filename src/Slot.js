@@ -1,3 +1,6 @@
+import * as GeneralSize from './GeneralSize';
+import * as SizeMappingArray from './SizeMappingArray';
+
 /**
  * Slot is an object representing single ad slot on a page.
  */
@@ -14,7 +17,7 @@ export default class Slot {
   constructor(adUnitPath, size, optDiv) {
     this._adUnitPath = adUnitPath;
     this._slotElementId = optDiv;
-    this._size = size;
+    this._sizes = GeneralSize.toSizes(size);
     this._services = [];
     this._categoryExclusions = [];
     this._targeting = {};
@@ -66,10 +69,10 @@ export default class Slot {
   /**
    * UNDOCUMENTED - returns the sizes.
    *
-   * @returns {GeneralSize|*}
+   * @returns {Array<GeneralSize>} The list of sizes.
    */
   getSizes() {
-    return this._size; // TODO
+    return this._sizes.slice(0);
   }
 
   /**
@@ -91,7 +94,7 @@ export default class Slot {
   /**
    * Returns the list of attribute keys set on this slot. If you intend to see
    * the keys of service-level attributes inherited by this slot, you have to
-   * use the PubAdsService.getAttributeKeys() API.
+   * use the {@link PubAdsService#getAttributeKeys} API.
    *
    * @returns {!Array<string>} Array of attribute keys. Ordering is undefined.
    */
@@ -102,7 +105,7 @@ export default class Slot {
   /**
    * Returns the value for the AdSense attribute associated with the given key.
    * Note that if you intend to see service-level attributes inherited by this
-   * slot, you have to use the PubAdsService.get(key) API.
+   * slot, you have to use the {@link PubAdsService#get} API.
    *
    * @param {string} key Name of the attribute to look for.
    * @returns {?string} Current value for the attribute key, or null if the key
@@ -214,9 +217,19 @@ export default class Slot {
    * @returns {Slot} The slot object on which the method was called.
    */
   addService(service) {
-    this._services.push(service);
-    service._addSlot(this);
+    if (this._services.indexOf(service) === -1) {
+      this._services.push(service);
+      service._addSlot(this);
+    }
     return this;
+  }
+
+  _removeServices() {
+    for (let service of this._services) {
+      service._removeSlot(this);
+    }
+
+    this._services = [];
   }
 
   _hasService(service) {
@@ -262,6 +275,10 @@ export default class Slot {
    * @returns {Slot} The slot object on which the method was called.
    */
   defineSizeMapping(sizeMapping) {
+    if (!SizeMappingArray.isSizeMappingArray(sizeMapping)) {
+      // TODO - throw error
+    }
+
     this._sizeMapping = sizeMapping;
     return this;
   }
@@ -372,5 +389,9 @@ export default class Slot {
 
   _setContent(content) {
     this._options.content = content;
+  }
+
+  _getContent() {
+    return this._options.content;
   }
 }

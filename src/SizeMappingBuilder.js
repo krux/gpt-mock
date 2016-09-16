@@ -1,3 +1,5 @@
+import * as SizeMappingArray from './SizeMappingArray';
+
 /**
  * Builder for size mapping specification objects. This builder is provided to
  * help easily construct size specifications.
@@ -7,7 +9,7 @@ export default class SizeMappingBuilder {
    * Creates a new SizeMappingBuilder.
    */
   constructor() {
-    this._mappings = null;
+    this._mappings = [];
   }
 
   /**
@@ -19,12 +21,7 @@ export default class SizeMappingBuilder {
    * @returns {SizeMappingBuilder} A reference to this builder.
    */
   addSize(viewportSize, slotSize) {
-    if (this._mappings == null) {
-      this._mappings = [];
-    }
-
     this._mappings.push([viewportSize, slotSize]);
-
     return this;
   }
 
@@ -39,8 +36,13 @@ export default class SizeMappingBuilder {
    * if invalid size mappings were supplied.
    */
   build() {
-    const mappings = this._mappings;
-    this._mappings = null;
-    return mappings;
+    if (this._mappings.length > 0 &&
+      SizeMappingArray.isSizeMappingArray(this._mappings)) {
+      const mappings = this._mappings;
+      this._mappings = [];
+      return mappings;
+    } else {
+      return null;
+    }
   }
 }

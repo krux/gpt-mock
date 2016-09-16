@@ -46,27 +46,14 @@ export default class CompanionAdsService extends Service {
     this._options.refreshUnfilledSlots = value;
   }
 
-  /**
-   * Undocumented
-   */
-  // refreshAllSlots()
-  // fillSlot(a, b, c, d)
-  // notifyUnfilledSlots(a)
-  // setClearUnfilledSlots(a)
-
-  getDisplayAdsCorrelator() {
-    return 'TODO';
-  }
-
-  getVideoStreamCorrelator() {
-    return 'TODO';
-  }
-
-  isRoadblockingSupported() {
-    return false;
-  }
-
-  isSlotAPersistentRoadblock() {
-    return false;
-  }
+  /* Undocumented
+    refreshAllSlots()
+    fillSlot(a, b, c, d)
+    notifyUnfilledSlots(a)
+    setClearUnfilledSlots(a)
+    getDisplayAdsCorrelator()
+    getVideoStreamCorrelator()
+    isRoadblockingSupported()
+    isSlotAPersistentRoadblock()
+  */
 }
