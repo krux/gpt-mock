@@ -39,6 +39,8 @@ export default class SizeMappingBuilder {
    * if invalid size mappings were supplied.
    */
   build() {
-    return this._mappings;
+    const mappings = this._mappings;
+    this._mappings = null;
+    return mappings;
   }
 }
