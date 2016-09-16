@@ -16,6 +16,7 @@ export default class Service {
     this._listeners = {};
     this._attributes = {};
     this._slots = [];
+    this._slotCounter = 0;
     this._slotIdMap = {};
   }
 
@@ -47,12 +48,28 @@ export default class Service {
   }
 
   _addSlot(slot) {
-    const n = this._slots.push(slot);
-    this._gt._slots.push(slot);
-    const id = `${slot.getAdUnitPath()}_${n}`;
-    this._slotIdMap[id] = slot;
+    if (this._slots.indexOf(slot) === -1) {
+      this._gt._addSlot(slot);
+
+      this._slots.push(slot);
+      this._slotCounter = this._slotCounter + 1;
+
+      const id = `${slot.getAdUnitPath()}_${this._slotCounter}`;
+      this._slotIdMap[id] = slot;
+    }
+
     this._used = true;
     return slot;
+  }
+
+  _removeSlot(slot) {
+    const index = this._slots.indexOf(slot);
+    if (index !== -1) {
+      this._slots.splice(index, 1);
+      this._gt.removeSlot(slot);
+      const id = `${slot.getAdUnitPath()}_${index}`;
+      delete this._slotIdMap[id];
+    }
   }
 
   /**
@@ -68,8 +85,10 @@ export default class Service {
    * Registers a listener that allows you to set up and call a JavaScript
    * function when a specific GPT event happens on the page. The following
    * events are supported:
-   * * googletag.events.SlotRenderEndedEvent
    * * googletag.events.ImpressionViewableEvent
+   * * googletag.events.SlotOnloadEvent
+   * * googletag.events.SlotRenderEndedEvent
+   * * googletag.events.SlotVisibilityChangedEvent
    *
    * An object of the appropriate event type is passed to the listener when it is called.
    *
@@ -82,6 +101,12 @@ export default class Service {
     this._listeners[eventType] = this._listeners[eventType] || [];
     this._listeners[eventType].push(listener);
     return this;
+  }
+
+  _fireEvent(event) {
+    for (let listener of (this._listeners[event.name] || [])) {
+      listener(event);
+    }
   }
 
   /**
@@ -137,10 +162,8 @@ export default class Service {
   }
 
   enable() {
-    if (this._used) {
-      this._enabled = true;
-      this._onEnable();
-    }
+    this._enabled = true;
+    this._onEnable();
   }
 
   _onEnable() {}

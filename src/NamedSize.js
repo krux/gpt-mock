@@ -10,3 +10,12 @@
  *
  * @typedef {string} NamedSize
  */
+
+/**
+ * Returns true if the given object is a {@link NamedSize}.
+ *
+ * @param {NamedSize|*} obj The object to test
+ */
+export function isNamedSize(obj) {
+  return obj === 'fluid';
+}

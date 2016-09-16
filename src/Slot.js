@@ -1,3 +1,10 @@
+import * as GeneralSize from './GeneralSize';
+import * as SizeMappingArray from './SizeMappingArray';
+import ImpressionViewableEvent from './events/ImpressionViewableEvent';
+import SlotOnloadEvent from './events/SlotOnloadEvent';
+import SlotRenderEndedEvent from './events/SlotRenderEndedEvent';
+import SlotVisibilityChangedEvent from './events/SlotVisibilityChangedEvent';
+
 /**
  * Slot is an object representing single ad slot on a page.
  */
@@ -14,7 +21,7 @@ export default class Slot {
   constructor(adUnitPath, size, optDiv) {
     this._adUnitPath = adUnitPath;
     this._slotElementId = optDiv;
-    this._size = size;
+    this._sizes = GeneralSize.toSizes(size);
     this._services = [];
     this._categoryExclusions = [];
     this._targeting = {};
@@ -66,10 +73,10 @@ export default class Slot {
   /**
    * UNDOCUMENTED - returns the sizes.
    *
-   * @returns {GeneralSize|*}
+   * @returns {Array<GeneralSize>} The list of sizes.
    */
   getSizes() {
-    return this._size; // TODO
+    return this._sizes.slice(0);
   }
 
   /**
@@ -85,13 +92,26 @@ export default class Slot {
    * Initiates rendering of this slot.
    */
   display() {
+    this._options.fetched = true;
     this._options.displayed = true;
+    const isEmpty = this._options.content == null;
+    const lineItemId = this._responseInformation != null ? this._responseInformation.lineItemId : null;
+    const creativeId = this._responseInformation != null ? this._responseInformation.creativeId : null;
+    const size = this.getSizes()[0];
+
+    for (let service of this._services) {
+      service._fireEvent(new ImpressionViewableEvent(service.getName(), this));
+      service._fireEvent(new SlotOnloadEvent(service.getName(), this));
+      service._fireEvent(new SlotRenderEndedEvent(service.getName(), this,
+        creativeId, lineItemId, isEmpty, size));
+      service._fireEvent(new SlotVisibilityChangedEvent(service.getName(), this, 100));
+    }
   }
 
   /**
    * Returns the list of attribute keys set on this slot. If you intend to see
    * the keys of service-level attributes inherited by this slot, you have to
-   * use the PubAdsService.getAttributeKeys() API.
+   * use the {@link PubAdsService#getAttributeKeys} API.
    *
    * @returns {!Array<string>} Array of attribute keys. Ordering is undefined.
    */
@@ -102,7 +122,7 @@ export default class Slot {
   /**
    * Returns the value for the AdSense attribute associated with the given key.
    * Note that if you intend to see service-level attributes inherited by this
-   * slot, you have to use the PubAdsService.get(key) API.
+   * slot, you have to use the {@link PubAdsService#get} API.
    *
    * @param {string} key Name of the attribute to look for.
    * @returns {?string} Current value for the attribute key, or null if the key
@@ -214,9 +234,19 @@ export default class Slot {
    * @returns {Slot} The slot object on which the method was called.
    */
   addService(service) {
-    this._services.push(service);
-    service._addSlot(this);
+    if (this._services.indexOf(service) === -1) {
+      this._services.push(service);
+      service._addSlot(this);
+    }
     return this;
+  }
+
+  _removeServices() {
+    for (let service of this._services) {
+      service._removeSlot(this);
+    }
+
+    this._services = [];
   }
 
   _hasService(service) {
@@ -262,6 +292,10 @@ export default class Slot {
    * @returns {Slot} The slot object on which the method was called.
    */
   defineSizeMapping(sizeMapping) {
+    if (!SizeMappingArray.isSizeMappingArray(sizeMapping)) {
+      // TODO - throw error
+    }
+
     this._sizeMapping = sizeMapping;
     return this;
   }
@@ -372,5 +406,9 @@ export default class Slot {
 
   _setContent(content) {
     this._options.content = content;
+  }
+
+  _getContent() {
+    return this._options.content;
   }
 }

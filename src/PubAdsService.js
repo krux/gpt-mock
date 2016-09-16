@@ -31,6 +31,7 @@ export default class PubAdsService extends Service {
       safeFrameConfig: null,
       tagForChildDirectedTreatment: null
     };
+    this._correlator = Math.random();
   }
 
   static get _name() {
@@ -61,15 +62,15 @@ export default class PubAdsService extends Service {
    * correlator is generated for every refresh.
    */
   refresh(optSlots, optOptions) {
-    let slots = this._gt._slots;
-    if (optSlots == null) {
+    let slots = this._slots;
+    if (optSlots != null) {
       slots = optSlots;
     }
     for (let slot of slots) {
       slot._refresh();
     }
     if (optOptions && optOptions.changeCorrelator) {
-      // TODO - change correlator
+      this._correlator = Math.random();
     }
   }
 
@@ -82,12 +83,17 @@ export default class PubAdsService extends Service {
    * @returns {boolean} Returns true if slots have been cleared, false otherwise.
    */
   clear(optSlots) {
-    let slots = this._gt._slots;
-    if (optSlots == null) {
+    let slots = this._slots;
+    if (optSlots != null) {
       slots = optSlots;
     }
+
     for (let slot of slots) {
-      slot._clear();
+      if (this._slots.indexOf(slot) !== -1) {
+        slot._clear();
+      } else {
+        return false;
+      }
     }
 
     return true;
@@ -108,7 +114,7 @@ export default class PubAdsService extends Service {
       const slot = new Slot(adUnitPath).addService(this);
       slot._passback = true;
       slot._outOfPage = true;
-      return this._addSlot(slot);
+      return slot;
     } else {
       return null;
     }
@@ -129,7 +135,7 @@ export default class PubAdsService extends Service {
     if (adUnitPath != null && size != null) {
       const slot = new Slot(adUnitPath, size).addService(this);
       slot._passback = true;
-      return this._addSlot(slot);
+      return slot;
     } else {
       return null;
     }
@@ -156,8 +162,12 @@ export default class PubAdsService extends Service {
    * was called after the service was enabled.
    */
   enableAsyncRendering() {
-    this._options.asyncRendering = true;
-    return true;
+    if (this._enabled) {
+      return false;
+    } else {
+      this._options.asyncRendering = true;
+      return true;
+    }
   }
 
   /**
@@ -171,8 +181,12 @@ export default class PubAdsService extends Service {
    * called after the service was enabled.
    */
   enableSingleRequest() {
-    this._options.singleRequest = true;
-    return true;
+    if (this._enabled) {
+      return false;
+    } else {
+      this._options.singleRequest = true;
+      return true;
+    }
   }
 
   /**
@@ -185,8 +199,12 @@ export default class PubAdsService extends Service {
    * called after the service was enabled.
    */
   enableSyncRendering() {
-    this._options.syncRendering = true;
-    return true;
+    if (this._enabled) {
+      return false;
+    } else {
+      this._options.syncRendering = true;
+      return true;
+    }
   }
 
   /**
@@ -261,9 +279,13 @@ export default class PubAdsService extends Service {
    * after the service was enabled.
    */
   collapseEmptyDivs(optCollapseBeforeAdFetch) {
-    this._options.collapseEmptyDivs = true;
-    this._options.collapseBeforeAdFetch = optCollapseBeforeAdFetch;
-    return true; // TODO - see return comment
+    if (this._enabled) {
+      return false;
+    } else {
+      this._options.collapseEmptyDivs = true;
+      this._options.collapseBeforeAdFetch = optCollapseBeforeAdFetch;
+      return true;
+    }
   }
 
   /**
@@ -340,9 +362,9 @@ export default class PubAdsService extends Service {
    */
   setLocation(latitudeOrAddress, optLongitude, optRadius) {
     if (typeof latitudeOrAddress === 'number') {
-      this._options.latitude = latitudeOrAddress;
-      this._options.longitude = optLongitude;
-      this._options.radius = optRadius;
+      this._options.latitude = latitudeOrAddress || null;
+      this._options.longitude = optLongitude || null;
+      this._options.radius = optRadius || null;
       this._options.address = null;
     } else {
       this._options.address = latitudeOrAddress;

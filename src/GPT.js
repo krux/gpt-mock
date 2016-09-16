@@ -42,12 +42,16 @@ import CommandArray from './CommandArray';
 export default class GPT {
   /**
    * Creates a new GPT instance.
+   *
+   * @param {number} version The version to emulate.
    */
-  constructor() {
+  constructor(version = 94) {
     this.apiReady = void 0;
     this.pubadsReady = void 0;
     this.cmd = [];
+    this._version = version;
     this._slots = [];
+    this._slotsByDomId = {};
     this._services = {};
     this._addService(new CompanionAdsService(this));
     this._addService(new ContentService(this));
@@ -61,7 +65,7 @@ export default class GPT {
    * @returns {string} Version string.
    */
   getVersion() {
-    return '94';
+    return `${this._version}`;
   }
 
   /**
@@ -123,9 +127,7 @@ export default class GPT {
    * @returns {Slot} The newly created slot.
    */
   defineSlot(adUnitPath, size, optDiv) {
-    const slot = new Slot(adUnitPath, size, optDiv);
-    this._slots.push(slot);
-    return slot;
+    return this._addSlot(new Slot(adUnitPath, size, optDiv));
   }
 
   /**
@@ -139,8 +141,7 @@ export default class GPT {
   defineOutOfPageSlot(adUnitPath, optDiv) {
     const slot = new Slot(adUnitPath, [], optDiv);
     slot._outOfPage = true;
-    this._slots.push(slot);
-    return slot;
+    return this._addSlot(slot);
   }
 
   /**
@@ -158,11 +159,16 @@ export default class GPT {
    * @returns {boolean} true if slots have been destroyed, false otherwise.
    */
   destroySlots(optSlots) {
-    if (optSlots == null) {
-      this.slots = [];
-    } else {
-      // TODO - destroy selective slots
+    for (let slot of (optSlots || this._slots)) {
+      const i = this._slots.indexOf(slot);
+      if (i !== -1) {
+        slot._removeServices();
+        this._slots.splice(i, 1);
+      } else {
+        return false;
+      }
     }
+
     return true;
   }
 
@@ -183,7 +189,13 @@ export default class GPT {
    */
   display(div) {
     if (div) {
-      // TODO
+      if (this._slotsByDomId[div]) {
+        this._slotsByDomId[div].display();
+      } else {
+        // TODO - error
+      }
+    } else {
+      // TODO - error
     }
   }
 
@@ -212,9 +224,26 @@ export default class GPT {
     return service;
   }
 
+  _addSlot(slot) {
+    if (this._slots.indexOf(slot) === -1) {
+      this._slots.push(slot);
+      this._slotsByDomId[slot.getSlotElementId()] = slot;
+    }
+    return slot;
+  }
+
+  _removeSlot(slot) {
+    const index = this._slots.indexOf(slot);
+    if (index !== -1) {
+      this._slots.splice(index, 1);
+    }
+  }
+
   _loaded() {
-    this.apiReady = true;
-    this.cmd = new CommandArray(this.cmd);
+    if (!this.apiReady) {
+      this.apiReady = true;
+      this.cmd = new CommandArray(this.cmd);
+    }
   }
 
 }
