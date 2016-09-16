@@ -25,13 +25,13 @@ npm install --save-dev gpt-mock
 ### ES6/ES2015
 
 ```javascript
-import googletag from 'gpt-mock';
+import GPT from 'gpt-mock';
 ```
 
 ### AMD
 
 ```javascript
-define(['gpt-mock'], function(googletag) {
+define(['gpt-mock'], function(GPT) {
 
 });
 ```
@@ -39,8 +39,28 @@ define(['gpt-mock'], function(googletag) {
 ### CommonJS
 
 ```javascript
-var googletag = require('gpt-mock');
+var GPT = require('gpt-mock');
 ```
+
+## Usage
+
+This library is used to mock out the Google Publisher Tag (GPT) library, so the most natural
+way to use this would be:
+
+```javascript
+window.googletag = new GPT();
+```
+
+Note that the instance is left as "unloaded", meaning `apiReady` will be false, and `googletag.cmd.push` will only accumulate the functions.
+
+To mark the tag library as having been loaded, use the following:
+
+```javascript
+window.googletag._loaded();
+```
+
+This library is intended to be as API-compatible as possible with the production code.  Any member
+that starts with an underscore (`_`) is not part of the API and is a mock implementation detail.
 
 # Help/Bugs/Requests
 
