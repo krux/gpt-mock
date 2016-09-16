@@ -37,7 +37,6 @@ const LINTABLE_PATTERN = [
 
 function build(config) {
   return () => webpackStream(config)
-    .pipe(jsOnly)
     .pipe(header(BANNER))
     .pipe(gulp.dest(DIST));
 }
