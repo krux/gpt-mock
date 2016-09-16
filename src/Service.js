@@ -22,7 +22,7 @@ export default class Service {
   /**
    * UNDOCUMENTED - Returns the name of the service.
    *
-   * @returns {string} The nae of the service
+   * @returns {string} The name of the service
    */
   getName() {
     return this._name;
@@ -43,14 +43,16 @@ export default class Service {
    * @returns {Array<Slot>} The slots
    */
   getSlots() {
-    return this._slots;
+    return this._slots.slice(0);
   }
 
   _addSlot(slot) {
     const n = this._slots.push(slot);
+    this._gt._slots.push(slot);
     const id = `${slot.getAdUnitPath()}_${n}`;
     this._slotIdMap[id] = slot;
     this._used = true;
+    return slot;
   }
 
   /**
@@ -59,7 +61,7 @@ export default class Service {
    * @returns {Object<string, Slot>} The map of ID's to slots.
    */
   getSlotIdMap() {
-    return this._slotIdMap;
+    return Object.assign({}, this._slotIdMap);
   }
 
   /**

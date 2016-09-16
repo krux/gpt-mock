@@ -60,7 +60,7 @@ export default class Slot {
    * @returns {Array<Service>} The list of enabled services.
    */
   getServices() {
-    return this._services;
+    return this._services.slice(0);
   }
 
   /**
@@ -129,7 +129,7 @@ export default class Slot {
   }
 
   _getAttributes() {
-    return this._attributes;
+    return Object.assign({}, this._attributes);
   }
 
   /**
@@ -204,7 +204,7 @@ export default class Slot {
   }
 
   _getTargetingMap() {
-    return this._targeting;
+    return Object.assign({}, this._targeting);
   }
 
   /**
@@ -229,7 +229,7 @@ export default class Slot {
    * @returns {!Array<string>} The ad category exclusion labels for this slot.
    */
   getCategoryExclusions() {
-    return this._categoryExclusions;
+    return this._categoryExclusions.slice(0);
   }
 
   /**
@@ -267,7 +267,11 @@ export default class Slot {
   }
 
   _getSizeMapping() {
-    return this._sizeMapping;
+    if (this._sizeMapping != null) {
+      return this._sizeMapping.slice(0);
+    } else {
+      return null;
+    }
   }
 
   /**

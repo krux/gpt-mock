@@ -8,6 +8,8 @@ import CommandArray from './CommandArray';
 /**
  * This is the global namespace that the Google Publisher Tag uses for its API.
  *
+ * For details on this API, see https://developers.google.com/doubleclick-gpt/reference.
+ *
  * @namespace googletag
  *
  * @property {boolean|undefined} apiReady Flag indicating that GPT API is loaded
@@ -18,12 +20,12 @@ import CommandArray from './CommandArray';
  * queue callbacks for when GPT is ready. These callbacks do not have to check
  * {@link #apiReady} as they are guaranteed to execute once the API is set up.
  *
- * @property pubadsReady {boolean|undefined} Flag indicating that Pubads service
+ * @property {boolean|undefined} pubadsReady Flag indicating that Pubads service
  * is enabled, loaded and fully operational.
  * This property will be simply `undefined` until {@link #enableServices()}
  * is called and Pubads service is loaded and initialized.
  *
- * @property cmd {!Array<function()>|!CommandArray} Reference to the global
+ * @property {!Array<function()>|!CommandArray} cmd Reference to the global
  * command queue for asynchronous execution of GPT-related calls.
  *
  * The {@link #cmd} variable is initialized to an empty JavaScript array by

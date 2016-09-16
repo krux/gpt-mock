@@ -12,7 +12,6 @@ export default class PubAdsService extends Service {
    */
   constructor(gt) {
     super(gt, PubAdsService._name);
-    this._slots = [];
     this._categoryExclusions = [];
     this._targeting = {};
     this._options = {
@@ -62,7 +61,7 @@ export default class PubAdsService extends Service {
    * correlator is generated for every refresh.
    */
   refresh(optSlots, optOptions) {
-    let slots = this._slots;
+    let slots = this._gt._slots;
     if (optSlots == null) {
       slots = optSlots;
     }
@@ -83,7 +82,7 @@ export default class PubAdsService extends Service {
    * @returns {boolean} Returns true if slots have been cleared, false otherwise.
    */
   clear(optSlots) {
-    let slots = this._slots;
+    let slots = this._gt._slots;
     if (optSlots == null) {
       slots = optSlots;
     }
@@ -101,15 +100,18 @@ export default class PubAdsService extends Service {
    * synchronously in non-single request mode.
    *
    * @param {string} adUnitPath The ad unit path of the slot to use as a passback.
-   * @returns {Slot} The new passback object or null if the method was
+   * @returns {?Slot} The new passback object or null if the method was
    * called with invalid arguments.
    */
   defineOutOfPagePassback(adUnitPath) {
-    const slot = new Slot(adUnitPath).addService(this);
-    slot._passback = true;
-    slot._outOfPage = true;
-    this._gt._slots.push(slot);
-    return slot;
+    if (adUnitPath != null) {
+      const slot = new Slot(adUnitPath).addService(this);
+      slot._passback = true;
+      slot._outOfPage = true;
+      return this._addSlot(slot);
+    } else {
+      return null;
+    }
   }
 
   /**
@@ -120,14 +122,17 @@ export default class PubAdsService extends Service {
    *
    * @param {string} adUnitPath The ad unit path of the slot to use as a passback.
    * @param {GeneralSize} size The size of the slot.
-   * @returns {Slot} The new passback object or null if the method was
+   * @returns {?Slot} The new passback object or null if the method was
    * called with invalid arguments.
    */
   definePassback(adUnitPath, size) {
-    const slot = new Slot(adUnitPath, size).addService(this);
-    slot._passback = true;
-    this._gt._slots.push(slot);
-    return slot;
+    if (adUnitPath != null && size != null) {
+      const slot = new Slot(adUnitPath, size).addService(this);
+      slot._passback = true;
+      return this._addSlot(slot);
+    } else {
+      return null;
+    }
   }
 
   /**
@@ -283,7 +288,7 @@ export default class PubAdsService extends Service {
   }
 
   _getCategoryExclusions() {
-    return this._categoryExclusions;
+    return this._categoryExclusions.slice(0);
   }
 
   /**
