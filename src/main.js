@@ -1,4 +1,3 @@
-import GoogleTag from './GoogleTag.js';
+import GPT from './GPT.js';
 
-module.exports = new GoogleTag();
-
+module.exports = GPT;

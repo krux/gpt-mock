@@ -1,0 +1,3 @@
+/**
+ * @typedef {Array<!SingleSize>} MultiSize
+ */

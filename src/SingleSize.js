@@ -1,0 +1,3 @@
+/**
+ * @typedef {SingleSizeArray|NamedSize} SingleSize
+ */
