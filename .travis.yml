@@ -1,0 +1,34 @@
+sudo: false
+
+language: node_js
+
+cache:
+  directories:
+    - node_modules
+
+node_js:
+  - 5
+
+before_script:
+  - npm prune
+
+script:
+- |
+  npm run lint
+  npm run build
+  npm run test:ci
+
+after_success:
+- |
+  npm run semantic-release
+  if [ "${TRAVIS_PULL_REQUEST}" != "true" ]; then
+    npm install codeclimate-test-reporter
+    ./node_modules/.bin/codeclimate-test-reporter < build/test-reports/coverage/*/lcov.info
+  fi
+
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
+
+notifications:
+  email: false
