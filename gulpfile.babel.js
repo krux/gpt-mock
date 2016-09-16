@@ -9,10 +9,6 @@ import webpackStream from 'webpack-stream';
 import WebpackDevServer from 'webpack-dev-server';
 import {Server as Karma} from 'karma';
 import gutil from 'gulp-util';
-import rename from 'gulp-rename';
-import uglify from 'gulp-uglify';
-import filter from 'gulp-filter';
-import stripDebug from 'gulp-strip-debug';
 import eslint from 'gulp-eslint';
 import jscs from 'gulp-jscs';
 import header from 'gulp-header';
@@ -40,24 +36,9 @@ const LINTABLE_PATTERN = [
 ];
 
 function build(config) {
-  const basename = path.basename(config.output.filename, path.extname(config.output.filename));
-  const jsOnly = filter(['**/*.js'], {restore: true});
-  const mapOnly = filter(['**/*.map']);
-
   return () => webpackStream(config)
     .pipe(jsOnly)
     .pipe(header(BANNER))
-    .pipe(rename({basename: basename, extname: '.max.js'}))
-    .pipe(gulp.dest(DIST))
-    .pipe(stripDebug())
-    .pipe(rename({basename: basename, extname: '.js'}))
-    .pipe(gulp.dest(DIST))
-    .pipe(uglify())
-    .pipe(header(BANNER))
-    .pipe(rename({basename: basename, extname: '.min.js'}))
-    .pipe(gulp.dest(DIST))
-    .pipe(jsOnly.restore)
-    .pipe(mapOnly)
     .pipe(gulp.dest(DIST));
 }
 
