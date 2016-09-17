@@ -123,7 +123,7 @@ npm run tdd
 
 ## Issue Guidelines
 
-Please either add a failing [unit test](./test/unit) or include a [jsfiddle](http://jsfiddle.net) that distills and reproduces the issue.
+Please add a failing [bug test](./test/bugs) and create a Pull Request.
 
 # License
 

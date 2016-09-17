@@ -89,10 +89,10 @@ export default class Service {
   }
 
   /**
-   * Returns a map of ID's to slots.
+   * Returns a map of IDs to slots.
    *
    * @experimental
-   * @returns {object} The map of ID's to slots.
+   * @returns {Object} The map of IDs to slots.
    */
   getSlotIdMap() {
     return Object.assign({}, this._slotIdMap);
@@ -111,7 +111,7 @@ export default class Service {
    *
    * @param {string} eventType A string representing the type of event generated
    * by GPT. Event types are case sensitive.
-   * @param {function(event: object)} listener Function that takes a single event object argument.
+   * @param {function(event: Object)} listener Function that takes a single event object argument.
    * @returns {Service} The service object on which the method was called.
    */
   addEventListener(eventType, listener) {
@@ -125,7 +125,7 @@ export default class Service {
    * specified event object.
    *
    * @param {string} eventType The event type to fire.
-   * @param {object} event The event object to pass to listeners.
+   * @param {Object} event The event object to pass to listeners.
    * @private
    */
   _fireEvent(eventType, event) {

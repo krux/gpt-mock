@@ -5,6 +5,7 @@ import SlotOnloadEvent from './events/SlotOnloadEvent';
 import SlotRenderEndedEvent from './events/SlotRenderEndedEvent';
 import SlotVisibilityChangedEvent from './events/SlotVisibilityChangedEvent';
 import SlotId from './SlotId';
+import TargetingMap from './TargetingMap';
 
 /**
  * Slot is an object representing single ad slot on a page.
@@ -25,7 +26,7 @@ export default class Slot {
     this._sizes = GeneralSize.toSizes(size);
     this._services = [];
     this._categoryExclusions = [];
-    this._targeting = {};
+    this._targeting = new TargetingMap();
     this._attributes = {};
     this._clickUrl = null;
     this._responseInformation = null;
@@ -187,17 +188,7 @@ export default class Slot {
    * array if there is no such key.
    */
   getTargeting(key) {
-    return this._targeting[key] || [];
-  }
-
-  /**
-   * Returns the list of all custom targeting keys set on this slot. Service-level
-   * targeting keys are not included.
-   *
-   * @returns {!Array<string>} Array of targeting keys. Ordering is undefined.
-   */
-  getTargetingKeys() {
-    return Object.keys(this._targeting);
+    return this._targeting.get(key);
   }
 
   /**
@@ -211,11 +202,37 @@ export default class Slot {
    * @returns {Slot} The {@link Slot} object on which the method was called.
    */
   setTargeting(key, value) {
-    if (Array.isArray(value)) {
-      this._targeting[key] = value;
-    } else {
-      this._targeting[key] = [value];
-    }
+    this._targeting.set(key, value);
+    return this;
+  }
+
+  /**
+   * Returns the list of all custom targeting keys set on this slot. Service-level
+   * targeting keys are not included.
+   *
+   * @returns {!Array<string>} Array of targeting keys. Ordering is undefined.
+   */
+  getTargetingKeys() {
+    return this._targeting.keys();
+  }
+
+  /**
+   * Returns the current targeting key-value dictionary.
+   *
+   * @experimental
+   * @returns {Object<string, Array<string>>} the targeting map.
+   */
+  getTargetingMap() {
+    return this._targeting.all();
+  }
+
+  /**
+   * Clears all custom slot-level targeting parameters for this slot.
+   *
+   * @returns {Slot} The {@link Slot} object on which the method was called.
+   */
+  clearTargeting() {
+    this._targeting.clear();
     return this;
   }
 
@@ -237,26 +254,6 @@ export default class Slot {
       }
     }
     return this;
-  }
-
-  /**
-   * Clears all custom slot-level targeting parameters for this slot.
-   *
-   * @returns {Slot} The {@link Slot} object on which the method was called.
-   */
-  clearTargeting() {
-    this._targeting = {};
-    return this;
-  }
-
-  /**
-   * Returns the current targeting key-value dictionary.
-   *
-   * @experimental
-   * @returns {Object<string, Array<string>>} the targeting map.
-   */
-  getTargetingMap() {
-    return Object.assign({}, this._targeting);
   }
 
   /**

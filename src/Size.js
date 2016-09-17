@@ -46,7 +46,7 @@ export default class Size {
    * Returns whether the {@link Size} is empty.
    *
    * @experimental
-   * @type {boolean} True if the size is empty.
+   * @type {boolean} true if the size is empty.
    */
   isEmpty() {
     return !(this.width * this.height);

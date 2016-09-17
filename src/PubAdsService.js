@@ -1,5 +1,6 @@
 import Service from './Service';
 import Slot from './Slot';
+import TargetingMap from './TargetingMap';
 
 /**
  * Publisher Ads service. This service is used to fetch and show ads from your
@@ -14,7 +15,7 @@ export default class PubAdsService extends Service {
   constructor(gt) {
     super(gt, PubAdsService._name);
     this._categoryExclusions = [];
-    this._targeting = {};
+    this._targeting = new TargetingMap();
     this._options = {
       collapseEmptyDivs: false,
       collapseBeforeAdFetch: false,
@@ -161,7 +162,9 @@ export default class PubAdsService extends Service {
    * request ads using {@link PubAdsService#refresh}.
    */
   disableInitialLoad() {
-    this._options.initialLoad = false;
+    this._unlessEnabled(() => {
+      this._options.initialLoad = false;
+    });
   }
 
   /**
@@ -175,12 +178,9 @@ export default class PubAdsService extends Service {
    * was called after the service was enabled.
    */
   enableAsyncRendering() {
-    if (this._enabled) {
-      return false;
-    } else {
+    return this._unlessEnabled(() => {
       this._options.asyncRendering = true;
-      return true;
-    }
+    });
   }
 
   /**
@@ -194,12 +194,9 @@ export default class PubAdsService extends Service {
    * called after the service was enabled.
    */
   enableSingleRequest() {
-    if (this._enabled) {
-      return false;
-    } else {
+    return this._unlessEnabled(() => {
       this._options.singleRequest = true;
-      return true;
-    }
+    });
   }
 
   /**
@@ -212,12 +209,9 @@ export default class PubAdsService extends Service {
    * called after the service was enabled.
    */
   enableSyncRendering() {
-    if (this._enabled) {
-      return false;
-    } else {
+    return this._unlessEnabled(() => {
       this._options.syncRendering = true;
-      return true;
-    }
+    });
   }
 
   /**
@@ -240,11 +234,7 @@ export default class PubAdsService extends Service {
    * @returns {PubAdsService} The service object on which the method was called.
    */
   setTargeting(key, value) {
-    if (Array.isArray(value)) {
-      this._targeting[key] = value;
-    } else {
-      this._targeting[key] = [value];
-    }
+    this._targeting.set(key, value);
     return this;
   }
 
@@ -256,7 +246,7 @@ export default class PubAdsService extends Service {
    * array if there is no such key.
    */
   getTargeting(key) {
-    return this._targeting[key] || [];
+    return this._targeting.get(key);
   }
 
   /**
@@ -265,7 +255,7 @@ export default class PubAdsService extends Service {
    * @returns {!Array<string>} Array of targeting keys. Ordering is undefined.
    */
   getTargetingKeys() {
-    return Object.keys(this._targeting);
+    return this._targeting.keys();
   }
 
   /**
@@ -275,7 +265,7 @@ export default class PubAdsService extends Service {
    * @returns {PubAdsService} The service object on which the method was called.
    */
   clearTargeting(key) {
-    delete this._targeting[key];
+    this._targeting.clear(key);
     return this;
   }
 
@@ -292,13 +282,10 @@ export default class PubAdsService extends Service {
    * after the service was enabled.
    */
   collapseEmptyDivs(optCollapseBeforeAdFetch = false) {
-    if (this._enabled) {
-      return false;
-    } else {
+    return this._unlessEnabled(() => {
       this._options.collapseEmptyDivs = true;
       this._options.collapseBeforeAdFetch = optCollapseBeforeAdFetch;
-      return true;
-    }
+    });
   }
 
   /**
@@ -330,9 +317,9 @@ export default class PubAdsService extends Service {
    * @param {boolean} centerAds true to center ads, false to left-align them.
    */
   setCentering(centerAds) {
-    if (!this._enabled) {
+    this._unlessEnabled(() => {
       this._options.centerAds = centerAds;
-    }
+    });
   }
 
   /**
@@ -462,4 +449,20 @@ export default class PubAdsService extends Service {
     return this;
   }
 
+  /**
+   * Conditionally execute a function unless the service has already been
+   * enabled.
+   *
+   * @param {function} fn The function to call if the service is not enabled
+   * @returns {boolean} true if the function was called; false if the service has
+   * already been enabled.
+   */
+  _unlessEnabled(fn) {
+    if (this._enabled) {
+      return false;
+    } else {
+      fn();
+      return true;
+    }
+  }
 }
