@@ -1,6 +1,8 @@
 import CommandArray from '../../src/CommandArray';
 
+/** @test {CommandArray} */
 describe('CommandArray', () => {
+  /** @test {CommandArray#constructor} */
   describe('#constructor', () => {
     it('constructs with empty array', () => {
       const cmd = new CommandArray([]);
@@ -18,7 +20,32 @@ describe('CommandArray', () => {
     });
   });
 
+  /** @test {CommandArray#push} */
   describe('#push', () => {
+    it('ignores null', () => {
+      const cmd = new CommandArray([]);
+
+      const result = cmd.push(null);
+      expect(result).to.be(0);
+    });
+
+    it('ignores undefined', () => {
+      const cmd = new CommandArray([]);
+
+      const result = cmd.push(undefined);
+      expect(result).to.be(0);
+    });
+
+    it('ignores non-functions', () => {
+      const cmd = new CommandArray([]);
+
+      const result = cmd.push('something');
+      expect(result).to.be(0);
+
+      const result2 = cmd.push({});
+      expect(result2).to.be(0);
+    });
+
     it('executes the function and updates the count', () => {
       const cmd = new CommandArray([]);
       const fn = sinon.spy();

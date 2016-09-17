@@ -1,11 +1,13 @@
 /**
  * @typedef {Array<!SizeMapping>} SizeMappingArray
+ * @private
  */
 import * as SizeMapping from './SizeMapping';
 
 /**
  * Returns true if the object is a {@link SizeMappingArray}.
  *
+ * @private
  * @param {SizeMappingArray|*} obj The object to test
  */
 export function isSizeMappingArray(obj) {

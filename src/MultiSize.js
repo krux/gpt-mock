@@ -1,11 +1,13 @@
 /**
  * @typedef {Array<!SingleSize>} MultiSize
+ * @private
  */
 import * as SingleSize from './SingleSize';
 
 /**
- * Returns true if the given object is a MultiSize.
+ * Returns true if the given object is a {@link MultiSize}.
  *
+ * @private
  * @param {MultiSize|*} obj The object to test
  */
 export function isMultiSize(obj) {
@@ -25,8 +27,10 @@ export function isMultiSize(obj) {
 /**
  * Returns an array of {@link Size} instances from the {@link MultiSize}.
  *
+ * @private
  * @param {MultiSize|*} obj The object to convert.
- * @returns {Array<Size>} The Size instance or null if the object is not a {@link MultiSize}.
+ * @returns {Array<Size>} The {@link Size} instances or empty array if the object
+ * is not a {@link MultiSize}.
  */
 export function toSizes(obj) {
   const acc = [];

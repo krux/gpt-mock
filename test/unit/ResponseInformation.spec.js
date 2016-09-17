@@ -1,6 +1,8 @@
 import ResponseInformation from '../../src/ResponseInformation';
 
+/** @test {ResponseInformation} */
 describe('ResponseInformation', () => {
+  /** @test {ResponseInformation#constructor} */
   describe('#constructor', () => {
     it('constructs and properties are readonly', () => {
       const advertiserId = 'adv';

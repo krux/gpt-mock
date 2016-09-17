@@ -14,14 +14,20 @@ export default class ImpressionViewableEvent {
     this._slot = slot;
   }
 
-  get name() {
+  /**
+   * Name of the event.
+   *
+   * @private
+   * @type {string}
+   */
+  get _name() {
     return 'googletag.events.ImpressionViewableEvent';
   }
 
   /**
    * Name of the service that rendered the slot.
    *
-   * @returns {string}
+   * @type {string}
    */
   get serviceName() {
     return this._serviceName;
@@ -30,7 +36,7 @@ export default class ImpressionViewableEvent {
   /**
    * The slot which contains the impression that became viewable.
    *
-   * @returns {!Slot}
+   * @type {!Slot}
    */
   get slot() {
     return this._slot;

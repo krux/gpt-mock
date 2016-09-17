@@ -9,11 +9,13 @@
  *   https://support.google.com/dfp_premium/answer/6366905).
  *
  * @typedef {string} NamedSize
+ * @private
  */
 
 /**
  * Returns true if the given object is a {@link NamedSize}.
  *
+ * @private
  * @param {NamedSize|*} obj The object to test
  */
 export function isNamedSize(obj) {

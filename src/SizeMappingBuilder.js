@@ -6,15 +6,15 @@ import * as SizeMappingArray from './SizeMappingArray';
  */
 export default class SizeMappingBuilder {
   /**
-   * Creates a new SizeMappingBuilder.
+   * Creates a new {@link SizeMappingBuilder}.
    */
   constructor() {
     this._mappings = [];
   }
 
   /**
-   * Adds a mapping from a single-size array representing the viewport to either
-   * a single-size array or a multi-size array representing the slot.
+   * Adds a mapping from a {@link SingleSizeArray} representing the viewport to
+   * {@link GeneralSize} representing the slot.
    *
    * @param {SingleSizeArray} viewportSize The size of the viewport for this mapping entry.
    * @param {GeneralSize} slotSize The sizes of the slot for this mapping entry.
@@ -30,7 +30,7 @@ export default class SizeMappingBuilder {
    * any invalid mappings have been supplied, this method will return null.
    * Otherwise it returns a specification in the correct format to pass to
    * {@link Slot#defineSizeMapping()}. The behavior of the builder after
-   * calling {@link build()} is undefined.
+   * calling {@link SizeMappingBuilder#build} is undefined.
    *
    * @returns {?SizeMappingArray} The result built by this builder. Can be null
    * if invalid size mappings were supplied.

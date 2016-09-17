@@ -5,20 +5,32 @@ import Service from './Service';
  */
 export default class ContentService extends Service {
   /**
-   * Creates a new ContentService.
+   * Creates a new {@link ContentService}.
    *
-   * @param {GPT} gt The containing GPT instance.
+   * @param {GPT} gpt The containing {@link GPT} instance.
    */
-  constructor(gt) {
-    super(gt, ContentService._name);
+  constructor(gpt) {
+    super(gpt, ContentService._name);
     this._storedContent = [];
   }
 
+  /**
+   * The name of the service.
+   *
+   * @type {string}
+   * @private
+   */
   static get _name() {
     return 'content';
   }
 
-  _onEnable() {
+  /**
+   * Enables the service.
+   *
+   * @override
+   */
+  enable() {
+    super.enable();
     for (let [slot, content] of this._storedContent) {
       slot._setContent(content);
     }

@@ -1,5 +1,6 @@
 {
   "preset": "google",
   "maximumLineLength": null,
-  "validateQuoteMarks": { "mark": "'", "escape": true }
+  "validateQuoteMarks": { "mark": "'", "escape": true },
+  "jsDoc": false
 }

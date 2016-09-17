@@ -1,32 +1,90 @@
 /**
- * Size is used internally in GPT and is not actually documented.
+ * Size captures a two dimensional size.
+ *
+ * @experimental
  */
 export default class Size {
   /**
-   * Creates a new Size instance.
-   * @param {number} w The width
-   * @param {number} h The height
+   * Creates a new {@link Size} instance.
+   *
+   * @param {number} width The width
+   * @param {number} height The height
    */
-  constructor(w, h) {
-    this.w = w;
-    this.h = h;
+  constructor(width, height) {
+    /**
+     * The width
+     * @type {number}
+     */
+    this.width = width;
+
+    /**
+     * The height
+     * @type {number}
+     */
+    this.height = height;
   }
 
   /**
    * Gets the width in pixels.
    *
-   * @returns {number} The width in pixels
+   * @type {number} The width in pixels
    */
   getWidth() {
-    return this.w;
+    return this.width;
   }
 
   /**
    * Gets the height in pixels.
    *
-   * @returns {number} The height in pixels
+   * @type {number} The height in pixels
    */
   getHeight() {
-    return this.h;
+    return this.height;
+  }
+
+  /**
+   * Returns whether the {@link Size} is empty.
+   *
+   * @experimental
+   * @type {boolean} true if the size is empty.
+   */
+  isEmpty() {
+    return !(this.width * this.height);
+  }
+
+  /**
+   * Truncates the width and height upward.
+   *
+   * @experimental
+   * @type {Size} The instance called
+   */
+  ceil() {
+    this.width = Math.ceil(this.width);
+    this.height = Math.ceil(this.height);
+    return this;
+  }
+
+  /**
+   * Truncates the width and height downard.
+   *
+   * @experimental
+   * @type {Size} The instance called
+   */
+  floor() {
+    this.width = Math.floor(this.width);
+    this.height = Math.floor(this.height);
+    return this;
+  }
+
+  /**
+   * Rounds the width and height.
+   *
+   * @experimental
+   * @type {Size} The instance called
+   */
+  round() {
+    this.width = Math.round(this.width);
+    this.height = Math.round(this.height);
+    return this;
   }
 }

@@ -3,14 +3,28 @@ import Slot from '../../src/Slot';
 import Service from '../../src/Service';
 import ResponseInformation from '../../src/ResponseInformation';
 import SafeFrameConfig from '../../src/SafeFrameConfig';
+import SlotOnloadEvent from '../../src/events/SlotOnloadEvent';
+import SlotRenderEndedEvent from '../../src/events/SlotRenderEndedEvent';
+import ImpressionViewableEvent from '../../src/events/ImpressionViewableEvent';
+import SlotVisibilityChangedEvent from '../../src/events/SlotVisibilityChangedEvent';
 
+/** @test {Slot} */
 describe('Slot', () => {
-  const adUnitPath = '';
-  const optDiv = null;
+  const adUnitPath = '/Test/12345';
+  const optDiv = 'gpt-div-123';
+  const optDivNull = null;
   const size = [728, 90];
   const gt = new GPT();
   const clickUrl = 'http://www.google.com/';
+  const advertiserId = 'adv';
+  const campaignId = 'camp';
+  const lineItemId = 123;
+  const creativeId = 456;
+  const labelIds = ['label1', 'label2'];
+  const info = new ResponseInformation(advertiserId, campaignId, lineItemId,
+    creativeId, labelIds);
 
+  /** @test {Slot#constructor} */
   describe('#constructor', () => {
     it('constructs', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -18,6 +32,23 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#getName} */
+  describe('#getName', () => {
+    it('returns the adUnitPath', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getName()).to.be(adUnitPath);
+    });
+  });
+
+  /** @test {Slot#getDefinedId} */
+  describe('#getDefinedId', () => {
+    it('returns the instance', () => {
+      const slot = new Slot(adUnitPath, size, optDiv, 123);
+      expect(slot.getDefinedId()).to.be(123);
+    });
+  });
+
+  /** @test {Slot#getAdUnitPath} */
   describe('#getAdUnitPath', () => {
     it('returns the adUnitPath', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -25,13 +56,20 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#getSlotElementId} */
   describe('#getSlotElementId', () => {
     it('returns the optDiv', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
       expect(slot.getSlotElementId()).to.be(optDiv);
     });
+
+    it('returns a generated ID if necessary', () => {
+      const slot = new Slot(adUnitPath, size, optDivNull);
+      expect(slot.getSlotElementId()).to.be(`gpt_unit_${adUnitPath}_0`);
+    });
   });
 
+  /** @test {Slot#getServices} */
   describe('#getServices', () => {
     it('returns the services', () => {
       const service = new Service(gt, 'test');
@@ -41,6 +79,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#getSizes} */
   describe('#getSizes', () => {
     it('returns the sizes', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -53,6 +92,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#getOutOfPage} */
   describe('#getOutOfPage', () => {
     it('returns the outOfPage status', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -63,6 +103,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#display} */
   describe('#display', () => {
     it('returns undefined', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -101,6 +142,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#getAttributeKeys} */
   describe('#getAttributeKeys', () => {
     it('returns the attribute keys', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -112,6 +154,18 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#_getAttributes} */
+  describe('#_getAttributes', () => {
+    it('returns the attribute map', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.set('attr1', 'value1');
+      expect(slot._getAttributes()).to.eql({
+        attr1: 'value1'
+      });
+    });
+  });
+
+  /** @test {Slot#get} */
   describe('#get', () => {
     it('returns null if attribute not set', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -125,6 +179,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#set} */
   describe('#set', () => {
     it('returns the slot', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -138,6 +193,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#getTargeting} */
   describe('#getTargeting', () => {
     it('returns the null is not set', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -153,6 +209,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#getTargetingKeys} */
   describe('#getTargetingKeys', () => {
     it('returns empty array if no keys', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -169,6 +226,21 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#getTargetingMap} */
+  describe('getTargetingMap', () => {
+    it('returns the targeting map', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setTargeting('kv1', 'value1');
+      slot.setTargeting('kv2', 'value2');
+      expect(slot.getTargetingMap()).to.be.an('object');
+      expect(slot.getTargetingMap()).to.eql({
+        kv1: ['value1'],
+        kv2: ['value2']
+      });
+    });
+  });
+
+  /** @test {Slot#setTargeting} */
   describe('#setTargeting', () => {
     it('returns the slot', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -178,6 +250,13 @@ describe('Slot', () => {
     it('saves the value', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
       slot.setTargeting('kv1', 'value');
+      expect(slot.getTargeting('kv1')).to.be.an('array');
+      expect(slot.getTargeting('kv1')).to.eql(['value']);
+    });
+
+    it('saves the array value', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setTargeting('kv1', ['value']);
       expect(slot.getTargeting('kv1')).to.be.an('array');
       expect(slot.getTargeting('kv1')).to.eql(['value']);
     });
@@ -193,6 +272,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#updateTargetingFromMap} */
   describe('#updateTargetingFromMap', () => {
     it('returns the slot', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -225,6 +305,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#clearTargeting} */
   describe('#clearTargeting', () => {
     it('returns the slot', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -242,6 +323,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#addService} */
   describe('#addService', () => {
     it('returns the slot', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -267,6 +349,7 @@ describe('Slot', () => {
     }));
   });
 
+  /** @test {Slot#getCategoryExclusions} */
   describe('#getCategoryExclusions', () => {
     it('returns empty array if no exclusions', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -283,6 +366,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#setCategoryExclusion} */
   describe('#setCategoryExclusion', () => {
     it('returns the slot', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -300,6 +384,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#clearCategoryExclusions} */
   describe('#clearCategoryExclusions', () => {
     it('returns the slot', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -317,6 +402,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#defineSizeMapping} */
   describe('#defineSizeMapping', () => {
     it('returns the slot', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -329,8 +415,16 @@ describe('Slot', () => {
       slot.defineSizeMapping([]);
       expect(slot._sizeMapping).to.eql([]);
     });
+
+    it('throws an error on invalid size mapping', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot._sizeMapping).to.be(null);
+      expect(() => slot.defineSizeMapping('bob')).to.throwError();
+      expect(slot._sizeMapping).to.be(null);
+    });
   });
 
+  /** @test {Slot#setClickUrl} */
   describe('#setClickUrl', () => {
     it('returns the slot', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -344,6 +438,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#getClickUrl} */
   describe('#getClickUrl', () => {
     it('returns null if no click URL', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -357,6 +452,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#getResponseInformation} */
   describe('#getResponseInformation', () => {
     it('returns null if no response information', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -365,18 +461,12 @@ describe('Slot', () => {
 
     it('returns previous response information if set', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
-      const advertiserId = 'adv';
-      const campaignId = 'camp';
-      const lineItemId = 123;
-      const creativeId = 456;
-      const labelIds = ['label1', 'label2'];
-      const info = new ResponseInformation(advertiserId, campaignId, lineItemId,
-        creativeId, labelIds);
       slot._responseInformation = info;
       expect(slot.getResponseInformation()).to.be(info);
     });
   });
 
+  /** @test {Slot#setCollapseEmptyDiv} */
   describe('#setCollapseEmptyDiv', () => {
     it('returns the slot', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -385,13 +475,13 @@ describe('Slot', () => {
       expect(slot.setCollapseEmptyDiv(true)).to.be(slot);
     });
 
-    it('saves the option', () => {
+    it('saves the collapseEmptyDiv option', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
       slot.setCollapseEmptyDiv(true);
       expect(slot._options.collapseEmptyDiv).to.be(true);
     });
 
-    it('saves the beforeAdFetch option', () => {
+    it('saves the collapseBeforeAdFetch option', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
       slot.setCollapseEmptyDiv(true, true);
       expect(slot._options.collapseEmptyDiv).to.be(true);
@@ -399,6 +489,17 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#getCollapseEmptyDiv} */
+  describe('#getCollapseEmptyDiv', () => {
+    it('returns the collapseEmptyDiv options', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getCollapseEmptyDiv()).to.be(false);
+      slot.setCollapseEmptyDiv(true);
+      expect(slot.getCollapseEmptyDiv()).to.be(true);
+    });
+  });
+
+  /** @test {Slot#setForceSafeFrame} */
   describe('#setForceSafeFrame', () => {
     it('returns the slot', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
@@ -412,6 +513,7 @@ describe('Slot', () => {
     });
   });
 
+  /** @test {Slot#setSafeFrameConfig} */
   describe('#setSafeFrameConfig', () => {
     it('returns the slot', () => {
       const allowOverlayExpansion = true;
@@ -430,6 +532,201 @@ describe('Slot', () => {
       const slot = new Slot(adUnitPath, size, optDiv);
       slot.setSafeFrameConfig(config);
       expect(slot._options.safeFrameConfig).to.eql(config);
+    });
+  });
+
+  /** @test {Slot#fetchStarted} */
+  describe('#fetchStarted', () => {
+    it('clears the fetched option', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._options.fetched = true;
+      slot.fetchStarted();
+      expect(slot._options.fetched).to.be(false);
+    });
+  });
+
+  /** @test {Slot#fetchEnded} */
+  describe('#fetchEnded', () => {
+    it('sets the fetched option', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot._options.fetched).to.be(false);
+      slot.fetchStarted();
+      slot.fetchEnded();
+      expect(slot._options.fetched).to.be(true);
+    });
+  });
+
+  /** @test {Slot#loaded} */
+  describe('#loaded', () => {
+    it('broadcasts the event', () => {
+      const service = new Service(gt, 'test');
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      const spy = sinon.spy();
+      service.addEventListener('googletag.events.SlotOnloadEvent', spy);
+      slot.loaded();
+      expect(spy.called).to.be(true);
+      expect(spy.calledWith(new SlotOnloadEvent(service.getName(), slot))).to.be(true);
+    });
+  });
+
+  /** @test {Slot#renderStarted} */
+  describe('#renderStarted', () => {
+    it('clears the displayed option', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._options.displayed = true;
+      slot.renderStarted();
+      expect(slot._options.displayed).to.be(false);
+    });
+  });
+
+  /** @test {Slot#renderEnded} */
+  describe('#renderEnded', () => {
+    it('sets the displayed option', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.renderStarted();
+      slot.renderEnded();
+      expect(slot._options.displayed).to.be(true);
+    });
+
+    it('sets the response information', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.renderStarted();
+      slot.renderEnded(info);
+      expect(slot._responseInformation).to.be(info);
+    });
+
+    it('broadcasts an empty event if null', () => {
+      const service = new Service(gt, 'test');
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      const spy = sinon.spy();
+      service.addEventListener('googletag.events.SlotRenderEndedEvent', spy);
+      slot.renderStarted();
+      slot.renderEnded(null);
+      expect(spy.called).to.be(true);
+      expect(spy.calledWith(new SlotRenderEndedEvent(service.getName(), slot,
+        null, null, true, slot.getSizes()[0]))).to.be(true);
+    });
+
+    it('broadcasts a non-empty event if info provided', () => {
+      const service = new Service(gt, 'test');
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      const spy = sinon.spy();
+      service.addEventListener('googletag.events.SlotRenderEndedEvent', spy);
+      slot.renderStarted();
+      slot.renderEnded(info);
+      expect(spy.called).to.be(true);
+      expect(spy.calledWith(new SlotRenderEndedEvent(service.getName(), slot,
+        info.creativeId, info.lineItemId, false, slot.getSizes()[0]))).to.be(true);
+    });
+  });
+
+  /** @test {Slot#impressionViewable} */
+  describe('#impressionViewable', () => {
+    it('broadcasts the event', () => {
+      const service = new Service(gt, 'test');
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      const spy = sinon.spy();
+      service.addEventListener('googletag.events.ImpressionViewableEvent', spy);
+      slot.impressionViewable();
+      expect(spy.called).to.be(true);
+      expect(spy.calledWith(new ImpressionViewableEvent(service.getName(), slot))).to.be(true);
+    });
+  });
+
+  /** @test {Slot#visibilityChanged} */
+  describe('#visibilityChanged', () => {
+    it('saves the in-view percentage and broadcasts event', () => {
+      const inViewPercentage = 23;
+      const service = new Service(gt, 'test');
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      const spy = sinon.spy();
+      service.addEventListener('googletag.events.SlotVisibilityChangedEvent', spy);
+      slot.visibilityChanged(inViewPercentage);
+      expect(slot._options.inViewPercentage).to.be(inViewPercentage);
+      expect(spy.called).to.be(true);
+      expect(spy.calledWith(new SlotVisibilityChangedEvent(service.getName(), slot, inViewPercentage))).to.be(true);
+    });
+
+    it('does not re-broadcast event if no change', () => {
+      const inViewPercentage = 23;
+      const service = new Service(gt, 'test');
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      const spy = sinon.spy();
+      slot.visibilityChanged(inViewPercentage);
+      service.addEventListener('googletag.events.SlotVisibilityChangedEvent', spy);
+      expect(slot._options.inViewPercentage).to.be(inViewPercentage);
+      slot.impressionViewable(inViewPercentage);
+      expect(slot._options.inViewPercentage).to.be(inViewPercentage);
+      expect(spy.called).to.be(false);
+    });
+  });
+
+  /** @test {Slot#_refresh} */
+  describe('#_refresh', () => {
+    it('fetches the slot', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot._options.fetched).to.be(false);
+      slot._refresh();
+      expect(slot._options.fetched).to.be(true);
+    });
+
+    it('increments a refresh counter', () => {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot._options.refreshed).to.be(0);
+      slot._refresh();
+      expect(slot._options.refreshed).to.be(1);
+    });
+  });
+
+  /** @test {Slot#_clear} */
+  describe('#_clear', () => {
+    it('clears the content', () => {
+      const content = 'CONTENT';
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._setContent(content);
+      slot._clear();
+      expect(slot._options.content).to.be(null);
+    });
+
+    it('marks the slot as not fetched', () => {
+      const content = 'CONTENT';
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._setContent(content);
+      slot._clear();
+      expect(slot._options.fetched).to.be(false);
+    });
+  });
+
+  /** @test {Slot#_setContent} */
+  describe('#_setContent', () => {
+    it('saves the content', () => {
+      const content = 'CONTENT';
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._setContent(content);
+      expect(slot._options.content).to.be(content);
+    });
+  });
+
+  /** @test {Slot#_getContent} */
+  describe('#_getContent', () => {
+    it('returns the content', () => {
+      const content = 'CONTENT';
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._setContent(content);
+      expect(slot._getContent()).to.be(content);
+    });
+  });
+
+  /** @test {Slot#_removeServices} */
+  describe('#_removeServices', () => {
+    it('removes all the services', () => {
+      const service = new Service(gt, 'test');
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      expect(slot.getServices()).to.be.an('array');
+      expect(slot.getServices()).to.be.eql([service]);
+      slot._removeServices();
+      expect(slot.getServices()).to.be.an('array');
+      expect(slot.getServices()).to.be.empty();
     });
   });
 

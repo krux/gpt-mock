@@ -12,12 +12,45 @@ export default class SlotVisibilityChangedEvent {
    * @param {number} inViewPercentage The percentage (0-100) of the ad's area that is visible.
    */
   constructor(serviceName, slot, inViewPercentage) {
-    this.serviceName = serviceName;
-    this.slot = slot;
-    this.inViewPercentage = inViewPercentage;
+    this._serviceName = serviceName;
+    this._slot = slot;
+    this._inViewPercentage = inViewPercentage;
   }
 
-  get name() {
+  /**
+   * Name of the event.
+   *
+   * @private
+   * @type {string}
+   */
+  get _name() {
     return 'googletag.events.SlotVisibilityChangedEvent';
+  }
+
+  /**
+   * Name of the service that rendered the slot.
+   *
+   * @type {string}
+   */
+  get serviceName() {
+    return this._serviceName;
+  }
+
+  /**
+   * The slot which contains the impression that became viewable.
+   *
+   * @type {!Slot}
+   */
+  get slot() {
+    return this._slot;
+  }
+
+  /**
+   * The percentage of the ad that is "in view".
+   *
+   * @type {number}
+   */
+  get inViewPercentage() {
+    return this._inViewPercentage;
   }
 }

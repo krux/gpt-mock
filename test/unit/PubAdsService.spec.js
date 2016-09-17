@@ -3,11 +3,13 @@ import SafeFrameConfig from '../../src/SafeFrameConfig';
 import GPT from '../../src/GPT';
 import Slot from '../../src/Slot';
 
+/** @test {PubAdsService} */
 describe('PubAdsService', () => {
   const gt = new GPT();
   const adUnitPath = '/Test/12345';
   const size = [728, 90];
 
+  /** @test {PubAdsService#constructor} */
   describe('#constructor', () => {
     it('constructs', () => {
       const service = new PubAdsService(gt);
@@ -15,6 +17,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#enable} */
   describe('#enable', () => {
     it('returns undefined', () => {
       const service = new PubAdsService(gt);
@@ -30,6 +33,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#refresh} */
   describe('#refresh', () => {
     it('returns undefined', () => {
       const service = new PubAdsService(gt);
@@ -84,6 +88,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#clear} */
   describe('#clear', () => {
     const content = 'TEST CONTENT';
 
@@ -135,6 +140,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#defineOutOfPagePassback} */
   describe('#defineOutOfPagePassback', () => {
     it('returns the null if no adUnitPath', () => {
       const service = new PubAdsService(gt);
@@ -151,6 +157,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#definePassback} */
   describe('#definePassback', () => {
     it('returns the null if no adUnitPath', () => {
       const service = new PubAdsService(gt);
@@ -175,6 +182,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#disableInitialLoad} */
   describe('#disableInitialLoad', () => {
     it('returns undefined', () => {
       const service = new PubAdsService(gt);
@@ -189,6 +197,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#enableAsyncRendering} */
   describe('#enableAsyncRendering', () => {
     it('returns true if not enabled', () => {
       const service = new PubAdsService(gt);
@@ -209,6 +218,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#enableSingleRequest} */
   describe('#enableSingleRequest', () => {
     it('returns true if not enabled', () => {
       const service = new PubAdsService(gt);
@@ -229,6 +239,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#enableSyncRendering} */
   describe('#enableSyncRendering', () => {
     it('returns true if not enabled', () => {
       const service = new PubAdsService(gt);
@@ -249,6 +260,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#enableVideoAds} */
   describe('#enableVideoAds', () => {
     it('returns undefined', () => {
       const service = new PubAdsService(gt);
@@ -263,6 +275,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#setTargeting} */
   describe('#setTargeting', () => {
     it('returns the service', () => {
       const service = new PubAdsService(gt);
@@ -282,6 +295,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#getTargeting} */
   describe('#getTargeting', () => {
     it('returns empty array if no value', () => {
       const service = new PubAdsService(gt);
@@ -297,6 +311,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#getTargetingKeys} */
   describe('#getTargetingKeys', () => {
     it('returns empty array if no targeting', () => {
       const service = new PubAdsService(gt);
@@ -312,6 +327,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#clearTargeting} */
   describe('#clearTargeting', () => {
     it('returns the service', () => {
       const service = new PubAdsService(gt);
@@ -329,6 +345,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#collapseEmptyDivs} */
   describe('#collapseEmptyDivs', () => {
     it('returns true if not enabled', () => {
       const service = new PubAdsService(gt);
@@ -356,6 +373,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#setCategoryExclusion} */
   describe('#setCategoryExclusion', () => {
     it('returns the service', () => {
       const service = new PubAdsService(gt);
@@ -381,6 +399,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#clearCategoryExclusions} */
   describe('#clearCategoryExclusions', () => {
     it('returns the service', () => {
       const service = new PubAdsService(gt);
@@ -400,6 +419,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#setCentering} */
   describe('#setCentering', () => {
     it('returns the service', () => {
       const service = new PubAdsService(gt);
@@ -413,6 +433,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#setCookieOptions} */
   describe('#setCookieOptions', () => {
     it('returns the service', () => {
       const service = new PubAdsService(gt);
@@ -427,6 +448,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#setForceSafeFrame} */
   describe('#setForceSafeFrame', () => {
     it('returns the service', () => {
       const service = new PubAdsService(gt);
@@ -441,6 +463,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#setLocation} */
   describe('#setLocation', () => {
     it('returns the service', () => {
       const service = new PubAdsService(gt);
@@ -481,6 +504,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#setPublisherProvidedId} */
   describe('#setPublisherProvidedId', () => {
     const ppid = 'ppid_1234567';
 
@@ -496,6 +520,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#setSafeFrameConfig} */
   describe('#setSafeFrameConfig', () => {
     it('returns the service', () => {
       const allowOverlayExpansion = true;
@@ -517,6 +542,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#setTagForChildDirectedTreatment} */
   describe('#setTagForChildDirectedTreatment', () => {
     it('returns the service', () => {
       const service = new PubAdsService(gt);
@@ -531,6 +557,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#clearTagForChildDirectedTreatment} */
   describe('#clearTagForChildDirectedTreatment', () => {
     it('returns the service', () => {
       const service = new PubAdsService(gt);
@@ -547,6 +574,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#setVideoContent} */
   describe('#setVideoContent', () => {
     const videoContentId = 'CONTENTID';
     const videoCmsId = 'CMSID';
@@ -563,6 +591,7 @@ describe('PubAdsService', () => {
     });
   });
 
+  /** @test {PubAdsService#updateCorrelator} */
   describe('#updateCorrelator', () => {
     it('returns the service', () => {
       const service = new PubAdsService(gt);

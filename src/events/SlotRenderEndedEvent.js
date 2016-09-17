@@ -27,14 +27,20 @@ export default class SlotRenderEndedEvent {
     this._size = size;
   }
 
-  get name() {
+  /**
+   * Name of the event.
+   *
+   * @private
+   * @type {string}
+   */
+  get _name() {
     return 'googletag.events.SlotRenderEndedEvent';
   }
 
   /**
    * Name of the service that rendered the slot.
    *
-   * @returns {string}
+   * @type {string}
    */
   get serviceName() {
     return this._serviceName;
@@ -43,7 +49,7 @@ export default class SlotRenderEndedEvent {
   /**
    * The slot in which the creative was rendered.
    *
-   * @returns {!Slot}
+   * @type {!Slot}
    */
   get slot() {
     return this._slot;
@@ -53,7 +59,7 @@ export default class SlotRenderEndedEvent {
    * Creative ID of the rendered ad. Value is null for empty slots, backfill ads
    * or creatives rendered by services other than pubads service.
    *
-   * @returns {?number}
+   * @type {?number}
    */
   get creativeId() {
     return this._creativeId;
@@ -62,7 +68,7 @@ export default class SlotRenderEndedEvent {
   /**
    * true if no ad was returned for the slot, false otherwise.
    *
-   * @returns {boolean}
+   * @type {boolean}
    */
   get isEmpty() {
     return this._isEmpty;
@@ -72,7 +78,7 @@ export default class SlotRenderEndedEvent {
    * Line item ID of the rendered ad. Value is null for empty slots, backfill
    * ads or creatives rendered by services other than pubads service.
    *
-   * @returns {?number}
+   * @type {?number}
    */
   get lineItemId() {
     return this._lineItemId;
@@ -82,7 +88,7 @@ export default class SlotRenderEndedEvent {
    * Indicates the pixel size of the rendered creative. Example: [728, 90].
    * Value is null for empty ad slots.
    *
-   * @returns {SingleSize}
+   * @type {SingleSize}
    */
   get size() {
     return this._size;
