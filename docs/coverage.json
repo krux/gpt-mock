@@ -1,0 +1,87 @@
+{
+  "coverage": "100%",
+  "expectCount": 164,
+  "actualCount": 164,
+  "files": {
+    "src/CommandArray.js": {
+      "expectCount": 3,
+      "actualCount": 3,
+      "undocumentLines": []
+    },
+    "src/CompanionAdsService.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/ContentService.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/GPT.js": {
+      "expectCount": 19,
+      "actualCount": 19,
+      "undocumentLines": []
+    },
+    "src/events/ImpressionViewableEvent.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/PubAdsService.js": {
+      "expectCount": 29,
+      "actualCount": 29,
+      "undocumentLines": []
+    },
+    "src/ResponseInformation.js": {
+      "expectCount": 7,
+      "actualCount": 7,
+      "undocumentLines": []
+    },
+    "src/SafeFrameConfig.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/Service.js": {
+      "expectCount": 12,
+      "actualCount": 12,
+      "undocumentLines": []
+    },
+    "src/Size.js": {
+      "expectCount": 10,
+      "actualCount": 10,
+      "undocumentLines": []
+    },
+    "src/SizeMappingBuilder.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/Slot.js": {
+      "expectCount": 38,
+      "actualCount": 38,
+      "undocumentLines": []
+    },
+    "src/SlotId.js": {
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
+    },
+    "src/events/SlotOnloadEvent.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/events/SlotRenderEndedEvent.js": {
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
+    },
+    "src/events/SlotVisibilityChangedEvent.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    }
+  }
+}

@@ -1,0 +1,2422 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "ClassDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "SlotRenderEndedEvent",
+          "range": [
+            272,
+            292
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 21
+            },
+            "end": {
+              "line": 7,
+              "column": 41
+            }
+          }
+        },
+        "superClass": null,
+        "body": {
+          "type": "ClassBody",
+          "body": [
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "constructor",
+                "range": [
+                  1090,
+                  1101
+                ],
+                "loc": {
+                  "start": {
+                    "line": 21,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 21,
+                    "column": 13
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "serviceName",
+                    "range": [
+                      1102,
+                      1113
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 25
+                      }
+                    }
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "slot",
+                    "range": [
+                      1115,
+                      1119
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 27
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 31
+                      }
+                    }
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "creativeId",
+                    "range": [
+                      1121,
+                      1131
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 33
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 43
+                      }
+                    }
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "lineItemId",
+                    "range": [
+                      1133,
+                      1143
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 45
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 55
+                      }
+                    }
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "isEmpty",
+                    "range": [
+                      1145,
+                      1152
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 57
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 64
+                      }
+                    }
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "size",
+                    "range": [
+                      1154,
+                      1158
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 66
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 70
+                      }
+                    }
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              1166,
+                              1170
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 22,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 22,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_serviceName",
+                            "range": [
+                              1171,
+                              1183
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 22,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 22,
+                                "column": 21
+                              }
+                            }
+                          },
+                          "range": [
+                            1166,
+                            1183
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 22,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 22,
+                              "column": 21
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "serviceName",
+                          "range": [
+                            1186,
+                            1197
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 22,
+                              "column": 24
+                            },
+                            "end": {
+                              "line": 22,
+                              "column": 35
+                            }
+                          }
+                        },
+                        "range": [
+                          1166,
+                          1197
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 22,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 22,
+                            "column": 35
+                          }
+                        }
+                      },
+                      "range": [
+                        1166,
+                        1198
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 22,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 22,
+                          "column": 36
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              1203,
+                              1207
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 23,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 23,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_slot",
+                            "range": [
+                              1208,
+                              1213
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 23,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 23,
+                                "column": 14
+                              }
+                            }
+                          },
+                          "range": [
+                            1203,
+                            1213
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 23,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 23,
+                              "column": 14
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "slot",
+                          "range": [
+                            1216,
+                            1220
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 23,
+                              "column": 17
+                            },
+                            "end": {
+                              "line": 23,
+                              "column": 21
+                            }
+                          }
+                        },
+                        "range": [
+                          1203,
+                          1220
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 23,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 23,
+                            "column": 21
+                          }
+                        }
+                      },
+                      "range": [
+                        1203,
+                        1221
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 23,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 23,
+                          "column": 22
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              1226,
+                              1230
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 24,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 24,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_creativeId",
+                            "range": [
+                              1231,
+                              1242
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 24,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 24,
+                                "column": 20
+                              }
+                            }
+                          },
+                          "range": [
+                            1226,
+                            1242
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 24,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 24,
+                              "column": 20
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "creativeId",
+                          "range": [
+                            1245,
+                            1255
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 24,
+                              "column": 23
+                            },
+                            "end": {
+                              "line": 24,
+                              "column": 33
+                            }
+                          }
+                        },
+                        "range": [
+                          1226,
+                          1255
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 24,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 24,
+                            "column": 33
+                          }
+                        }
+                      },
+                      "range": [
+                        1226,
+                        1256
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 24,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 24,
+                          "column": 34
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              1261,
+                              1265
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 25,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 25,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_isEmpty",
+                            "range": [
+                              1266,
+                              1274
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 25,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 25,
+                                "column": 17
+                              }
+                            }
+                          },
+                          "range": [
+                            1261,
+                            1274
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 25,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 25,
+                              "column": 17
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "isEmpty",
+                          "range": [
+                            1277,
+                            1284
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 25,
+                              "column": 20
+                            },
+                            "end": {
+                              "line": 25,
+                              "column": 27
+                            }
+                          }
+                        },
+                        "range": [
+                          1261,
+                          1284
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 25,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 25,
+                            "column": 27
+                          }
+                        }
+                      },
+                      "range": [
+                        1261,
+                        1285
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 25,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 25,
+                          "column": 28
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              1290,
+                              1294
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 26,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 26,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_lineItemId",
+                            "range": [
+                              1295,
+                              1306
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 26,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 26,
+                                "column": 20
+                              }
+                            }
+                          },
+                          "range": [
+                            1290,
+                            1306
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 26,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 26,
+                              "column": 20
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "lineItemId",
+                          "range": [
+                            1309,
+                            1319
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 26,
+                              "column": 23
+                            },
+                            "end": {
+                              "line": 26,
+                              "column": 33
+                            }
+                          }
+                        },
+                        "range": [
+                          1290,
+                          1319
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 26,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 26,
+                            "column": 33
+                          }
+                        }
+                      },
+                      "range": [
+                        1290,
+                        1320
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 26,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 26,
+                          "column": 34
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              1325,
+                              1329
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 27,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 27,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_size",
+                            "range": [
+                              1330,
+                              1335
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 27,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 27,
+                                "column": 14
+                              }
+                            }
+                          },
+                          "range": [
+                            1325,
+                            1335
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 27,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 27,
+                              "column": 14
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "size",
+                          "range": [
+                            1338,
+                            1342
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 27,
+                              "column": 17
+                            },
+                            "end": {
+                              "line": 27,
+                              "column": 21
+                            }
+                          }
+                        },
+                        "range": [
+                          1325,
+                          1342
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 27,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 27,
+                            "column": 21
+                          }
+                        }
+                      },
+                      "range": [
+                        1325,
+                        1343
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 27,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 22
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1160,
+                    1347
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 21,
+                      "column": 72
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1101,
+                  1347
+                ],
+                "loc": {
+                  "start": {
+                    "line": 21,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 28,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "constructor",
+              "computed": false,
+              "range": [
+                1090,
+                1347
+              ],
+              "loc": {
+                "start": {
+                  "line": 21,
+                  "column": 2
+                },
+                "end": {
+                  "line": 28,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Creates a new SlotRenderEndedEvent instance.\n   *\n   * @param {string} serviceName Name of the service that rendered the slot.\n   * @param {!Slot} slot The slot in which the creative was rendered.\n   * @param {?number} creativeId Creative ID of the rendered ad. Value is null\n   * for empty slots, backfill ads or creatives rendered by services other than pubads service.\n   * @param {?number} lineItemId Line item ID of the rendered ad. Value is null\n   * for empty slots, backfill ads or creatives rendered by services other than pubads service.\n   * @param {boolean} isEmpty true if no ad was returned for the slot, false otherwise.\n   * @param {SingleSize} size Indicates the pixel size of the rendered\n   * creative. Example: [728, 90]. Value is null for empty ad slots.\n   ",
+                  "range": [
+                    297,
+                    1087
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 8,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 20,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Name of the event.\n   *\n   * @private\n   * @type {string}\n   ",
+                  "range": [
+                    1351,
+                    1423
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 30,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 35,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "_name",
+                "range": [
+                  1430,
+                  1435
+                ],
+                "loc": {
+                  "start": {
+                    "line": 36,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 36,
+                    "column": 11
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Literal",
+                        "value": "googletag.events.SlotRenderEndedEvent",
+                        "raw": "'googletag.events.SlotRenderEndedEvent'",
+                        "range": [
+                          1451,
+                          1490
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 37,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 37,
+                            "column": 50
+                          }
+                        }
+                      },
+                      "range": [
+                        1444,
+                        1491
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 37,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 37,
+                          "column": 51
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1438,
+                    1495
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 36,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1435,
+                  1495
+                ],
+                "loc": {
+                  "start": {
+                    "line": 36,
+                    "column": 11
+                  },
+                  "end": {
+                    "line": 38,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                1426,
+                1495
+              ],
+              "loc": {
+                "start": {
+                  "line": 36,
+                  "column": 2
+                },
+                "end": {
+                  "line": 38,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Name of the event.\n   *\n   * @private\n   * @type {string}\n   ",
+                  "range": [
+                    1351,
+                    1423
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 30,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 35,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Name of the service that rendered the slot.\n   *\n   * @type {string}\n   ",
+                  "range": [
+                    1499,
+                    1582
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 40,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 44,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "serviceName",
+                "range": [
+                  1589,
+                  1600
+                ],
+                "loc": {
+                  "start": {
+                    "line": 45,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 45,
+                    "column": 17
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1616,
+                            1620
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 46,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 46,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_serviceName",
+                          "range": [
+                            1621,
+                            1633
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 46,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 46,
+                              "column": 28
+                            }
+                          }
+                        },
+                        "range": [
+                          1616,
+                          1633
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 46,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 46,
+                            "column": 28
+                          }
+                        }
+                      },
+                      "range": [
+                        1609,
+                        1634
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 46,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 46,
+                          "column": 29
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1603,
+                    1638
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 45,
+                      "column": 20
+                    },
+                    "end": {
+                      "line": 47,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1600,
+                  1638
+                ],
+                "loc": {
+                  "start": {
+                    "line": 45,
+                    "column": 17
+                  },
+                  "end": {
+                    "line": 47,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                1585,
+                1638
+              ],
+              "loc": {
+                "start": {
+                  "line": 45,
+                  "column": 2
+                },
+                "end": {
+                  "line": 47,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Name of the service that rendered the slot.\n   *\n   * @type {string}\n   ",
+                  "range": [
+                    1499,
+                    1582
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 40,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 44,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * The slot in which the creative was rendered.\n   *\n   * @type {!Slot}\n   ",
+                  "range": [
+                    1642,
+                    1725
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 49,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 53,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "slot",
+                "range": [
+                  1732,
+                  1736
+                ],
+                "loc": {
+                  "start": {
+                    "line": 54,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 54,
+                    "column": 10
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1752,
+                            1756
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 55,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 55,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_slot",
+                          "range": [
+                            1757,
+                            1762
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 55,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 55,
+                              "column": 21
+                            }
+                          }
+                        },
+                        "range": [
+                          1752,
+                          1762
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 55,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 55,
+                            "column": 21
+                          }
+                        }
+                      },
+                      "range": [
+                        1745,
+                        1763
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 55,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 55,
+                          "column": 22
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1739,
+                    1767
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 54,
+                      "column": 13
+                    },
+                    "end": {
+                      "line": 56,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1736,
+                  1767
+                ],
+                "loc": {
+                  "start": {
+                    "line": 54,
+                    "column": 10
+                  },
+                  "end": {
+                    "line": 56,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                1728,
+                1767
+              ],
+              "loc": {
+                "start": {
+                  "line": 54,
+                  "column": 2
+                },
+                "end": {
+                  "line": 56,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * The slot in which the creative was rendered.\n   *\n   * @type {!Slot}\n   ",
+                  "range": [
+                    1642,
+                    1725
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 49,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 53,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Creative ID of the rendered ad. Value is null for empty slots, backfill ads\n   * or creatives rendered by services other than pubads service.\n   *\n   * @type {?number}\n   ",
+                  "range": [
+                    1771,
+                    1953
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 58,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 63,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "creativeId",
+                "range": [
+                  1960,
+                  1970
+                ],
+                "loc": {
+                  "start": {
+                    "line": 64,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 64,
+                    "column": 16
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1986,
+                            1990
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 65,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 65,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_creativeId",
+                          "range": [
+                            1991,
+                            2002
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 65,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 65,
+                              "column": 27
+                            }
+                          }
+                        },
+                        "range": [
+                          1986,
+                          2002
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 65,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 65,
+                            "column": 27
+                          }
+                        }
+                      },
+                      "range": [
+                        1979,
+                        2003
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 65,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 65,
+                          "column": 28
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1973,
+                    2007
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 64,
+                      "column": 19
+                    },
+                    "end": {
+                      "line": 66,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1970,
+                  2007
+                ],
+                "loc": {
+                  "start": {
+                    "line": 64,
+                    "column": 16
+                  },
+                  "end": {
+                    "line": 66,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                1956,
+                2007
+              ],
+              "loc": {
+                "start": {
+                  "line": 64,
+                  "column": 2
+                },
+                "end": {
+                  "line": 66,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Creative ID of the rendered ad. Value is null for empty slots, backfill ads\n   * or creatives rendered by services other than pubads service.\n   *\n   * @type {?number}\n   ",
+                  "range": [
+                    1771,
+                    1953
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 58,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 63,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * true if no ad was returned for the slot, false otherwise.\n   *\n   * @type {boolean}\n   ",
+                  "range": [
+                    2011,
+                    2109
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 68,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 72,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "isEmpty",
+                "range": [
+                  2116,
+                  2123
+                ],
+                "loc": {
+                  "start": {
+                    "line": 73,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 73,
+                    "column": 13
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            2139,
+                            2143
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 74,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 74,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_isEmpty",
+                          "range": [
+                            2144,
+                            2152
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 74,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 74,
+                              "column": 24
+                            }
+                          }
+                        },
+                        "range": [
+                          2139,
+                          2152
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 74,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 74,
+                            "column": 24
+                          }
+                        }
+                      },
+                      "range": [
+                        2132,
+                        2153
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 74,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 74,
+                          "column": 25
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    2126,
+                    2157
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 73,
+                      "column": 16
+                    },
+                    "end": {
+                      "line": 75,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  2123,
+                  2157
+                ],
+                "loc": {
+                  "start": {
+                    "line": 73,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 75,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                2112,
+                2157
+              ],
+              "loc": {
+                "start": {
+                  "line": 73,
+                  "column": 2
+                },
+                "end": {
+                  "line": 75,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * true if no ad was returned for the slot, false otherwise.\n   *\n   * @type {boolean}\n   ",
+                  "range": [
+                    2011,
+                    2109
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 68,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 72,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Line item ID of the rendered ad. Value is null for empty slots, backfill\n   * ads or creatives rendered by services other than pubads service.\n   *\n   * @type {?number}\n   ",
+                  "range": [
+                    2161,
+                    2344
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 77,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 82,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "lineItemId",
+                "range": [
+                  2351,
+                  2361
+                ],
+                "loc": {
+                  "start": {
+                    "line": 83,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 83,
+                    "column": 16
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            2377,
+                            2381
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 84,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 84,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_lineItemId",
+                          "range": [
+                            2382,
+                            2393
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 84,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 84,
+                              "column": 27
+                            }
+                          }
+                        },
+                        "range": [
+                          2377,
+                          2393
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 84,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 84,
+                            "column": 27
+                          }
+                        }
+                      },
+                      "range": [
+                        2370,
+                        2394
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 84,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 84,
+                          "column": 28
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    2364,
+                    2398
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 83,
+                      "column": 19
+                    },
+                    "end": {
+                      "line": 85,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  2361,
+                  2398
+                ],
+                "loc": {
+                  "start": {
+                    "line": 83,
+                    "column": 16
+                  },
+                  "end": {
+                    "line": 85,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                2347,
+                2398
+              ],
+              "loc": {
+                "start": {
+                  "line": 83,
+                  "column": 2
+                },
+                "end": {
+                  "line": 85,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Line item ID of the rendered ad. Value is null for empty slots, backfill\n   * ads or creatives rendered by services other than pubads service.\n   *\n   * @type {?number}\n   ",
+                  "range": [
+                    2161,
+                    2344
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 77,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 82,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Indicates the pixel size of the rendered creative. Example: [728, 90].\n   * Value is null for empty ad slots.\n   *\n   * @type {SingleSize}\n   ",
+                  "range": [
+                    2402,
+                    2555
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 87,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 92,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "size",
+                "range": [
+                  2562,
+                  2566
+                ],
+                "loc": {
+                  "start": {
+                    "line": 93,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 93,
+                    "column": 10
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            2582,
+                            2586
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 94,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 94,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_size",
+                          "range": [
+                            2587,
+                            2592
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 94,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 94,
+                              "column": 21
+                            }
+                          }
+                        },
+                        "range": [
+                          2582,
+                          2592
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 94,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 94,
+                            "column": 21
+                          }
+                        }
+                      },
+                      "range": [
+                        2575,
+                        2593
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 94,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 94,
+                          "column": 22
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    2569,
+                    2597
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 93,
+                      "column": 13
+                    },
+                    "end": {
+                      "line": 95,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  2566,
+                  2597
+                ],
+                "loc": {
+                  "start": {
+                    "line": 93,
+                    "column": 10
+                  },
+                  "end": {
+                    "line": 95,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                2558,
+                2597
+              ],
+              "loc": {
+                "start": {
+                  "line": 93,
+                  "column": 2
+                },
+                "end": {
+                  "line": 95,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Indicates the pixel size of the rendered creative. Example: [728, 90].\n   * Value is null for empty ad slots.\n   *\n   * @type {SingleSize}\n   ",
+                  "range": [
+                    2402,
+                    2555
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 87,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 92,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            }
+          ],
+          "range": [
+            293,
+            2599
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 42
+            },
+            "end": {
+              "line": 96,
+              "column": 1
+            }
+          }
+        },
+        "range": [
+          266,
+          2599
+        ],
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 15
+          },
+          "end": {
+            "line": 96,
+            "column": 1
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * This event is fired when a slot on the page has finished rendering. The event\n * is fired by the service that rendered the slot. Example: To listen to\n * companion ads, add a listener to the companionAds service, not the pubads\n * service.\n ",
+            "range": [
+              0,
+              250
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": []
+      },
+      "range": [
+        251,
+        2599
+      ],
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 96,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * This event is fired when a slot on the page has finished rendering. The event\n * is fired by the service that rendered the slot. Example: To listen to\n * companion ads, add a listener to the companionAds service, not the pubads\n * service.\n ",
+          "range": [
+            0,
+            250
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    251,
+    2599
+  ],
+  "loc": {
+    "start": {
+      "line": 7,
+      "column": 0
+    },
+    "end": {
+      "line": 96,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * This event is fired when a slot on the page has finished rendering. The event\n * is fired by the service that rendered the slot. Example: To listen to\n * companion ads, add a listener to the companionAds service, not the pubads\n * service.\n ",
+      "range": [
+        0,
+        250
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Creates a new SlotRenderEndedEvent instance.\n   *\n   * @param {string} serviceName Name of the service that rendered the slot.\n   * @param {!Slot} slot The slot in which the creative was rendered.\n   * @param {?number} creativeId Creative ID of the rendered ad. Value is null\n   * for empty slots, backfill ads or creatives rendered by services other than pubads service.\n   * @param {?number} lineItemId Line item ID of the rendered ad. Value is null\n   * for empty slots, backfill ads or creatives rendered by services other than pubads service.\n   * @param {boolean} isEmpty true if no ad was returned for the slot, false otherwise.\n   * @param {SingleSize} size Indicates the pixel size of the rendered\n   * creative. Example: [728, 90]. Value is null for empty ad slots.\n   ",
+      "range": [
+        297,
+        1087
+      ],
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "line": 20,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Name of the event.\n   *\n   * @private\n   * @type {string}\n   ",
+      "range": [
+        1351,
+        1423
+      ],
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 2
+        },
+        "end": {
+          "line": 35,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Name of the service that rendered the slot.\n   *\n   * @type {string}\n   ",
+      "range": [
+        1499,
+        1582
+      ],
+      "loc": {
+        "start": {
+          "line": 40,
+          "column": 2
+        },
+        "end": {
+          "line": 44,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * The slot in which the creative was rendered.\n   *\n   * @type {!Slot}\n   ",
+      "range": [
+        1642,
+        1725
+      ],
+      "loc": {
+        "start": {
+          "line": 49,
+          "column": 2
+        },
+        "end": {
+          "line": 53,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Creative ID of the rendered ad. Value is null for empty slots, backfill ads\n   * or creatives rendered by services other than pubads service.\n   *\n   * @type {?number}\n   ",
+      "range": [
+        1771,
+        1953
+      ],
+      "loc": {
+        "start": {
+          "line": 58,
+          "column": 2
+        },
+        "end": {
+          "line": 63,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * true if no ad was returned for the slot, false otherwise.\n   *\n   * @type {boolean}\n   ",
+      "range": [
+        2011,
+        2109
+      ],
+      "loc": {
+        "start": {
+          "line": 68,
+          "column": 2
+        },
+        "end": {
+          "line": 72,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Line item ID of the rendered ad. Value is null for empty slots, backfill\n   * ads or creatives rendered by services other than pubads service.\n   *\n   * @type {?number}\n   ",
+      "range": [
+        2161,
+        2344
+      ],
+      "loc": {
+        "start": {
+          "line": 77,
+          "column": 2
+        },
+        "end": {
+          "line": 82,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Indicates the pixel size of the rendered creative. Example: [728, 90].\n   * Value is null for empty ad slots.\n   *\n   * @type {SingleSize}\n   ",
+      "range": [
+        2402,
+        2555
+      ],
+      "loc": {
+        "start": {
+          "line": 87,
+          "column": 2
+        },
+        "end": {
+          "line": 92,
+          "column": 5
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1260 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "ClassDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "SafeFrameConfig",
+          "range": [
+            79,
+            94
+          ],
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 21
+            },
+            "end": {
+              "line": 4,
+              "column": 36
+            }
+          }
+        },
+        "superClass": null,
+        "body": {
+          "type": "ClassBody",
+          "body": [
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "constructor",
+                "range": [
+                  478,
+                  489
+                ],
+                "loc": {
+                  "start": {
+                    "line": 13,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 13,
+                    "column": 13
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "allowOverlayExpansion",
+                    "range": [
+                      490,
+                      511
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 35
+                      }
+                    }
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "allowPushExpansion",
+                    "range": [
+                      513,
+                      531
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 37
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 55
+                      }
+                    }
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "sandbox",
+                    "range": [
+                      533,
+                      540
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 57
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 64
+                      }
+                    }
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              548,
+                              552
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 14,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 14,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_allowOverlayExpansion",
+                            "range": [
+                              553,
+                              575
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 14,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 14,
+                                "column": 31
+                              }
+                            }
+                          },
+                          "range": [
+                            548,
+                            575
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 14,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 14,
+                              "column": 31
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "allowOverlayExpansion",
+                          "range": [
+                            578,
+                            599
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 14,
+                              "column": 34
+                            },
+                            "end": {
+                              "line": 14,
+                              "column": 55
+                            }
+                          }
+                        },
+                        "range": [
+                          548,
+                          599
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 14,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 14,
+                            "column": 55
+                          }
+                        }
+                      },
+                      "range": [
+                        548,
+                        600
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 14,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 14,
+                          "column": 56
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              605,
+                              609
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 15,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 15,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_allowPushExpansion",
+                            "range": [
+                              610,
+                              629
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 15,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 15,
+                                "column": 28
+                              }
+                            }
+                          },
+                          "range": [
+                            605,
+                            629
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 15,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 15,
+                              "column": 28
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "allowPushExpansion",
+                          "range": [
+                            632,
+                            650
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 15,
+                              "column": 31
+                            },
+                            "end": {
+                              "line": 15,
+                              "column": 49
+                            }
+                          }
+                        },
+                        "range": [
+                          605,
+                          650
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 15,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 49
+                          }
+                        }
+                      },
+                      "range": [
+                        605,
+                        651
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 50
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              656,
+                              660
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_sandbox",
+                            "range": [
+                              661,
+                              669
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 17
+                              }
+                            }
+                          },
+                          "range": [
+                            656,
+                            669
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 16,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 16,
+                              "column": 17
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "sandbox",
+                          "range": [
+                            672,
+                            679
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 16,
+                              "column": 20
+                            },
+                            "end": {
+                              "line": 16,
+                              "column": 27
+                            }
+                          }
+                        },
+                        "range": [
+                          656,
+                          679
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 16,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 27
+                          }
+                        }
+                      },
+                      "range": [
+                        656,
+                        680
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 16,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 16,
+                          "column": 28
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    542,
+                    684
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 13,
+                      "column": 66
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  489,
+                  684
+                ],
+                "loc": {
+                  "start": {
+                    "line": 13,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "constructor",
+              "computed": false,
+              "range": [
+                478,
+                684
+              ],
+              "loc": {
+                "start": {
+                  "line": 13,
+                  "column": 2
+                },
+                "end": {
+                  "line": 17,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Creates a new {@link SafeFrameConfig}\n   *\n   * @param {boolean} allowOverlayExpansion true to allow expansion by overlay and false otherwise.\n   * @param {boolean} allowPushExpansion true to allow expansion by push and false otherwise.\n   * @param {boolean} sandbox true if SafeFrame should use the HTML5 sandbox\n   * attribute to prevent top level navigation.\n   ",
+                  "range": [
+                    99,
+                    475
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 5,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 12,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * true to allow expansion by overlay and false otherwise.\n   *\n   * @type {boolean}\n   ",
+                  "range": [
+                    688,
+                    784
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 19,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "allowOverlayExpansion",
+                "range": [
+                  791,
+                  812
+                ],
+                "loc": {
+                  "start": {
+                    "line": 24,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 24,
+                    "column": 27
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            828,
+                            832
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 25,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 25,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_allowOverlayExpansion",
+                          "range": [
+                            833,
+                            855
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 25,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 25,
+                              "column": 38
+                            }
+                          }
+                        },
+                        "range": [
+                          828,
+                          855
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 25,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 25,
+                            "column": 38
+                          }
+                        }
+                      },
+                      "range": [
+                        821,
+                        856
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 25,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 25,
+                          "column": 39
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    815,
+                    860
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 24,
+                      "column": 30
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  812,
+                  860
+                ],
+                "loc": {
+                  "start": {
+                    "line": 24,
+                    "column": 27
+                  },
+                  "end": {
+                    "line": 26,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                787,
+                860
+              ],
+              "loc": {
+                "start": {
+                  "line": 24,
+                  "column": 2
+                },
+                "end": {
+                  "line": 26,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * true to allow expansion by overlay and false otherwise.\n   *\n   * @type {boolean}\n   ",
+                  "range": [
+                    688,
+                    784
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 19,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * true to allow expansion by push and false otherwise.\n   *\n   * @type {boolean}\n   ",
+                  "range": [
+                    864,
+                    957
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 32,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "allowPushExpansion",
+                "range": [
+                  964,
+                  982
+                ],
+                "loc": {
+                  "start": {
+                    "line": 33,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 33,
+                    "column": 24
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            998,
+                            1002
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 34,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 34,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_allowPushExpansion",
+                          "range": [
+                            1003,
+                            1022
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 34,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 34,
+                              "column": 35
+                            }
+                          }
+                        },
+                        "range": [
+                          998,
+                          1022
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 34,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 34,
+                            "column": 35
+                          }
+                        }
+                      },
+                      "range": [
+                        991,
+                        1023
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 34,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 34,
+                          "column": 36
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    985,
+                    1027
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 33,
+                      "column": 27
+                    },
+                    "end": {
+                      "line": 35,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  982,
+                  1027
+                ],
+                "loc": {
+                  "start": {
+                    "line": 33,
+                    "column": 24
+                  },
+                  "end": {
+                    "line": 35,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                960,
+                1027
+              ],
+              "loc": {
+                "start": {
+                  "line": 33,
+                  "column": 2
+                },
+                "end": {
+                  "line": 35,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * true to allow expansion by push and false otherwise.\n   *\n   * @type {boolean}\n   ",
+                  "range": [
+                    864,
+                    957
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 32,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * true if SafeFrame should use the HTML5 sandbox\n   * attribute to prevent top level navigation. The only valid value is true (cannot\n   * be forced to false). Note that the sandbox attribute disables plugins (e.g. Flash)\n   * and creatives that attempt to navigate the top level page instead of opening\n   * in a new window.\n   *\n   * @type {boolean} boolean\n   ",
+                  "range": [
+                    1031,
+                    1403
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 37,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 45,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "sandbox",
+                "range": [
+                  1410,
+                  1417
+                ],
+                "loc": {
+                  "start": {
+                    "line": 46,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 13
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1433,
+                            1437
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 47,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 47,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_sandbox",
+                          "range": [
+                            1438,
+                            1446
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 47,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 47,
+                              "column": 24
+                            }
+                          }
+                        },
+                        "range": [
+                          1433,
+                          1446
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 47,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 47,
+                            "column": 24
+                          }
+                        }
+                      },
+                      "range": [
+                        1426,
+                        1447
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 47,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 47,
+                          "column": 25
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1420,
+                    1451
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 46,
+                      "column": 16
+                    },
+                    "end": {
+                      "line": 48,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1417,
+                  1451
+                ],
+                "loc": {
+                  "start": {
+                    "line": 46,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 48,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                1406,
+                1451
+              ],
+              "loc": {
+                "start": {
+                  "line": 46,
+                  "column": 2
+                },
+                "end": {
+                  "line": 48,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * true if SafeFrame should use the HTML5 sandbox\n   * attribute to prevent top level navigation. The only valid value is true (cannot\n   * be forced to false). Note that the sandbox attribute disables plugins (e.g. Flash)\n   * and creatives that attempt to navigate the top level page instead of opening\n   * in a new window.\n   *\n   * @type {boolean} boolean\n   ",
+                  "range": [
+                    1031,
+                    1403
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 37,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 45,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            }
+          ],
+          "range": [
+            95,
+            1453
+          ],
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 37
+            },
+            "end": {
+              "line": 49,
+              "column": 1
+            }
+          }
+        },
+        "range": [
+          73,
+          1453
+        ],
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 15
+          },
+          "end": {
+            "line": 49,
+            "column": 1
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Configuration object for SafeFrame containers.\n ",
+            "range": [
+              0,
+              57
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": []
+      },
+      "range": [
+        58,
+        1453
+      ],
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 49,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Configuration object for SafeFrame containers.\n ",
+          "range": [
+            0,
+            57
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    58,
+    1453
+  ],
+  "loc": {
+    "start": {
+      "line": 4,
+      "column": 0
+    },
+    "end": {
+      "line": 49,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * Configuration object for SafeFrame containers.\n ",
+      "range": [
+        0,
+        57
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Creates a new {@link SafeFrameConfig}\n   *\n   * @param {boolean} allowOverlayExpansion true to allow expansion by overlay and false otherwise.\n   * @param {boolean} allowPushExpansion true to allow expansion by push and false otherwise.\n   * @param {boolean} sandbox true if SafeFrame should use the HTML5 sandbox\n   * attribute to prevent top level navigation.\n   ",
+      "range": [
+        99,
+        475
+      ],
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 2
+        },
+        "end": {
+          "line": 12,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * true to allow expansion by overlay and false otherwise.\n   *\n   * @type {boolean}\n   ",
+      "range": [
+        688,
+        784
+      ],
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 2
+        },
+        "end": {
+          "line": 23,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * true to allow expansion by push and false otherwise.\n   *\n   * @type {boolean}\n   ",
+      "range": [
+        864,
+        957
+      ],
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 2
+        },
+        "end": {
+          "line": 32,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * true if SafeFrame should use the HTML5 sandbox\n   * attribute to prevent top level navigation. The only valid value is true (cannot\n   * be forced to false). Note that the sandbox attribute disables plugins (e.g. Flash)\n   * and creatives that attempt to navigate the top level page instead of opening\n   * in a new window.\n   *\n   * @type {boolean} boolean\n   ",
+      "range": [
+        1031,
+        1403
+      ],
+      "loc": {
+        "start": {
+          "line": 37,
+          "column": 2
+        },
+        "end": {
+          "line": 45,
+          "column": 5
+        }
+      }
+    }
+  ]
+}

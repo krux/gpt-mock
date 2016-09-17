@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">unit/PubAdsService.spec.js | gpt-mock API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CommandArray.js~CommandArray.html">CommandArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GPT.js~GPT.html">GPT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeFrameConfig.js~SafeFrameConfig.html">SafeFrameConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Service.js~Service.html">Service</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Size.js~Size.html">Size</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SlotId.js~SlotId.html">SlotId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array#push</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://www.google.com/dfp">DFP</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">events</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/ImpressionViewableEvent.js~ImpressionViewableEvent.html">ImpressionViewableEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotOnloadEvent.js~SlotOnloadEvent.html">SlotOnloadEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotRenderEndedEvent.js~SlotRenderEndedEvent.html">SlotRenderEndedEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotVisibilityChangedEvent.js~SlotVisibilityChangedEvent.html">SlotVisibilityChangedEvent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">unit/PubAdsService.spec.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import PubAdsService from &apos;../../src/PubAdsService&apos;;
+import SafeFrameConfig from &apos;../../src/SafeFrameConfig&apos;;
+import GPT from &apos;../../src/GPT&apos;;
+import Slot from &apos;../../src/Slot&apos;;
+
+/** @test {PubAdsService} */
+describe(&apos;PubAdsService&apos;, () =&gt; {
+  const gt = new GPT();
+  const adUnitPath = &apos;/Test/12345&apos;;
+  const size = [728, 90];
+
+  /** @test {PubAdsService#constructor} */
+  describe(&apos;#constructor&apos;, () =&gt; {
+    it(&apos;constructs&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service).to.be.ok();
+    });
+  });
+
+  /** @test {PubAdsService#enable} */
+  describe(&apos;#enable&apos;, () =&gt; {
+    it(&apos;returns undefined&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.enable()).to.be(undefined);
+    });
+
+    it(&apos;sets the pubadsReady flag&apos;, () =&gt; {
+      const gt = new GPT();
+      const service = new PubAdsService(gt);
+      expect(gt.pubadsReady).to.be(undefined);
+      service.enable();
+      expect(gt.pubadsReady).to.be(true);
+    });
+  });
+
+  /** @test {PubAdsService#refresh} */
+  describe(&apos;#refresh&apos;, () =&gt; {
+    it(&apos;returns undefined&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      const correlator = service._correlator;
+      expect(service.refresh()).to.be(undefined);
+      expect(service._correlator).to.be(correlator);
+    });
+
+    it(&apos;updates the correlator&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      const correlator = service._correlator;
+      service.refresh(null, {changeCorrelator: true});
+      expect(service._correlator).to.not.be(correlator);
+    });
+
+    it(&apos;fetches all ads&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      const slot = service.definePassback(adUnitPath, size);
+      expect(slot._options.refreshed).to.be(0);
+      expect(slot._options.fetched).to.be(false);
+      service.refresh();
+      expect(slot._options.refreshed).to.be(1);
+      expect(slot._options.fetched).to.be(true);
+      service.refresh();
+      expect(slot._options.refreshed).to.be(2);
+      expect(slot._options.fetched).to.be(true);
+    });
+
+    it(&apos;fetches specified ads&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      const slot1 = service.definePassback(adUnitPath, size);
+      const slot2 = service.definePassback(adUnitPath, size);
+      expect(slot1._options.refreshed).to.be(0);
+      expect(slot1._options.fetched).to.be(false);
+      expect(slot2._options.refreshed).to.be(0);
+      expect(slot2._options.fetched).to.be(false);
+      service.refresh([slot2]);
+      expect(slot1._options.refreshed).to.be(0);
+      expect(slot1._options.fetched).to.be(false);
+      expect(slot2._options.refreshed).to.be(1);
+      expect(slot2._options.fetched).to.be(true);
+      service.refresh([slot2]);
+      expect(slot1._options.refreshed).to.be(0);
+      expect(slot1._options.fetched).to.be(false);
+      expect(slot2._options.refreshed).to.be(2);
+      expect(slot2._options.fetched).to.be(true);
+      service.refresh([slot1]);
+      expect(slot1._options.refreshed).to.be(1);
+      expect(slot1._options.fetched).to.be(true);
+      expect(slot2._options.refreshed).to.be(2);
+      expect(slot2._options.fetched).to.be(true);
+    });
+  });
+
+  /** @test {PubAdsService#clear} */
+  describe(&apos;#clear&apos;, () =&gt; {
+    const content = &apos;TEST CONTENT&apos;;
+
+    it(&apos;returns true if no slots registered&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.clear()).to.be(true);
+    });
+
+    it(&apos;returns true if slots registered and clearing all&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      const slot = service.definePassback(adUnitPath, size);
+      slot._setContent(content);
+      expect(slot._getContent()).to.be(content);
+      expect(service.clear()).to.be(true);
+      expect(slot._getContent()).to.be(null);
+    });
+
+    it(&apos;returns true if slots registered and clearing existing&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      const slot = service.definePassback(adUnitPath, size);
+      slot._setContent(content);
+      expect(slot._getContent()).to.be(content);
+      expect(service.clear([slot])).to.be(true);
+      expect(slot._getContent()).to.be(null);
+    });
+
+    it(&apos;returns false if slots registered and clearing non-existing&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      const slot = service.definePassback(adUnitPath, size);
+      const unrelatedSlot = new Slot(adUnitPath, size);
+      slot._setContent(content);
+      expect(slot._getContent()).to.be(content);
+      expect(service.clear([unrelatedSlot])).to.be(false);
+      expect(slot._getContent()).to.be(content);
+    });
+
+    it(&apos;clears only specified&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      const slot1 = service.definePassback(adUnitPath, size);
+      const slot2 = service.definePassback(adUnitPath, size);
+      slot1._setContent(content);
+      slot2._setContent(content);
+      expect(slot1._getContent()).to.be(content);
+      expect(slot2._getContent()).to.be(content);
+      expect(service.clear([slot2])).to.be(true);
+      expect(slot1._getContent()).to.be(content);
+      expect(slot2._getContent()).to.be(null);
+
+    });
+  });
+
+  /** @test {PubAdsService#defineOutOfPagePassback} */
+  describe(&apos;#defineOutOfPagePassback&apos;, () =&gt; {
+    it(&apos;returns the null if no adUnitPath&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.defineOutOfPagePassback()).to.be(null);
+    });
+
+    it(&apos;returns slot if adUnitPath provided&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      const slot = service.defineOutOfPagePassback(adUnitPath);
+      expect(slot).to.be.ok();
+      expect(slot.getAdUnitPath()).to.be(adUnitPath);
+      expect(slot._passback).to.be(true);
+      expect(slot._outOfPage).to.be(true);
+    });
+  });
+
+  /** @test {PubAdsService#definePassback} */
+  describe(&apos;#definePassback&apos;, () =&gt; {
+    it(&apos;returns the null if no adUnitPath&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.definePassback()).to.be(null);
+    });
+
+    it(&apos;returns the null if no size&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.definePassback(adUnitPath)).to.be(null);
+    });
+
+    it(&apos;returns slot if adUnitPath and size provided&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      const slot = service.definePassback(adUnitPath, size);
+      expect(slot).to.be.ok();
+      expect(slot.getAdUnitPath()).to.be(adUnitPath);
+      expect(slot.getSizes()).to.be.an(&apos;array&apos;);
+      expect(slot.getSizes()).to.have.length(1);
+      expect(slot.getSizes()[0].getWidth()).to.be(size[0]);
+      expect(slot.getSizes()[0].getHeight()).to.be(size[1]);
+      expect(slot._passback).to.be(true);
+    });
+  });
+
+  /** @test {PubAdsService#disableInitialLoad} */
+  describe(&apos;#disableInitialLoad&apos;, () =&gt; {
+    it(&apos;returns undefined&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.disableInitialLoad()).to.be(undefined);
+    });
+
+    it(&apos;sets the initialLoad flag&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._options.initialLoad).to.be(true);
+      service.disableInitialLoad();
+      expect(service._options.initialLoad).to.be(false);
+    });
+  });
+
+  /** @test {PubAdsService#enableAsyncRendering} */
+  describe(&apos;#enableAsyncRendering&apos;, () =&gt; {
+    it(&apos;returns true if not enabled&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.enableAsyncRendering()).to.be(true);
+    });
+
+    it(&apos;returns false if enabled&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      service.enable();
+      expect(service.enableAsyncRendering()).to.be(false);
+    });
+
+    it(&apos;sets the asyncRendering flag&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._options.asyncRendering).to.be(false);
+      service.enableAsyncRendering();
+      expect(service._options.asyncRendering).to.be(true);
+    });
+  });
+
+  /** @test {PubAdsService#enableSingleRequest} */
+  describe(&apos;#enableSingleRequest&apos;, () =&gt; {
+    it(&apos;returns true if not enabled&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.enableSingleRequest()).to.be(true);
+    });
+
+    it(&apos;returns false if enabled&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      service.enable();
+      expect(service.enableSingleRequest()).to.be(false);
+    });
+
+    it(&apos;sets the asyncRendering flag&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._options.singleRequest).to.be(false);
+      service.enableSingleRequest();
+      expect(service._options.singleRequest).to.be(true);
+    });
+  });
+
+  /** @test {PubAdsService#enableSyncRendering} */
+  describe(&apos;#enableSyncRendering&apos;, () =&gt; {
+    it(&apos;returns true if not enabled&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.enableSyncRendering()).to.be(true);
+    });
+
+    it(&apos;returns false if enabled&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      service.enable();
+      expect(service.enableSyncRendering()).to.be(false);
+    });
+
+    it(&apos;sets the syncRendering flag&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._options.syncRendering).to.be(false);
+      service.enableSyncRendering();
+      expect(service._options.syncRendering).to.be(true);
+    });
+  });
+
+  /** @test {PubAdsService#enableVideoAds} */
+  describe(&apos;#enableVideoAds&apos;, () =&gt; {
+    it(&apos;returns undefined&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.enableVideoAds()).to.be(undefined);
+    });
+
+    it(&apos;sets the videoAds flag&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._options.videoAds).to.be(false);
+      service.enableVideoAds();
+      expect(service._options.videoAds).to.be(true);
+    });
+  });
+
+  /** @test {PubAdsService#setTargeting} */
+  describe(&apos;#setTargeting&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.setTargeting(&apos;kv1&apos;, &apos;value1&apos;)).to.be(service);
+    });
+
+    it(&apos;saves value as array if given a single value&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      service.setTargeting(&apos;kv1&apos;, &apos;value1&apos;);
+      expect(service.getTargeting(&apos;kv1&apos;)).to.eql([&apos;value1&apos;]);
+    });
+
+    it(&apos;saves value as array if given an array value&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      service.setTargeting(&apos;kv1&apos;, [&apos;value1&apos;, &apos;value2&apos;]);
+      expect(service.getTargeting(&apos;kv1&apos;)).to.eql([&apos;value1&apos;, &apos;value2&apos;]);
+    });
+  });
+
+  /** @test {PubAdsService#getTargeting} */
+  describe(&apos;#getTargeting&apos;, () =&gt; {
+    it(&apos;returns empty array if no value&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.getTargeting(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(service.getTargeting(&apos;kv1&apos;)).to.be.empty();
+    });
+
+    it(&apos;returns value as an array&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      service.setTargeting(&apos;kv1&apos;, &apos;value1&apos;);
+      expect(service.getTargeting(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(service.getTargeting(&apos;kv1&apos;)).to.eql([&apos;value1&apos;]);
+    });
+  });
+
+  /** @test {PubAdsService#getTargetingKeys} */
+  describe(&apos;#getTargetingKeys&apos;, () =&gt; {
+    it(&apos;returns empty array if no targeting&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.getTargetingKeys()).to.be.an(&apos;array&apos;);
+      expect(service.getTargetingKeys()).to.be.empty();
+    });
+
+    it(&apos;returns array of keys&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      service.setTargeting(&apos;kv1&apos;, &apos;value1&apos;);
+      expect(service.getTargetingKeys()).to.be.an(&apos;array&apos;);
+      expect(service.getTargetingKeys()).to.eql([&apos;kv1&apos;]);
+    });
+  });
+
+  /** @test {PubAdsService#clearTargeting} */
+  describe(&apos;#clearTargeting&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.clearTargeting(&apos;kv1&apos;)).to.be(service);
+    });
+
+    it(&apos;clears targeting&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      service.setTargeting(&apos;kv1&apos;, &apos;value1&apos;);
+      expect(service.getTargetingKeys()).to.be.an(&apos;array&apos;);
+      expect(service.getTargetingKeys()).to.eql([&apos;kv1&apos;]);
+      service.clearTargeting(&apos;kv1&apos;);
+      expect(service.getTargetingKeys()).to.be.an(&apos;array&apos;);
+      expect(service.getTargetingKeys()).to.empty();
+    });
+  });
+
+  /** @test {PubAdsService#collapseEmptyDivs} */
+  describe(&apos;#collapseEmptyDivs&apos;, () =&gt; {
+    it(&apos;returns true if not enabled&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.collapseEmptyDivs()).to.be(true);
+    });
+
+    it(&apos;returns false if enabled&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      service.enable();
+      expect(service.collapseEmptyDivs()).to.be(false);
+    });
+
+    it(&apos;sets the collapseEmptyDivs flag&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._options.collapseEmptyDivs).to.be(false);
+      service.collapseEmptyDivs();
+      expect(service._options.collapseEmptyDivs).to.be(true);
+    });
+
+    it(&apos;sets the collapseBeforeAdFetch flag&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._options.collapseBeforeAdFetch).to.be(false);
+      service.collapseEmptyDivs(true);
+      expect(service._options.collapseBeforeAdFetch).to.be(true);
+    });
+  });
+
+  /** @test {PubAdsService#setCategoryExclusion} */
+  describe(&apos;#setCategoryExclusion&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.setCategoryExclusion(&apos;ex1&apos;)).to.be(service);
+    });
+
+    it(&apos;adds an exclusion&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._categoryExclusions).to.be.an(&apos;array&apos;);
+      expect(service._categoryExclusions).to.be.empty();
+      service.setCategoryExclusion(&apos;ex1&apos;);
+      expect(service._categoryExclusions).to.be.eql([&apos;ex1&apos;]);
+    });
+
+    it(&apos;accumulates exclusions&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._categoryExclusions).to.be.an(&apos;array&apos;);
+      expect(service._categoryExclusions).to.be.empty();
+      service.setCategoryExclusion(&apos;ex1&apos;);
+      expect(service._categoryExclusions).to.be.eql([&apos;ex1&apos;]);
+      service.setCategoryExclusion(&apos;ex2&apos;);
+      expect(service._categoryExclusions).to.be.eql([&apos;ex1&apos;, &apos;ex2&apos;]);
+    });
+  });
+
+  /** @test {PubAdsService#clearCategoryExclusions} */
+  describe(&apos;#clearCategoryExclusions&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.clearCategoryExclusions()).to.be(service);
+    });
+
+    it(&apos;clears the exclusions&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._categoryExclusions).to.be.an(&apos;array&apos;);
+      expect(service._categoryExclusions).to.be.empty();
+      service.setCategoryExclusion(&apos;ex1&apos;);
+      expect(service._categoryExclusions).to.be.eql([&apos;ex1&apos;]);
+      service.setCategoryExclusion(&apos;ex2&apos;);
+      expect(service._categoryExclusions).to.be.eql([&apos;ex1&apos;, &apos;ex2&apos;]);
+      service.clearCategoryExclusions();
+      expect(service._categoryExclusions).to.be.empty();
+    });
+  });
+
+  /** @test {PubAdsService#setCentering} */
+  describe(&apos;#setCentering&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.setCentering(1)).to.be(undefined);
+    });
+
+    it(&apos;sets the centerAds flag&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      service.setCentering(1);
+      expect(service._options.centerAds).to.be(1);
+    });
+  });
+
+  /** @test {PubAdsService#setCookieOptions} */
+  describe(&apos;#setCookieOptions&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.setCookieOptions(1)).to.be(service);
+    });
+
+    it(&apos;does something else&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._options.cookieOptions).to.be(null);
+      service.setCookieOptions(1);
+      expect(service._options.cookieOptions).to.be(1);
+    });
+  });
+
+  /** @test {PubAdsService#setForceSafeFrame} */
+  describe(&apos;#setForceSafeFrame&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.setForceSafeFrame(true)).to.be(service);
+    });
+
+    it(&apos;does something else&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._options.forceSafeFrame).to.be(false);
+      service.setForceSafeFrame(true);
+      expect(service._options.forceSafeFrame).to.be(true);
+    });
+  });
+
+  /** @test {PubAdsService#setLocation} */
+  describe(&apos;#setLocation&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.setLocation(1.0)).to.be(service);
+    });
+
+    it(&apos;saves an address&apos;, () =&gt; {
+      const address = &apos;123 Main Street&apos;;
+      const service = new PubAdsService(gt);
+      service.setLocation(address);
+      expect(service._options.address).to.be(address);
+      expect(service._options.latitude).to.be(null);
+      expect(service._options.longitude).to.be(null);
+      expect(service._options.radius).to.be(null);
+    });
+
+    it(&apos;saves an lat/lon&apos;, () =&gt; {
+      const latitude = 40.2524632;
+      const longitude = 58.4374557;
+      const service = new PubAdsService(gt);
+      service.setLocation(latitude, longitude);
+      expect(service._options.address).to.be(null);
+      expect(service._options.latitude).to.be(latitude);
+      expect(service._options.longitude).to.be(longitude);
+      expect(service._options.radius).to.be(null);
+    });
+
+    it(&apos;saves an lat/lon with radius&apos;, () =&gt; {
+      const latitude = 40.2524632;
+      const longitude = 58.4374557;
+      const radius = 100000;
+      const service = new PubAdsService(gt);
+      service.setLocation(latitude, longitude, radius);
+      expect(service._options.address).to.be(null);
+      expect(service._options.latitude).to.be(latitude);
+      expect(service._options.longitude).to.be(longitude);
+      expect(service._options.radius).to.be(radius);
+    });
+  });
+
+  /** @test {PubAdsService#setPublisherProvidedId} */
+  describe(&apos;#setPublisherProvidedId&apos;, () =&gt; {
+    const ppid = &apos;ppid_1234567&apos;;
+
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.setPublisherProvidedId(ppid)).to.be(service);
+    });
+
+    it(&apos;saves the ppid&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      service.setPublisherProvidedId(ppid);
+      expect(service._options.ppid).to.be(ppid);
+    });
+  });
+
+  /** @test {PubAdsService#setSafeFrameConfig} */
+  describe(&apos;#setSafeFrameConfig&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const allowOverlayExpansion = true;
+      const allowPushExpansion = true;
+      const sandbox = true;
+      const config = new SafeFrameConfig(allowOverlayExpansion, allowPushExpansion, sandbox);
+      const service = new PubAdsService(gt);
+      expect(service.setSafeFrameConfig(config)).to.be(service);
+    });
+
+    it(&apos;saves the config&apos;, () =&gt; {
+      const allowOverlayExpansion = true;
+      const allowPushExpansion = true;
+      const sandbox = true;
+      const config = new SafeFrameConfig(allowOverlayExpansion, allowPushExpansion, sandbox);
+      const service = new PubAdsService(gt);
+      service.setSafeFrameConfig(config);
+      expect(service._options.safeFrameConfig).to.eql(config);
+    });
+  });
+
+  /** @test {PubAdsService#setTagForChildDirectedTreatment} */
+  describe(&apos;#setTagForChildDirectedTreatment&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.setTagForChildDirectedTreatment(1)).to.be(service);
+    });
+
+    it(&apos;does something else&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._options.tagForChildDirectedTreatment).to.be(null);
+      service.setTagForChildDirectedTreatment(1);
+      expect(service._options.tagForChildDirectedTreatment).to.be(1);
+    });
+  });
+
+  /** @test {PubAdsService#clearTagForChildDirectedTreatment} */
+  describe(&apos;#clearTagForChildDirectedTreatment&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.clearTagForChildDirectedTreatment()).to.be(service);
+    });
+
+    it(&apos;does something else&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service._options.tagForChildDirectedTreatment).to.be(null);
+      service.setTagForChildDirectedTreatment(1);
+      expect(service._options.tagForChildDirectedTreatment).to.be(1);
+      service.clearTagForChildDirectedTreatment();
+      expect(service._options.tagForChildDirectedTreatment).to.be(null);
+    });
+  });
+
+  /** @test {PubAdsService#setVideoContent} */
+  describe(&apos;#setVideoContent&apos;, () =&gt; {
+    const videoContentId = &apos;CONTENTID&apos;;
+    const videoCmsId = &apos;CMSID&apos;;
+    it(&apos;returns undefined&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.setVideoContent(videoContentId, videoCmsId)).to.be(undefined);
+    });
+
+    it(&apos;saves the ID\&apos;s&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      service.setVideoContent(videoContentId, videoCmsId);
+      expect(service._options.videoContentId).to.be(videoContentId);
+      expect(service._options.videoCmsId).to.be(videoCmsId);
+    });
+  });
+
+  /** @test {PubAdsService#updateCorrelator} */
+  describe(&apos;#updateCorrelator&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new PubAdsService(gt);
+      expect(service.updateCorrelator()).to.be(service);
+    });
+  });
+
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.8)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

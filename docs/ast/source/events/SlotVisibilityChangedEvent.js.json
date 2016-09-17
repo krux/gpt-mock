@@ -1,0 +1,1432 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "ClassDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "SlotVisibilityChangedEvent",
+          "range": [
+            197,
+            223
+          ],
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 21
+            },
+            "end": {
+              "line": 6,
+              "column": 47
+            }
+          }
+        },
+        "superClass": null,
+        "body": {
+          "type": "ClassBody",
+          "body": [
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "constructor",
+                "range": [
+                  529,
+                  540
+                ],
+                "loc": {
+                  "start": {
+                    "line": 14,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 14,
+                    "column": 13
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "serviceName",
+                    "range": [
+                      541,
+                      552
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 14,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 14,
+                        "column": 25
+                      }
+                    }
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "slot",
+                    "range": [
+                      554,
+                      558
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 14,
+                        "column": 27
+                      },
+                      "end": {
+                        "line": 14,
+                        "column": 31
+                      }
+                    }
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "inViewPercentage",
+                    "range": [
+                      560,
+                      576
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 14,
+                        "column": 33
+                      },
+                      "end": {
+                        "line": 14,
+                        "column": 49
+                      }
+                    }
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              584,
+                              588
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 15,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 15,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_serviceName",
+                            "range": [
+                              589,
+                              601
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 15,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 15,
+                                "column": 21
+                              }
+                            }
+                          },
+                          "range": [
+                            584,
+                            601
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 15,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 15,
+                              "column": 21
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "serviceName",
+                          "range": [
+                            604,
+                            615
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 15,
+                              "column": 24
+                            },
+                            "end": {
+                              "line": 15,
+                              "column": 35
+                            }
+                          }
+                        },
+                        "range": [
+                          584,
+                          615
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 15,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 35
+                          }
+                        }
+                      },
+                      "range": [
+                        584,
+                        616
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 36
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              621,
+                              625
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_slot",
+                            "range": [
+                              626,
+                              631
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 14
+                              }
+                            }
+                          },
+                          "range": [
+                            621,
+                            631
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 16,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 16,
+                              "column": 14
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "slot",
+                          "range": [
+                            634,
+                            638
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 16,
+                              "column": 17
+                            },
+                            "end": {
+                              "line": 16,
+                              "column": 21
+                            }
+                          }
+                        },
+                        "range": [
+                          621,
+                          638
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 16,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 21
+                          }
+                        }
+                      },
+                      "range": [
+                        621,
+                        639
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 16,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 16,
+                          "column": 22
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              644,
+                              648
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 17,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 17,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_inViewPercentage",
+                            "range": [
+                              649,
+                              666
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 17,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 17,
+                                "column": 26
+                              }
+                            }
+                          },
+                          "range": [
+                            644,
+                            666
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 17,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 17,
+                              "column": 26
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "inViewPercentage",
+                          "range": [
+                            669,
+                            685
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 17,
+                              "column": 29
+                            },
+                            "end": {
+                              "line": 17,
+                              "column": 45
+                            }
+                          }
+                        },
+                        "range": [
+                          644,
+                          685
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 17,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 17,
+                            "column": 45
+                          }
+                        }
+                      },
+                      "range": [
+                        644,
+                        686
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 17,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 17,
+                          "column": 46
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    578,
+                    690
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 14,
+                      "column": 51
+                    },
+                    "end": {
+                      "line": 18,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  540,
+                  690
+                ],
+                "loc": {
+                  "start": {
+                    "line": 14,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 18,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "constructor",
+              "computed": false,
+              "range": [
+                529,
+                690
+              ],
+              "loc": {
+                "start": {
+                  "line": 14,
+                  "column": 2
+                },
+                "end": {
+                  "line": 18,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Creates a new SlotVisibilityChangedEvent instance.\n   *\n   * @param {string} serviceName Name of the service that owns the slot.\n   * @param {!Slot} slot The slot whose visibility changed.\n   * @param {number} inViewPercentage The percentage (0-100) of the ad's area that is visible.\n   ",
+                  "range": [
+                    228,
+                    526
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 13,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Name of the event.\n   *\n   * @private\n   * @type {string}\n   ",
+                  "range": [
+                    694,
+                    766
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 20,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 25,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "_name",
+                "range": [
+                  773,
+                  778
+                ],
+                "loc": {
+                  "start": {
+                    "line": 26,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 26,
+                    "column": 11
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Literal",
+                        "value": "googletag.events.SlotVisibilityChangedEvent",
+                        "raw": "'googletag.events.SlotVisibilityChangedEvent'",
+                        "range": [
+                          794,
+                          839
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 27,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 27,
+                            "column": 56
+                          }
+                        }
+                      },
+                      "range": [
+                        787,
+                        840
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 27,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 57
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    781,
+                    844
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 26,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  778,
+                  844
+                ],
+                "loc": {
+                  "start": {
+                    "line": 26,
+                    "column": 11
+                  },
+                  "end": {
+                    "line": 28,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                769,
+                844
+              ],
+              "loc": {
+                "start": {
+                  "line": 26,
+                  "column": 2
+                },
+                "end": {
+                  "line": 28,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Name of the event.\n   *\n   * @private\n   * @type {string}\n   ",
+                  "range": [
+                    694,
+                    766
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 20,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 25,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Name of the service that rendered the slot.\n   *\n   * @type {string}\n   ",
+                  "range": [
+                    848,
+                    931
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 30,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "serviceName",
+                "range": [
+                  938,
+                  949
+                ],
+                "loc": {
+                  "start": {
+                    "line": 35,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 35,
+                    "column": 17
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            965,
+                            969
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 36,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 36,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_serviceName",
+                          "range": [
+                            970,
+                            982
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 36,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 36,
+                              "column": 28
+                            }
+                          }
+                        },
+                        "range": [
+                          965,
+                          982
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 36,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 36,
+                            "column": 28
+                          }
+                        }
+                      },
+                      "range": [
+                        958,
+                        983
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 36,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 36,
+                          "column": 29
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    952,
+                    987
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 35,
+                      "column": 20
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  949,
+                  987
+                ],
+                "loc": {
+                  "start": {
+                    "line": 35,
+                    "column": 17
+                  },
+                  "end": {
+                    "line": 37,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                934,
+                987
+              ],
+              "loc": {
+                "start": {
+                  "line": 35,
+                  "column": 2
+                },
+                "end": {
+                  "line": 37,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Name of the service that rendered the slot.\n   *\n   * @type {string}\n   ",
+                  "range": [
+                    848,
+                    931
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 30,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * The slot which contains the impression that became viewable.\n   *\n   * @type {!Slot}\n   ",
+                  "range": [
+                    991,
+                    1090
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 39,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 43,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "slot",
+                "range": [
+                  1097,
+                  1101
+                ],
+                "loc": {
+                  "start": {
+                    "line": 44,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 44,
+                    "column": 10
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1117,
+                            1121
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 45,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 45,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_slot",
+                          "range": [
+                            1122,
+                            1127
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 45,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 45,
+                              "column": 21
+                            }
+                          }
+                        },
+                        "range": [
+                          1117,
+                          1127
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 45,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 45,
+                            "column": 21
+                          }
+                        }
+                      },
+                      "range": [
+                        1110,
+                        1128
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 45,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 45,
+                          "column": 22
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1104,
+                    1132
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 44,
+                      "column": 13
+                    },
+                    "end": {
+                      "line": 46,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1101,
+                  1132
+                ],
+                "loc": {
+                  "start": {
+                    "line": 44,
+                    "column": 10
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                1093,
+                1132
+              ],
+              "loc": {
+                "start": {
+                  "line": 44,
+                  "column": 2
+                },
+                "end": {
+                  "line": 46,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * The slot which contains the impression that became viewable.\n   *\n   * @type {!Slot}\n   ",
+                  "range": [
+                    991,
+                    1090
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 39,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 43,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * The percentage of the ad that is \"in view\".\n   *\n   * @type {number}\n   ",
+                  "range": [
+                    1136,
+                    1219
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 48,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 52,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "inViewPercentage",
+                "range": [
+                  1226,
+                  1242
+                ],
+                "loc": {
+                  "start": {
+                    "line": 53,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 53,
+                    "column": 22
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1258,
+                            1262
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 54,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 54,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_inViewPercentage",
+                          "range": [
+                            1263,
+                            1280
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 54,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 54,
+                              "column": 33
+                            }
+                          }
+                        },
+                        "range": [
+                          1258,
+                          1280
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 54,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 54,
+                            "column": 33
+                          }
+                        }
+                      },
+                      "range": [
+                        1251,
+                        1281
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 54,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 54,
+                          "column": 34
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1245,
+                    1285
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 53,
+                      "column": 25
+                    },
+                    "end": {
+                      "line": 55,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1242,
+                  1285
+                ],
+                "loc": {
+                  "start": {
+                    "line": 53,
+                    "column": 22
+                  },
+                  "end": {
+                    "line": 55,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                1222,
+                1285
+              ],
+              "loc": {
+                "start": {
+                  "line": 53,
+                  "column": 2
+                },
+                "end": {
+                  "line": 55,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * The percentage of the ad that is \"in view\".\n   *\n   * @type {number}\n   ",
+                  "range": [
+                    1136,
+                    1219
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 48,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 52,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            }
+          ],
+          "range": [
+            224,
+            1287
+          ],
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 48
+            },
+            "end": {
+              "line": 56,
+              "column": 1
+            }
+          }
+        },
+        "range": [
+          191,
+          1287
+        ],
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 15
+          },
+          "end": {
+            "line": 56,
+            "column": 1
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * This event is fired whenever the on-screen percentage of an ad slot's area\n * changes. The event is throttled and will not fire more often than once every\n * 200ms.\n ",
+            "range": [
+              0,
+              175
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": []
+      },
+      "range": [
+        176,
+        1287
+      ],
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 56,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * This event is fired whenever the on-screen percentage of an ad slot's area\n * changes. The event is throttled and will not fire more often than once every\n * 200ms.\n ",
+          "range": [
+            0,
+            175
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    176,
+    1287
+  ],
+  "loc": {
+    "start": {
+      "line": 6,
+      "column": 0
+    },
+    "end": {
+      "line": 56,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * This event is fired whenever the on-screen percentage of an ad slot's area\n * changes. The event is throttled and will not fire more often than once every\n * 200ms.\n ",
+      "range": [
+        0,
+        175
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Creates a new SlotVisibilityChangedEvent instance.\n   *\n   * @param {string} serviceName Name of the service that owns the slot.\n   * @param {!Slot} slot The slot whose visibility changed.\n   * @param {number} inViewPercentage The percentage (0-100) of the ad's area that is visible.\n   ",
+      "range": [
+        228,
+        526
+      ],
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 2
+        },
+        "end": {
+          "line": 13,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Name of the event.\n   *\n   * @private\n   * @type {string}\n   ",
+      "range": [
+        694,
+        766
+      ],
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 2
+        },
+        "end": {
+          "line": 25,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Name of the service that rendered the slot.\n   *\n   * @type {string}\n   ",
+      "range": [
+        848,
+        931
+      ],
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 2
+        },
+        "end": {
+          "line": 34,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * The slot which contains the impression that became viewable.\n   *\n   * @type {!Slot}\n   ",
+      "range": [
+        991,
+        1090
+      ],
+      "loc": {
+        "start": {
+          "line": 39,
+          "column": 2
+        },
+        "end": {
+          "line": 43,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * The percentage of the ad that is \"in view\".\n   *\n   * @type {number}\n   ",
+      "range": [
+        1136,
+        1219
+      ],
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 2
+        },
+        "end": {
+          "line": 52,
+          "column": 5
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1102 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "ClassDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "SlotOnloadEvent",
+          "range": [
+            216,
+            231
+          ],
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 21
+            },
+            "end": {
+              "line": 6,
+              "column": 36
+            }
+          }
+        },
+        "superClass": null,
+        "body": {
+          "type": "ClassBody",
+          "body": [
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "constructor",
+                "range": [
+                  443,
+                  454
+                ],
+                "loc": {
+                  "start": {
+                    "line": 13,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 13,
+                    "column": 13
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "serviceName",
+                    "range": [
+                      455,
+                      466
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 25
+                      }
+                    }
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "slot",
+                    "range": [
+                      468,
+                      472
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 27
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 31
+                      }
+                    }
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              480,
+                              484
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 14,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 14,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_serviceName",
+                            "range": [
+                              485,
+                              497
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 14,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 14,
+                                "column": 21
+                              }
+                            }
+                          },
+                          "range": [
+                            480,
+                            497
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 14,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 14,
+                              "column": 21
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "serviceName",
+                          "range": [
+                            500,
+                            511
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 14,
+                              "column": 24
+                            },
+                            "end": {
+                              "line": 14,
+                              "column": 35
+                            }
+                          }
+                        },
+                        "range": [
+                          480,
+                          511
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 14,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 14,
+                            "column": 35
+                          }
+                        }
+                      },
+                      "range": [
+                        480,
+                        512
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 14,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 14,
+                          "column": 36
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              517,
+                              521
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 15,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 15,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_slot",
+                            "range": [
+                              522,
+                              527
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 15,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 15,
+                                "column": 14
+                              }
+                            }
+                          },
+                          "range": [
+                            517,
+                            527
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 15,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 15,
+                              "column": 14
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "name": "slot",
+                          "range": [
+                            530,
+                            534
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 15,
+                              "column": 17
+                            },
+                            "end": {
+                              "line": 15,
+                              "column": 21
+                            }
+                          }
+                        },
+                        "range": [
+                          517,
+                          534
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 15,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 21
+                          }
+                        }
+                      },
+                      "range": [
+                        517,
+                        535
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 22
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    474,
+                    539
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 13,
+                      "column": 33
+                    },
+                    "end": {
+                      "line": 16,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  454,
+                  539
+                ],
+                "loc": {
+                  "start": {
+                    "line": 13,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 16,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "constructor",
+              "computed": false,
+              "range": [
+                443,
+                539
+              ],
+              "loc": {
+                "start": {
+                  "line": 13,
+                  "column": 2
+                },
+                "end": {
+                  "line": 16,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Creates a new SlotOnloadEvent instance.\n   *\n   * @param {string} serviceName Name of the service that rendered the slot.\n   * @param {!Slot} slot The slot in which the creative was loaded.\n   ",
+                  "range": [
+                    236,
+                    440
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 12,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Name of the event.\n   *\n   * @private\n   * @type {string}\n   ",
+                  "range": [
+                    543,
+                    615
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 18,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "_name",
+                "range": [
+                  622,
+                  627
+                ],
+                "loc": {
+                  "start": {
+                    "line": 24,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 24,
+                    "column": 11
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Literal",
+                        "value": "googletag.events.SlotOnloadEvent",
+                        "raw": "'googletag.events.SlotOnloadEvent'",
+                        "range": [
+                          643,
+                          677
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 25,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 25,
+                            "column": 45
+                          }
+                        }
+                      },
+                      "range": [
+                        636,
+                        678
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 25,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 25,
+                          "column": 46
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    630,
+                    682
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 24,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  627,
+                  682
+                ],
+                "loc": {
+                  "start": {
+                    "line": 24,
+                    "column": 11
+                  },
+                  "end": {
+                    "line": 26,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                618,
+                682
+              ],
+              "loc": {
+                "start": {
+                  "line": 24,
+                  "column": 2
+                },
+                "end": {
+                  "line": 26,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Name of the event.\n   *\n   * @private\n   * @type {string}\n   ",
+                  "range": [
+                    543,
+                    615
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 18,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Name of the service that rendered the slot.\n   *\n   * @type {string}\n   ",
+                  "range": [
+                    686,
+                    769
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 32,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "serviceName",
+                "range": [
+                  776,
+                  787
+                ],
+                "loc": {
+                  "start": {
+                    "line": 33,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 33,
+                    "column": 17
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            803,
+                            807
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 34,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 34,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_serviceName",
+                          "range": [
+                            808,
+                            820
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 34,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 34,
+                              "column": 28
+                            }
+                          }
+                        },
+                        "range": [
+                          803,
+                          820
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 34,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 34,
+                            "column": 28
+                          }
+                        }
+                      },
+                      "range": [
+                        796,
+                        821
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 34,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 34,
+                          "column": 29
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    790,
+                    825
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 33,
+                      "column": 20
+                    },
+                    "end": {
+                      "line": 35,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  787,
+                  825
+                ],
+                "loc": {
+                  "start": {
+                    "line": 33,
+                    "column": 17
+                  },
+                  "end": {
+                    "line": 35,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                772,
+                825
+              ],
+              "loc": {
+                "start": {
+                  "line": 33,
+                  "column": 2
+                },
+                "end": {
+                  "line": 35,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Name of the service that rendered the slot.\n   *\n   * @type {string}\n   ",
+                  "range": [
+                    686,
+                    769
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 32,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * The slot in which the creative was loaded.\n   *\n   * @type {!Slot}\n   ",
+                  "range": [
+                    829,
+                    910
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 37,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 41,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "slot",
+                "range": [
+                  917,
+                  921
+                ],
+                "loc": {
+                  "start": {
+                    "line": 42,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 42,
+                    "column": 10
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            937,
+                            941
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 43,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 43,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "_slot",
+                          "range": [
+                            942,
+                            947
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 43,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 43,
+                              "column": 21
+                            }
+                          }
+                        },
+                        "range": [
+                          937,
+                          947
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 43,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 43,
+                            "column": 21
+                          }
+                        }
+                      },
+                      "range": [
+                        930,
+                        948
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 43,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 43,
+                          "column": 22
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    924,
+                    952
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 42,
+                      "column": 13
+                    },
+                    "end": {
+                      "line": 44,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  921,
+                  952
+                ],
+                "loc": {
+                  "start": {
+                    "line": 42,
+                    "column": 10
+                  },
+                  "end": {
+                    "line": 44,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "get",
+              "computed": false,
+              "range": [
+                913,
+                952
+              ],
+              "loc": {
+                "start": {
+                  "line": 42,
+                  "column": 2
+                },
+                "end": {
+                  "line": 44,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * The slot in which the creative was loaded.\n   *\n   * @type {!Slot}\n   ",
+                  "range": [
+                    829,
+                    910
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 37,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 41,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            }
+          ],
+          "range": [
+            232,
+            954
+          ],
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 37
+            },
+            "end": {
+              "line": 45,
+              "column": 1
+            }
+          }
+        },
+        "range": [
+          210,
+          954
+        ],
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 15
+          },
+          "end": {
+            "line": 45,
+            "column": 1
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * This event is fired when the creative's iframe fires its load event. When\n * rendering rich media ads in sync rendering mode, no iframe is used so no\n * SlotOnLoadEvent will be fired.\n ",
+            "range": [
+              0,
+              194
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": []
+      },
+      "range": [
+        195,
+        954
+      ],
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 45,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * This event is fired when the creative's iframe fires its load event. When\n * rendering rich media ads in sync rendering mode, no iframe is used so no\n * SlotOnLoadEvent will be fired.\n ",
+          "range": [
+            0,
+            194
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    195,
+    954
+  ],
+  "loc": {
+    "start": {
+      "line": 6,
+      "column": 0
+    },
+    "end": {
+      "line": 45,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * This event is fired when the creative's iframe fires its load event. When\n * rendering rich media ads in sync rendering mode, no iframe is used so no\n * SlotOnLoadEvent will be fired.\n ",
+      "range": [
+        0,
+        194
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Creates a new SlotOnloadEvent instance.\n   *\n   * @param {string} serviceName Name of the service that rendered the slot.\n   * @param {!Slot} slot The slot in which the creative was loaded.\n   ",
+      "range": [
+        236,
+        440
+      ],
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 2
+        },
+        "end": {
+          "line": 12,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Name of the event.\n   *\n   * @private\n   * @type {string}\n   ",
+      "range": [
+        543,
+        615
+      ],
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 2
+        },
+        "end": {
+          "line": 23,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Name of the service that rendered the slot.\n   *\n   * @type {string}\n   ",
+      "range": [
+        686,
+        769
+      ],
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 2
+        },
+        "end": {
+          "line": 32,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * The slot in which the creative was loaded.\n   *\n   * @type {!Slot}\n   ",
+      "range": [
+        829,
+        910
+      ],
+      "loc": {
+        "start": {
+          "line": 37,
+          "column": 2
+        },
+        "end": {
+          "line": 41,
+          "column": 5
+        }
+      }
+    }
+  ]
+}

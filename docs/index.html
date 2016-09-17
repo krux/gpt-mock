@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">gpt-mock API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CommandArray.js~CommandArray.html">CommandArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GPT.js~GPT.html">GPT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeFrameConfig.js~SafeFrameConfig.html">SafeFrameConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Service.js~Service.html">Service</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Size.js~Size.html">Size</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SlotId.js~SlotId.html">SlotId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array#push</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://www.google.com/dfp">DFP</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">events</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/ImpressionViewableEvent.js~ImpressionViewableEvent.html">ImpressionViewableEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotOnloadEvent.js~SlotOnloadEvent.html">SlotOnloadEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotRenderEndedEvent.js~SlotRenderEndedEvent.html">SlotRenderEndedEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotVisibilityChangedEvent.js~SlotVisibilityChangedEvent.html">SlotVisibilityChangedEvent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="overview">Overview</h1>
+<p><a href="http://npmjs.com/package/gpt-mock"><img src="https://img.shields.io/npm/v/gpt-mock.svg" alt="Version"></a>
+<a href="http://npmjs.com/package/gpt-mock"><img src="https://img.shields.io/npm/l/gpt-mock.svg" alt="License"></a>
+<a href="https://travis-ci.org/krux/gpt-mock"><img src="https://travis-ci.org/krux/gpt-mock.svg?branch=master" alt="Build Status"></a>
+<a href="https://codeclimate.com/github/krux/gpt-mock"><img src="https://img.shields.io/codeclimate/github/krux/gpt-mock.svg" alt="Code Climate"></a>
+<a href="https://coveralls.io/github/krux/gpt-mock"><img src="https://img.shields.io/coveralls/krux/gpt-mock.svg" alt="Coverage"></a>
+<a href="./package.json"><img src="https://img.shields.io/david/dev/krux/gpt-mock.svg" alt="Dependencies"></a>
+<a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly"></a>
+<a href="https://github.com/semantic-release/semantic-release"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-release"></a></p>
+<p>A test library to mock out the Google Publisher Tag library.</p>
+<h2 id="installation">Installation</h2>
+<p>You can include <code>gpt-mock</code> using <em>npm</em>:</p>
+<pre><code class="lang-console"><code class="source-code prettyprint">npm install --save-dev gpt-mock</code>
+</code></pre>
+<h2 id="accessing">Accessing</h2>
+<h3 id="es6-es2015">ES6/ES2015</h3>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import GPT from &apos;gpt-mock&apos;;</code>
+</code></pre>
+<h3 id="amd">AMD</h3>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">define([&apos;gpt-mock&apos;], function(GPT) {
+
+});</code>
+</code></pre>
+<h3 id="commonjs">CommonJS</h3>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">var GPT = require(&apos;gpt-mock&apos;);</code>
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>This library is used to mock out the Google Publisher Tag (GPT) library, so the most natural
+way to use this would be:</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">window.googletag = new GPT();</code>
+</code></pre>
+<p>Note that the instance is left as &quot;unloaded&quot;, meaning <code>apiReady</code> will be false, and <code>googletag.cmd.push</code> will only accumulate the functions.</p>
+<p>To mark the tag library as having been loaded, use the following:</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">window.googletag._loaded();</code>
+</code></pre>
+<p>This library is intended to be as API-compatible as possible with the production code.  Any member
+that starts with an underscore (<code>_</code>) is not part of the API and is a mock implementation detail.</p>
+<h1 id="help-bugs-requests">Help/Bugs/Requests</h1>
+<p>We &#x2665; bug reports.</p>
+<p>Have a problem? Need help? Would you like additional functionality added? We use GitHub&apos;s ticket system for keeping track of these requests.</p>
+<p>Please check out the <a href="https://github.com/krux/gpt-mock/issues">existing issues</a>, and if you don&apos;t see that your problem is already being
+worked on, please <a href="https://github.com/krux/gpt-mock/issues/new">file a new issue</a>. The more information the better to describe your problem.</p>
+<h1 id="contributing">Contributing</h1>
+<p>We &#x2665; <a href="https://help.github.com/articles/using-pull-requests">forks and pull requests</a>.</p>
+<p>Please see <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for full details.</p>
+<h2 id="environment">Environment</h2>
+<p>The project requires nodejs (&gt;=5.6) and npm (&gt;=3.6.0) for development. It has no runtime dependencies.</p>
+<h2 id="developing">Developing</h2>
+<p>Check the code out and install the development dependencies using:</p>
+<pre><code class="lang-console"><code class="source-code prettyprint">npm install</code>
+</code></pre>
+<h3 id="building">Building</h3>
+<p>To build the code, run</p>
+<pre><code class="lang-console"><code class="source-code prettyprint">npm run build</code>
+</code></pre>
+<h3 id="linting">Linting</h3>
+<p>We use ESLint and JSCS to do static analysis of the JavaScript and keep things smelling good.  To run both, use:</p>
+<pre><code class="lang-console"><code class="source-code prettyprint">npm run lint</code>
+</code></pre>
+<h3 id="testing">Testing</h3>
+<p>Using <a href="https://travis-ci.org">travis-ci</a>, the <a href="http://mochajs.org">Mocha</a> unit tests are run on every commit using PhantomJS to run the tests
+with a real browser.</p>
+<p>To test the code locally, you can use:</p>
+<pre><code class="lang-console"><code class="source-code prettyprint">npm test</code>
+</code></pre>
+<p>To run tests in Test-Driven-Development mode, where the test will be run after every change, use:</p>
+<pre><code class="lang-console"><code class="source-code prettyprint">npm run tdd</code>
+</code></pre>
+<h2 id="issue-guidelines">Issue Guidelines</h2>
+<p>Please either add a failing <a href="./test/unit">unit test</a> or include a <a href="http://jsfiddle.net">jsfiddle</a> that distills and reproduces the issue.</p>
+<h1 id="license">License</h1>
+<p>See <a href="LICENSE">LICENSE</a>.</p>
+<p>Some of the documentation incorporated into this source code is based on the <a href="https://developers.google.com/doubleclick-gpt/reference">Google documentation</a> which is licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>.  Some of the material may have been modified for use in this library.  Copyright of the incorporated documentation remains Google, Inc.  Google is a registered trademark of Google and/or its affiliates and this project is not intended to represent that Google endorses this library.</p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.8)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">GPT | gpt-mock API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CommandArray.js~CommandArray.html">CommandArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GPT.js~GPT.html">GPT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeFrameConfig.js~SafeFrameConfig.html">SafeFrameConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Service.js~Service.html">Service</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Size.js~Size.html">Size</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SlotId.js~SlotId.html">SlotId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array#push</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://www.google.com/dfp">DFP</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">events</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/ImpressionViewableEvent.js~ImpressionViewableEvent.html">ImpressionViewableEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotOnloadEvent.js~SlotOnloadEvent.html">SlotOnloadEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotRenderEndedEvent.js~SlotRenderEndedEvent.html">SlotRenderEndedEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotVisibilityChangedEvent.js~SlotVisibilityChangedEvent.html">SlotVisibilityChangedEvent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="header-notice">
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import GPT from &apos;<span><a href="file/src/GPT.js.html#lineNumber43">gpt-mock/dist/GPT.js</a></span>&apos;</code></pre></div>
+  <span data-ice="access">public</span>
+  <span data-ice="kind">class</span>
+  
+  
+  
+  <span data-ice="source">| <span><a href="file/src/GPT.js.html#lineNumber43">source</a></span></span>
+</div>
+
+<div class="self-detail detail">
+  <h1 data-ice="name">GPT</h1>
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <div class="description" data-ice="description"><p>This is the global namespace that the <span><a href="class/src/GPT.js~GPT.html">GPT</a></span> uses for its API.</p>
+<p>For details on this API, see <a href="https://developers.google.com/doubleclick-gpt/reference">https://developers.google.com/doubleclick-gpt/reference</a>.</p>
+<p>Note that the recommended way of handling async is to use <span><a href="class/src/GPT.js~GPT.html#instance-member-cmd">GPT#cmd</a></span> to
+queue callbacks for when <span><a href="class/src/GPT.js~GPT.html">GPT</a></span> is ready. These callbacks do not have to check
+<span><a href="class/src/GPT.js~GPT.html#instance-member-apiReady">GPT#apiReady</a></span> as they are guaranteed to execute once the API is set up.</p>
+<p>The <span><a href="class/src/GPT.js~GPT.html#instance-member-cmd">GPT#cmd</a></span> variable is initialized to an empty JavaScript array by
+the GPT tag syntax on the page, and cmd.push is the standard Array.push
+method that adds an element to the end of the array. When the <span><a href="class/src/GPT.js~GPT.html">GPT</a></span> JavaScript
+is loaded, it looks through the array and executes all the functions in
+order. The script then replaces cmd with a <span><a href="class/src/CommandArray.js~CommandArray.html">CommandArray</a></span> object
+whose push method is defined to execute the function argument passed to it.
+This mechanism allows <span><a href="class/src/GPT.js~GPT.html">GPT</a></span> to reduce perceived latency by fetching the
+JavaScript asynchronously while allowing the browser to continue rendering
+the page.</p>
+</div>
+
+  
+
+  <div data-ice="exampleDocs">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">import GPT from &apos;gpt-mock&apos;;
+
+googletag = new GPT();
+googletag.cmd.push(function() {
+  googletag.defineSlot(&apos;/Test/12345&apos;, [728, 90], &apos;gpt-div-1&apos;).addService(googletag.pubads());
+});
+
+googletag.cmd.push(function() {
+  googletag.display(&apos;gpt-div-1&apos;);
+});
+
+// Vitally, you need to tell the library that it has loaded so the commands
+// will be executed.
+googletag._loaded();</code></pre>
+    </div>
+</div>
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber5">GPT</a></span></li>
+</ul>
+  </div>
+
+  
+</div>
+
+
+
+<div data-ice="constructorSummary"><h2>Constructor Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Constructor</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-constructor-constructor">constructor</a></span></span><span data-ice="signature">(version: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Creates a new GPT instance.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<div data-ice="memberSummary"><h2>Member Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Members</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-member-apiReady">apiReady</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Flag indicating that <span><a href="class/src/GPT.js~GPT.html">GPT</a></span> API is loaded and ready to be called.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-member-cmd">cmd</a></span></span><span data-ice="signature">: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>()</span></span> | <span>!CommandArray</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Reference to the global command queue for asynchronous execution of
+<span><a href="class/src/GPT.js~GPT.html">GPT</a></span>-related calls.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-member-pubadsReady">pubadsReady</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Flag indicating that <span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span> is enabled, loaded and fully
+operational.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<div data-ice="methodSummary"><h2>Method Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Methods</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-_loaded">_loaded</a></span></span><span data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Tells the <span><a href="class/src/GPT.js~GPT.html">GPT</a></span> service that it has finished loading.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-companionAds">companionAds</a></span></span><span data-ice="signature">(): <span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns a reference to the <span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span>.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-content">content</a></span></span><span data-ice="signature">(): <span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns a reference to the <span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span>.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-defineOutOfPageSlot">defineOutOfPageSlot</a></span></span><span data-ice="signature">(adUnitPath: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, optDiv: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Constructs an out-of-page (interstitial) ad slot with the given ad unit path.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-defineSlot">defineSlot</a></span></span><span data-ice="signature">(adUnitPath: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, size: <span>GeneralSize</span>, optDiv: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Constructs an ad slot with a given ad unit path and size and associates it
+with the ID of a div element on the page that will contain the ad.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-destroySlots">destroySlots</a></span></span><span data-ice="signature">(optSlots: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span>!Slot</span>&gt;): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Destroys the given slots, removes all related objects and references of
+given slots from <span><a href="class/src/GPT.js~GPT.html">GPT</a></span>.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-disablePublisherConsole">disablePublisherConsole</a></span></span><span data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Disables the Console.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-display">display</a></span></span><span data-ice="signature">(div: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Instructs slot services to render the slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-enableServices">enableServices</a></span></span><span data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Enables all <span><a href="class/src/GPT.js~GPT.html">GPT</a></span> services that have been defined for ad slots on the page.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-getVersion">getVersion</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns the current version of <span><a href="class/src/GPT.js~GPT.html">GPT</a></span>.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-openConsole">openConsole</a></span></span><span data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Opens the Console.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-pubads">pubads</a></span></span><span data-ice="signature">(): <span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns a reference to the <span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span>.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-setAdIframeTitle">setAdIframeTitle</a></span></span><span data-ice="signature">(title: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Sets that title for all ad container iframes created by <span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span>,
+from this point onwards.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/GPT.js~GPT.html#instance-method-sizeMapping">sizeMapping</a></span></span><span data-ice="signature">(): <span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Creates a new <span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span>.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+<div data-ice="constructorDetails"><h2 data-ice="title">Public Constructors</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-constructor-constructor">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">constructor</span><span data-ice="signature">(version: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>)</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber49">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Creates a new GPT instance.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">version</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The version to emulate.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber11">GPT #constructor</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+</div>
+<div data-ice="memberDetails"><h2 data-ice="title">Public Members</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-member-apiReady">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">apiReady</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber56">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Flag indicating that <span><a href="class/src/GPT.js~GPT.html">GPT</a></span> API is loaded and ready to be called.
+This property will be simply undefined until the API is ready.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-member-cmd">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">cmd</span><span data-ice="signature">: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>()</span></span> | <span>!CommandArray</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber75">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Reference to the global command queue for asynchronous execution of
+<span><a href="class/src/GPT.js~GPT.html">GPT</a></span>-related calls.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-member-pubadsReady">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">pubadsReady</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber67">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Flag indicating that <span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span> is enabled, loaded and fully
+operational.</p>
+<p>This property will be simply <code>undefined</code> until {@link GPT#enableServices()}
+is called and <span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span> is loaded and initialized.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+</div>
+<div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-_loaded">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">_loaded</span><span data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber292">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Tells the <span><a href="class/src/GPT.js~GPT.html">GPT</a></span> service that it has finished loading.  This method
+MUST be called in order for most of the rest of the library to function.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber225">GPT #_loaded</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-companionAds">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">companionAds</span><span data-ice="signature">(): <span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber100">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns a reference to the <span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span>.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>Instance of the <span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span>.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber27">GPT #companionAds</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-content">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">content</span><span data-ice="signature">(): <span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber109">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns a reference to the <span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span>.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>Instance of the <span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span>.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber36">GPT #content</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-defineOutOfPageSlot">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">defineOutOfPageSlot</span><span data-ice="signature">(adUnitPath: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, optDiv: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber166">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Constructs an out-of-page (interstitial) ad slot with the given ad unit path.
+optDiv is the ID of the div element that will contain the ad.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">adUnitPath</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Full path of the ad unit with the network code and ad unit code.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">optDiv</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>ID of the div that will contain this ad unit.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The newly created slot.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber100">GPT #defineOutOfPageSlot</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-defineSlot">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">defineSlot</span><span data-ice="signature">(adUnitPath: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, size: <span>GeneralSize</span>, optDiv: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber153">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Constructs an ad slot with a given ad unit path and size and associates it
+with the ID of a div element on the page that will contain the ad.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">adUnitPath</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Full path of the ad unit with the network code and unit code.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">size</td>
+      <td data-ice="type"><span>GeneralSize</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Width and height of the added slot. This is the
+size that is used in the ad request if no responsive size mapping is provided
+or the size of the viewport is smaller than the smallest size provided in the mapping.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">optDiv</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>ID of the div that will contain this ad unit.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The newly created slot.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber80">GPT #defineSlot</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-destroySlots">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">destroySlots</span><span data-ice="signature">(optSlots: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span>!Slot</span>&gt;): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber187">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Destroys the given slots, removes all related objects and references of
+given slots from <span><a href="class/src/GPT.js~GPT.html">GPT</a></span>. This API does not support passback slots and
+companion slots. Calling this API clears the ad and removes the slot object
+from the internal state maintained by <span><a href="class/src/GPT.js~GPT.html">GPT</a></span>. Calling any more functions on
+that slot object will result in undefined behaviour. Note the browser may
+still not free the memory associated with that slot if a reference to it is
+maintained by the publisher page. Calling this API makes the div associated
+with that slot available for reuse.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">optSlots</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span>!Slot</span>&gt;</td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>The array of slots to
+destroy. Array is optional; all slots will be destroyed if it is unspecified.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>true if slots have been destroyed, false otherwise.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber121">GPT #destroySlots</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-disablePublisherConsole">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">disablePublisherConsole</span><span data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber235">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Disables the Console.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber202">GPT #disablePublisherConsole</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-display">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">display</span><span data-ice="signature">(div: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>)</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber216">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Instructs slot services to render the slot. Each ad slot should only be
+displayed once per page. All slots must be defined and have a service
+associated with them before being displayed. The display call must not
+happen until the element is present in the DOM. The usual way to achieve
+that is to place it within a script block within the div element named in
+the method call.</p>
+<p>If single request architecture (SRA) is being used, all unfetched ad slots
+at the moment display is called will be fetched in a single instance of
+<span><a href="class/src/GPT.js~GPT.html#instance-method-display">GPT#display</a></span>. To force an ad slot not to display, the entire div
+must be removed.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">div</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>ID of the div element containing the ad slot.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber179">GPT #display</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-enableServices">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">enableServices</span><span data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber125">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Enables all <span><a href="class/src/GPT.js~GPT.html">GPT</a></span> services that have been defined for ad slots on the page.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber54">GPT #enableServices</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getVersion">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getVersion</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber91">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns the current version of <span><a href="class/src/GPT.js~GPT.html">GPT</a></span>.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>Version string.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber19">GPT #getVersion</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-openConsole">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">openConsole</span><span data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber230">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Opens the Console.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber194">GPT #openConsole</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-pubads">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">pubads</span><span data-ice="signature">(): <span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber118">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns a reference to the <span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span>.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>Instance of the <span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span>.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber45">GPT #pubads</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-setAdIframeTitle">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">setAdIframeTitle</span><span data-ice="signature">(title: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>)</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber243">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Sets that title for all ad container iframes created by <span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span>,
+from this point onwards.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">title</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The title to set.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber210">GPT #setAdIframeTitle</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-sizeMapping">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">sizeMapping</span><span data-ice="signature">(): <span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GPT.js.html#lineNumber138">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Creates a new <span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span>.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>A new builder.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/GPT.spec.js.html#lineNumber68">GPT #sizeMapping</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.8)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/CompanionAdsService.js | gpt-mock API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CommandArray.js~CommandArray.html">CommandArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GPT.js~GPT.html">GPT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeFrameConfig.js~SafeFrameConfig.html">SafeFrameConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Service.js~Service.html">Service</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Size.js~Size.html">Size</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SlotId.js~SlotId.html">SlotId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array#push</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://www.google.com/dfp">DFP</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">events</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/ImpressionViewableEvent.js~ImpressionViewableEvent.html">ImpressionViewableEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotOnloadEvent.js~SlotOnloadEvent.html">SlotOnloadEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotRenderEndedEvent.js~SlotRenderEndedEvent.html">SlotRenderEndedEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotVisibilityChangedEvent.js~SlotVisibilityChangedEvent.html">SlotVisibilityChangedEvent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/CompanionAdsService.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import Service from &apos;./Service&apos;;
+
+/**
+ * Companion Ads service. This service is used by video ads to show companion ads.
+ */
+export default class CompanionAdsService extends Service {
+  /**
+   * Creates a new CompanionAdsService.
+   *
+   * @param {GPT} gpt The containing {@link GPT} instance.
+   */
+  constructor(gpt) {
+    super(gpt, CompanionAdsService._name);
+    this._options = {
+      syncLoading: false,
+      refreshUnfilledSlots: null
+    };
+  }
+
+  /**
+   * The name of the service.
+   *
+   * @type {string}
+   * @private
+   */
+  static get _name() {
+    return &apos;companion_ads&apos;;
+  }
+
+  /**
+   * Enables the service implementation to be loaded synchronously. This needs
+   * to be called before {@link GPT#enableServices}.
+   *
+   * Note: this call can be only used if gpt.js is also loaded synchronously,
+   * for example, by using a script element. If called when {@link GPT} is loaded
+   * asynchronously, the outcome of the loading is undefined.
+   */
+  enableSyncLoading() {
+    this._options.syncLoading = true;
+  }
+
+  /**
+   * Sets whether companion slots that have not been filled will be automatically
+   * backfilled. Only slots that are also registered with the {@link PubAdsService} will
+   * be backfilled. This method can be called multiple times during the page&apos;s
+   * lifetime to turn backfill on and off.
+   *
+   * @param {boolean} value true to automatically backfill unfilled slots,
+   * false to leave them unchanged.
+   */
+  setRefreshUnfilledSlots(value) {
+    this._options.refreshUnfilledSlots = value;
+  }
+
+  /* Undocumented
+    refreshAllSlots()
+    fillSlot(a, b, c, d)
+    notifyUnfilledSlots(a)
+    setClearUnfilledSlots(a)
+    getDisplayAdsCorrelator()
+    getVideoStreamCorrelator()
+    isRoadblockingSupported()
+    isSlotAPersistentRoadblock()
+  */
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.8)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

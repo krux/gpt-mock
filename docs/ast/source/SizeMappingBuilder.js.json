@@ -1,0 +1,1601 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportNamespaceSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "SizeMappingArray",
+            "range": [
+              12,
+              28
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 12
+              },
+              "end": {
+                "line": 1,
+                "column": 28
+              }
+            }
+          },
+          "range": [
+            7,
+            28
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 28
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "./SizeMappingArray",
+        "raw": "'./SizeMappingArray'",
+        "range": [
+          34,
+          54
+        ],
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 34
+          },
+          "end": {
+            "line": 1,
+            "column": 54
+          }
+        }
+      },
+      "range": [
+        0,
+        55
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 55
+        }
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Builder for size mapping specification objects. This builder is provided to\n * help easily construct size specifications.\n ",
+          "range": [
+            57,
+            189
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "ClassDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "SizeMappingBuilder",
+          "range": [
+            211,
+            229
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 21
+            },
+            "end": {
+              "line": 7,
+              "column": 39
+            }
+          }
+        },
+        "superClass": null,
+        "body": {
+          "type": "ClassBody",
+          "body": [
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "constructor",
+                "range": [
+                  293,
+                  304
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 13
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              313,
+                              317
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 12,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 12,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "_mappings",
+                            "range": [
+                              318,
+                              327
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 12,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 12,
+                                "column": 18
+                              }
+                            }
+                          },
+                          "range": [
+                            313,
+                            327
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 12,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 12,
+                              "column": 18
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "ArrayExpression",
+                          "elements": [],
+                          "range": [
+                            330,
+                            332
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 12,
+                              "column": 21
+                            },
+                            "end": {
+                              "line": 12,
+                              "column": 23
+                            }
+                          }
+                        },
+                        "range": [
+                          313,
+                          332
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 12,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 12,
+                            "column": 23
+                          }
+                        }
+                      },
+                      "range": [
+                        313,
+                        333
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 12,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 12,
+                          "column": 24
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    307,
+                    337
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 11,
+                      "column": 16
+                    },
+                    "end": {
+                      "line": 13,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  304,
+                  337
+                ],
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 13,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "constructor",
+              "computed": false,
+              "range": [
+                293,
+                337
+              ],
+              "loc": {
+                "start": {
+                  "line": 11,
+                  "column": 2
+                },
+                "end": {
+                  "line": 13,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Creates a new {@link SizeMappingBuilder}.\n   ",
+                  "range": [
+                    234,
+                    290
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 8,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 10,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Adds a mapping from a {@link SingleSizeArray} representing the viewport to\n   * {@link GeneralSize} representing the slot.\n   *\n   * @param {SingleSizeArray} viewportSize The size of the viewport for this mapping entry.\n   * @param {GeneralSize} slotSize The sizes of the slot for this mapping entry.\n   * @returns {SizeMappingBuilder} A reference to this builder.\n   ",
+                  "range": [
+                    341,
+                    720
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 15,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 22,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "addSize",
+                "range": [
+                  723,
+                  730
+                ],
+                "loc": {
+                  "start": {
+                    "line": 23,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 23,
+                    "column": 9
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "viewportSize",
+                    "range": [
+                      731,
+                      743
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 23,
+                        "column": 10
+                      },
+                      "end": {
+                        "line": 23,
+                        "column": 22
+                      }
+                    }
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "slotSize",
+                    "range": [
+                      745,
+                      753
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 23,
+                        "column": 24
+                      },
+                      "end": {
+                        "line": 23,
+                        "column": 32
+                      }
+                    }
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression",
+                              "range": [
+                                761,
+                                765
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 24,
+                                  "column": 4
+                                },
+                                "end": {
+                                  "line": 24,
+                                  "column": 8
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "_mappings",
+                              "range": [
+                                766,
+                                775
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 24,
+                                  "column": 9
+                                },
+                                "end": {
+                                  "line": 24,
+                                  "column": 18
+                                }
+                              }
+                            },
+                            "range": [
+                              761,
+                              775
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 24,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 24,
+                                "column": 18
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "push",
+                            "range": [
+                              776,
+                              780
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 24,
+                                "column": 19
+                              },
+                              "end": {
+                                "line": 24,
+                                "column": 23
+                              }
+                            }
+                          },
+                          "range": [
+                            761,
+                            780
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 24,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 24,
+                              "column": 23
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "ArrayExpression",
+                            "elements": [
+                              {
+                                "type": "Identifier",
+                                "name": "viewportSize",
+                                "range": [
+                                  782,
+                                  794
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 24,
+                                    "column": 25
+                                  },
+                                  "end": {
+                                    "line": 24,
+                                    "column": 37
+                                  }
+                                }
+                              },
+                              {
+                                "type": "Identifier",
+                                "name": "slotSize",
+                                "range": [
+                                  796,
+                                  804
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 24,
+                                    "column": 39
+                                  },
+                                  "end": {
+                                    "line": 24,
+                                    "column": 47
+                                  }
+                                }
+                              }
+                            ],
+                            "range": [
+                              781,
+                              805
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 24,
+                                "column": 24
+                              },
+                              "end": {
+                                "line": 24,
+                                "column": 48
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          761,
+                          806
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 24,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 24,
+                            "column": 49
+                          }
+                        }
+                      },
+                      "range": [
+                        761,
+                        807
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 24,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 24,
+                          "column": 50
+                        }
+                      }
+                    },
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "ThisExpression",
+                        "range": [
+                          819,
+                          823
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 25,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 25,
+                            "column": 15
+                          }
+                        }
+                      },
+                      "range": [
+                        812,
+                        824
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 25,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 25,
+                          "column": 16
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    755,
+                    828
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 23,
+                      "column": 34
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  730,
+                  828
+                ],
+                "loc": {
+                  "start": {
+                    "line": 23,
+                    "column": 9
+                  },
+                  "end": {
+                    "line": 26,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "method",
+              "computed": false,
+              "range": [
+                723,
+                828
+              ],
+              "loc": {
+                "start": {
+                  "line": 23,
+                  "column": 2
+                },
+                "end": {
+                  "line": 26,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Adds a mapping from a {@link SingleSizeArray} representing the viewport to\n   * {@link GeneralSize} representing the slot.\n   *\n   * @param {SingleSizeArray} viewportSize The size of the viewport for this mapping entry.\n   * @param {GeneralSize} slotSize The sizes of the slot for this mapping entry.\n   * @returns {SizeMappingBuilder} A reference to this builder.\n   ",
+                  "range": [
+                    341,
+                    720
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 15,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 22,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Builds a size map specification from the mappings added to this builder. If\n   * any invalid mappings have been supplied, this method will return null.\n   * Otherwise it returns a specification in the correct format to pass to\n   * {@link Slot#defineSizeMapping()}. The behavior of the builder after\n   * calling {@link SizeMappingBuilder#build} is undefined.\n   *\n   * @returns {?SizeMappingArray} The result built by this builder. Can be null\n   * if invalid size mappings were supplied.\n   ",
+                  "range": [
+                    832,
+                    1336
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "build",
+                "range": [
+                  1339,
+                  1344
+                ],
+                "loc": {
+                  "start": {
+                    "line": 38,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 38,
+                    "column": 7
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "IfStatement",
+                      "test": {
+                        "type": "LogicalExpression",
+                        "operator": "&&",
+                        "left": {
+                          "type": "BinaryExpression",
+                          "operator": ">",
+                          "left": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression",
+                                "range": [
+                                  1357,
+                                  1361
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 39,
+                                    "column": 8
+                                  },
+                                  "end": {
+                                    "line": 39,
+                                    "column": 12
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "_mappings",
+                                "range": [
+                                  1362,
+                                  1371
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 39,
+                                    "column": 13
+                                  },
+                                  "end": {
+                                    "line": 39,
+                                    "column": 22
+                                  }
+                                }
+                              },
+                              "range": [
+                                1357,
+                                1371
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 39,
+                                  "column": 8
+                                },
+                                "end": {
+                                  "line": 39,
+                                  "column": 22
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "length",
+                              "range": [
+                                1372,
+                                1378
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 39,
+                                  "column": 23
+                                },
+                                "end": {
+                                  "line": 39,
+                                  "column": 29
+                                }
+                              }
+                            },
+                            "range": [
+                              1357,
+                              1378
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 39,
+                                "column": 8
+                              },
+                              "end": {
+                                "line": 39,
+                                "column": 29
+                              }
+                            }
+                          },
+                          "right": {
+                            "type": "Literal",
+                            "value": 0,
+                            "raw": "0",
+                            "range": [
+                              1381,
+                              1382
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 39,
+                                "column": 32
+                              },
+                              "end": {
+                                "line": 39,
+                                "column": 33
+                              }
+                            }
+                          },
+                          "range": [
+                            1357,
+                            1382
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 39,
+                              "column": 8
+                            },
+                            "end": {
+                              "line": 39,
+                              "column": 33
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "Identifier",
+                              "name": "SizeMappingArray",
+                              "range": [
+                                1392,
+                                1408
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 40,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 40,
+                                  "column": 22
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "isSizeMappingArray",
+                              "range": [
+                                1409,
+                                1427
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 40,
+                                  "column": 23
+                                },
+                                "end": {
+                                  "line": 40,
+                                  "column": 41
+                                }
+                              }
+                            },
+                            "range": [
+                              1392,
+                              1427
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 40,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 40,
+                                "column": 41
+                              }
+                            }
+                          },
+                          "arguments": [
+                            {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression",
+                                "range": [
+                                  1428,
+                                  1432
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 40,
+                                    "column": 42
+                                  },
+                                  "end": {
+                                    "line": 40,
+                                    "column": 46
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "_mappings",
+                                "range": [
+                                  1433,
+                                  1442
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 40,
+                                    "column": 47
+                                  },
+                                  "end": {
+                                    "line": 40,
+                                    "column": 56
+                                  }
+                                }
+                              },
+                              "range": [
+                                1428,
+                                1442
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 40,
+                                  "column": 42
+                                },
+                                "end": {
+                                  "line": 40,
+                                  "column": 56
+                                }
+                              }
+                            }
+                          ],
+                          "range": [
+                            1392,
+                            1443
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 40,
+                              "column": 6
+                            },
+                            "end": {
+                              "line": 40,
+                              "column": 57
+                            }
+                          }
+                        },
+                        "range": [
+                          1357,
+                          1443
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 39,
+                            "column": 8
+                          },
+                          "end": {
+                            "line": 40,
+                            "column": 57
+                          }
+                        }
+                      },
+                      "consequent": {
+                        "type": "BlockStatement",
+                        "body": [
+                          {
+                            "type": "VariableDeclaration",
+                            "declarations": [
+                              {
+                                "type": "VariableDeclarator",
+                                "id": {
+                                  "type": "Identifier",
+                                  "name": "mappings",
+                                  "range": [
+                                    1459,
+                                    1467
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 41,
+                                      "column": 12
+                                    },
+                                    "end": {
+                                      "line": 41,
+                                      "column": 20
+                                    }
+                                  }
+                                },
+                                "init": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "ThisExpression",
+                                    "range": [
+                                      1470,
+                                      1474
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 41,
+                                        "column": 23
+                                      },
+                                      "end": {
+                                        "line": 41,
+                                        "column": 27
+                                      }
+                                    }
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "_mappings",
+                                    "range": [
+                                      1475,
+                                      1484
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 41,
+                                        "column": 28
+                                      },
+                                      "end": {
+                                        "line": 41,
+                                        "column": 37
+                                      }
+                                    }
+                                  },
+                                  "range": [
+                                    1470,
+                                    1484
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 41,
+                                      "column": 23
+                                    },
+                                    "end": {
+                                      "line": 41,
+                                      "column": 37
+                                    }
+                                  }
+                                },
+                                "range": [
+                                  1459,
+                                  1484
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 41,
+                                    "column": 12
+                                  },
+                                  "end": {
+                                    "line": 41,
+                                    "column": 37
+                                  }
+                                }
+                              }
+                            ],
+                            "kind": "const",
+                            "range": [
+                              1453,
+                              1485
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 41,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 41,
+                                "column": 38
+                              }
+                            }
+                          },
+                          {
+                            "type": "ExpressionStatement",
+                            "expression": {
+                              "type": "AssignmentExpression",
+                              "operator": "=",
+                              "left": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "ThisExpression",
+                                  "range": [
+                                    1492,
+                                    1496
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 42,
+                                      "column": 6
+                                    },
+                                    "end": {
+                                      "line": 42,
+                                      "column": 10
+                                    }
+                                  }
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "_mappings",
+                                  "range": [
+                                    1497,
+                                    1506
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 42,
+                                      "column": 11
+                                    },
+                                    "end": {
+                                      "line": 42,
+                                      "column": 20
+                                    }
+                                  }
+                                },
+                                "range": [
+                                  1492,
+                                  1506
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 42,
+                                    "column": 6
+                                  },
+                                  "end": {
+                                    "line": 42,
+                                    "column": 20
+                                  }
+                                }
+                              },
+                              "right": {
+                                "type": "ArrayExpression",
+                                "elements": [],
+                                "range": [
+                                  1509,
+                                  1511
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 42,
+                                    "column": 23
+                                  },
+                                  "end": {
+                                    "line": 42,
+                                    "column": 25
+                                  }
+                                }
+                              },
+                              "range": [
+                                1492,
+                                1511
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 42,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 42,
+                                  "column": 25
+                                }
+                              }
+                            },
+                            "range": [
+                              1492,
+                              1512
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 42,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 42,
+                                "column": 26
+                              }
+                            }
+                          },
+                          {
+                            "type": "ReturnStatement",
+                            "argument": {
+                              "type": "Identifier",
+                              "name": "mappings",
+                              "range": [
+                                1526,
+                                1534
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 43,
+                                  "column": 13
+                                },
+                                "end": {
+                                  "line": 43,
+                                  "column": 21
+                                }
+                              }
+                            },
+                            "range": [
+                              1519,
+                              1535
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 43,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 43,
+                                "column": 22
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          1445,
+                          1541
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 40,
+                            "column": 59
+                          },
+                          "end": {
+                            "line": 44,
+                            "column": 5
+                          }
+                        }
+                      },
+                      "alternate": {
+                        "type": "BlockStatement",
+                        "body": [
+                          {
+                            "type": "ReturnStatement",
+                            "argument": {
+                              "type": "Literal",
+                              "value": null,
+                              "raw": "null",
+                              "range": [
+                                1562,
+                                1566
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 45,
+                                  "column": 13
+                                },
+                                "end": {
+                                  "line": 45,
+                                  "column": 17
+                                }
+                              }
+                            },
+                            "range": [
+                              1555,
+                              1567
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 45,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 45,
+                                "column": 18
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          1547,
+                          1573
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 44,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 46,
+                            "column": 5
+                          }
+                        }
+                      },
+                      "range": [
+                        1353,
+                        1573
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 39,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 46,
+                          "column": 5
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    1347,
+                    1577
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 38,
+                      "column": 10
+                    },
+                    "end": {
+                      "line": 47,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  1344,
+                  1577
+                ],
+                "loc": {
+                  "start": {
+                    "line": 38,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 47,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "method",
+              "computed": false,
+              "range": [
+                1339,
+                1577
+              ],
+              "loc": {
+                "start": {
+                  "line": 38,
+                  "column": 2
+                },
+                "end": {
+                  "line": 47,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * Builds a size map specification from the mappings added to this builder. If\n   * any invalid mappings have been supplied, this method will return null.\n   * Otherwise it returns a specification in the correct format to pass to\n   * {@link Slot#defineSizeMapping()}. The behavior of the builder after\n   * calling {@link SizeMappingBuilder#build} is undefined.\n   *\n   * @returns {?SizeMappingArray} The result built by this builder. Can be null\n   * if invalid size mappings were supplied.\n   ",
+                  "range": [
+                    832,
+                    1336
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            }
+          ],
+          "range": [
+            230,
+            1579
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 40
+            },
+            "end": {
+              "line": 48,
+              "column": 1
+            }
+          }
+        },
+        "range": [
+          205,
+          1579
+        ],
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 15
+          },
+          "end": {
+            "line": 48,
+            "column": 1
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Builder for size mapping specification objects. This builder is provided to\n * help easily construct size specifications.\n ",
+            "range": [
+              57,
+              189
+            ],
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": []
+      },
+      "range": [
+        190,
+        1579
+      ],
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 48,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Builder for size mapping specification objects. This builder is provided to\n * help easily construct size specifications.\n ",
+          "range": [
+            57,
+            189
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    0,
+    1579
+  ],
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 48,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * Builder for size mapping specification objects. This builder is provided to\n * help easily construct size specifications.\n ",
+      "range": [
+        57,
+        189
+      ],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Creates a new {@link SizeMappingBuilder}.\n   ",
+      "range": [
+        234,
+        290
+      ],
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "line": 10,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Adds a mapping from a {@link SingleSizeArray} representing the viewport to\n   * {@link GeneralSize} representing the slot.\n   *\n   * @param {SingleSizeArray} viewportSize The size of the viewport for this mapping entry.\n   * @param {GeneralSize} slotSize The sizes of the slot for this mapping entry.\n   * @returns {SizeMappingBuilder} A reference to this builder.\n   ",
+      "range": [
+        341,
+        720
+      ],
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 22,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * Builds a size map specification from the mappings added to this builder. If\n   * any invalid mappings have been supplied, this method will return null.\n   * Otherwise it returns a specification in the correct format to pass to\n   * {@link Slot#defineSizeMapping()}. The behavior of the builder after\n   * calling {@link SizeMappingBuilder#build} is undefined.\n   *\n   * @returns {?SizeMappingArray} The result built by this builder. Can be null\n   * if invalid size mappings were supplied.\n   ",
+      "range": [
+        832,
+        1336
+      ],
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 2
+        },
+        "end": {
+          "line": 37,
+          "column": 5
+        }
+      }
+    }
+  ]
+}

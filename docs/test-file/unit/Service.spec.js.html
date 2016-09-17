@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">unit/Service.spec.js | gpt-mock API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CommandArray.js~CommandArray.html">CommandArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GPT.js~GPT.html">GPT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeFrameConfig.js~SafeFrameConfig.html">SafeFrameConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Service.js~Service.html">Service</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Size.js~Size.html">Size</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SlotId.js~SlotId.html">SlotId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array#push</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://www.google.com/dfp">DFP</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">events</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/ImpressionViewableEvent.js~ImpressionViewableEvent.html">ImpressionViewableEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotOnloadEvent.js~SlotOnloadEvent.html">SlotOnloadEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotRenderEndedEvent.js~SlotRenderEndedEvent.html">SlotRenderEndedEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotVisibilityChangedEvent.js~SlotVisibilityChangedEvent.html">SlotVisibilityChangedEvent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">unit/Service.spec.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import Service from &apos;../../src/Service&apos;;
+import GPT from &apos;../../src/GPT&apos;;
+import Slot from &apos;../../src/Slot&apos;;
+
+/** @test {Service} */
+describe(&apos;Service&apos;, () =&gt; {
+  const gpt = new GPT();
+  const name = &apos;something&apos;;
+  const adUnitPath = &apos;/Test/123&apos;;
+  const size = [728, 90];
+  const eventType = &apos;some.event&apos;;
+
+  /** @test {Service#constructor} */
+  describe(&apos;#constructor&apos;, () =&gt; {
+    it(&apos;constructs&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      expect(service).to.be.ok();
+      expect(service).to.have.property(&apos;_gpt&apos;, gpt);
+      expect(service).to.have.property(&apos;_name&apos;, name);
+    });
+  });
+
+  /** @test {Service#getName} */
+  describe(&apos;#getName&apos;, () =&gt; {
+    it(&apos;returns the name&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      expect(service.getName()).to.be(name);
+    });
+  });
+
+  /** @test {Service#getVersion} */
+  describe(&apos;#getVersion&apos;, () =&gt; {
+    it(&apos;returns &quot;unversioned&quot;&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      expect(service.getVersion()).to.be(&apos;unversioned&apos;);
+    });
+  });
+
+  /** @test {Service#getSlots} */
+  describe(&apos;#getSlots&apos;, () =&gt; {
+    it(&apos;returns empty array if no slots&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      expect(service.getSlots()).to.be.an(&apos;array&apos;);
+      expect(service.getSlots()).to.be.empty();
+    });
+
+    it(&apos;return array of slots where this service is enabled&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      const slot1 = new Slot(adUnitPath, size).addService(service);
+      const slot2 = new Slot(adUnitPath, size).addService(service);
+      expect(service.getSlots()).to.be.an(&apos;array&apos;);
+      expect(service.getSlots()).to.eql([slot1, slot2]);
+    });
+  });
+
+  /** @test {Service#getSlotIdMap} */
+  describe(&apos;#getSlotIdMap&apos;, () =&gt; {
+    it(&apos;returns empty dictionary if no slots&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      expect(service.getSlotIdMap()).to.be.empty();
+    });
+
+    it(&apos;returns dictionary mapping keys to slots&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      const slot1 = new Slot(adUnitPath, size).addService(service);
+      const slot2 = new Slot(adUnitPath, size).addService(service);
+      expect(service.getSlotIdMap()).to.be.an(&apos;object&apos;);
+      expect(service.getSlotIdMap()).to.be.eql({
+        [`${adUnitPath}_1`]: slot1,
+        [`${adUnitPath}_2`]: slot2
+      });
+    });
+
+    it(&apos;returns dictionary without mapping keys for removed slots&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      const slot1 = new Slot(adUnitPath, size).addService(service);
+      const slot2 = new Slot(adUnitPath, size).addService(service);
+      expect(service.getSlotIdMap()).to.be.an(&apos;object&apos;);
+      gpt.destroySlots([slot1]);
+      expect(service.getSlotIdMap()).to.be.eql({
+        [`${adUnitPath}_2`]: slot2
+      });
+    });
+  });
+
+  /** @test {Service#addEventListener} */
+  describe(&apos;#addEventListener&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      const fn = sinon.spy();
+      expect(service.addEventListener(eventType, fn)).to.be(service);
+    });
+
+    it(&apos;adds the listener to event listener map&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      const fn = sinon.spy();
+      service.addEventListener(eventType, fn);
+      expect(service).to.have.property(&apos;_listeners&apos;);
+      expect(service._listeners).to.be.an(&apos;object&apos;);
+      expect(service._listeners).to.have.property(eventType);
+      expect(service._listeners[eventType]).to.be.an(&apos;array&apos;);
+      expect(service._listeners[eventType]).to.contain(fn);
+    });
+  });
+
+  /** @test {Service#get} */
+  describe(&apos;#get&apos;, () =&gt; {
+    it(&apos;returns empty map if no attribute&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      expect(service.get(&apos;attr1&apos;)).to.be(null);
+    });
+
+    it(&apos;attribute value if set&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      service.set(&apos;attr1&apos;, &apos;value1&apos;);
+      expect(service.get(&apos;attr1&apos;)).to.be(&apos;value1&apos;);
+    });
+  });
+
+  /** @test {Service#getAttributeKeys} */
+  describe(&apos;#getAttributeKeys&apos;, () =&gt; {
+    it(&apos;returns empty array if no attributes&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      expect(service.getAttributeKeys()).to.be.an(&apos;array&apos;);
+      expect(service.getAttributeKeys()).to.be.empty();
+    });
+
+    it(&apos;returns array with with attribute keys&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      service.set(&apos;attr1&apos;, &apos;value1&apos;);
+      service.set(&apos;attr2&apos;, &apos;value2&apos;);
+      expect(service.getAttributeKeys()).to.be.an(&apos;array&apos;);
+      expect(service.getAttributeKeys()).to.be.eql([&apos;attr1&apos;, &apos;attr2&apos;]);
+    });
+  });
+
+  /** @test {Service#set} */
+  describe(&apos;#set&apos;, () =&gt; {
+    it(&apos;returns the service&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      expect(service.set(&apos;attr1&apos;, &apos;value1&apos;)).to.be(service);
+    });
+
+    it(&apos;save the attribute value&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      service.set(&apos;attr1&apos;, &apos;value1&apos;);
+      expect(service.get(&apos;attr1&apos;)).to.be(&apos;value1&apos;);
+    });
+  });
+
+  /** @test {Service#display} */
+  describe(&apos;#display&apos;, () =&gt; {
+    it(&apos;returns undefined&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      expect(service.display(adUnitPath, size)).to.be(undefined);
+    });
+
+    it(&apos;marks the service as used&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      service.display(adUnitPath, size);
+      expect(service._used).to.be(true);
+    });
+
+    it(&apos;enables the service&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      service.display(adUnitPath, size);
+      expect(service._enabled).to.be(true);
+    });
+
+    it(&apos;adds a slot&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      service.display(adUnitPath, size);
+      expect(service._slots).to.be.an(&apos;array&apos;);
+      expect(service._slots[0].getAdUnitPath()).to.be(adUnitPath);
+    });
+  });
+
+  /** @test {Service#enable} */
+  describe(&apos;#enable&apos;, () =&gt; {
+    it(&apos;set enabled flag&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      service.enable();
+      expect(service._enabled).to.be(true);
+    });
+  });
+
+  /** @test {Service#_fireEvent} */
+  describe(&apos;#_fireEvent&apos;, () =&gt; {
+    it(&apos;calls all listeners&apos;, () =&gt; {
+      const service = new Service(gpt, name);
+      const fn1 = sinon.spy();
+      const fn2 = sinon.spy();
+      const eventObject = {name: eventType};
+      service.addEventListener(eventType, fn1);
+      service.addEventListener(eventType, fn2);
+      service._fireEvent(eventType, eventObject);
+      expect(fn1.calledWith(eventObject)).to.be(true);
+      expect(fn2.calledWith(eventObject)).to.be(true);
+    });
+  });
+
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.8)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

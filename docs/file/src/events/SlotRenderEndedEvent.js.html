@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/events/SlotRenderEndedEvent.js | gpt-mock API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CommandArray.js~CommandArray.html">CommandArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GPT.js~GPT.html">GPT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeFrameConfig.js~SafeFrameConfig.html">SafeFrameConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Service.js~Service.html">Service</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Size.js~Size.html">Size</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SlotId.js~SlotId.html">SlotId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array#push</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://www.google.com/dfp">DFP</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">events</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/ImpressionViewableEvent.js~ImpressionViewableEvent.html">ImpressionViewableEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotOnloadEvent.js~SlotOnloadEvent.html">SlotOnloadEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotRenderEndedEvent.js~SlotRenderEndedEvent.html">SlotRenderEndedEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotVisibilityChangedEvent.js~SlotVisibilityChangedEvent.html">SlotVisibilityChangedEvent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/events/SlotRenderEndedEvent.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * This event is fired when a slot on the page has finished rendering. The event
+ * is fired by the service that rendered the slot. Example: To listen to
+ * companion ads, add a listener to the companionAds service, not the pubads
+ * service.
+ */
+export default class SlotRenderEndedEvent {
+  /**
+   * Creates a new SlotRenderEndedEvent instance.
+   *
+   * @param {string} serviceName Name of the service that rendered the slot.
+   * @param {!Slot} slot The slot in which the creative was rendered.
+   * @param {?number} creativeId Creative ID of the rendered ad. Value is null
+   * for empty slots, backfill ads or creatives rendered by services other than pubads service.
+   * @param {?number} lineItemId Line item ID of the rendered ad. Value is null
+   * for empty slots, backfill ads or creatives rendered by services other than pubads service.
+   * @param {boolean} isEmpty true if no ad was returned for the slot, false otherwise.
+   * @param {SingleSize} size Indicates the pixel size of the rendered
+   * creative. Example: [728, 90]. Value is null for empty ad slots.
+   */
+  constructor(serviceName, slot, creativeId, lineItemId, isEmpty, size) {
+    this._serviceName = serviceName;
+    this._slot = slot;
+    this._creativeId = creativeId;
+    this._isEmpty = isEmpty;
+    this._lineItemId = lineItemId;
+    this._size = size;
+  }
+
+  /**
+   * Name of the event.
+   *
+   * @private
+   * @type {string}
+   */
+  get _name() {
+    return &apos;googletag.events.SlotRenderEndedEvent&apos;;
+  }
+
+  /**
+   * Name of the service that rendered the slot.
+   *
+   * @type {string}
+   */
+  get serviceName() {
+    return this._serviceName;
+  }
+
+  /**
+   * The slot in which the creative was rendered.
+   *
+   * @type {!Slot}
+   */
+  get slot() {
+    return this._slot;
+  }
+
+  /**
+   * Creative ID of the rendered ad. Value is null for empty slots, backfill ads
+   * or creatives rendered by services other than pubads service.
+   *
+   * @type {?number}
+   */
+  get creativeId() {
+    return this._creativeId;
+  }
+
+  /**
+   * true if no ad was returned for the slot, false otherwise.
+   *
+   * @type {boolean}
+   */
+  get isEmpty() {
+    return this._isEmpty;
+  }
+
+  /**
+   * Line item ID of the rendered ad. Value is null for empty slots, backfill
+   * ads or creatives rendered by services other than pubads service.
+   *
+   * @type {?number}
+   */
+  get lineItemId() {
+    return this._lineItemId;
+  }
+
+  /**
+   * Indicates the pixel size of the rendered creative. Example: [728, 90].
+   * Value is null for empty ad slots.
+   *
+   * @type {SingleSize}
+   */
+  get size() {
+    return this._size;
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.8)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

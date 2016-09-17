@@ -1,0 +1,314 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "GPT",
+            "range": [
+              7,
+              10
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 7
+              },
+              "end": {
+                "line": 1,
+                "column": 10
+              }
+            }
+          },
+          "range": [
+            7,
+            10
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 10
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "./GPT.js",
+        "raw": "'./GPT.js'",
+        "range": [
+          16,
+          26
+        ],
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 16
+          },
+          "end": {
+            "line": 1,
+            "column": 26
+          }
+        }
+      },
+      "range": [
+        0,
+        27
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 27
+        }
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "* @external {DFP} https://www.google.com/dfp ",
+          "range": [
+            29,
+            78
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 49
+            }
+          }
+        },
+        {
+          "type": "Block",
+          "value": "*\n * @external {Array#push} https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push\n ",
+          "range": [
+            80,
+            205
+          ],
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 0
+            },
+            "end": {
+              "line": 7,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "Identifier",
+            "name": "module",
+            "range": [
+              207,
+              213
+            ],
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 0
+              },
+              "end": {
+                "line": 9,
+                "column": 6
+              }
+            }
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "exports",
+            "range": [
+              214,
+              221
+            ],
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 7
+              },
+              "end": {
+                "line": 9,
+                "column": 14
+              }
+            }
+          },
+          "range": [
+            207,
+            221
+          ],
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 0
+            },
+            "end": {
+              "line": 9,
+              "column": 14
+            }
+          }
+        },
+        "right": {
+          "type": "Identifier",
+          "name": "GPT",
+          "range": [
+            224,
+            227
+          ],
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 17
+            },
+            "end": {
+              "line": 9,
+              "column": 20
+            }
+          }
+        },
+        "range": [
+          207,
+          227
+        ],
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 0
+          },
+          "end": {
+            "line": 9,
+            "column": 20
+          }
+        }
+      },
+      "range": [
+        207,
+        228
+      ],
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 21
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "* @external {DFP} https://www.google.com/dfp ",
+          "range": [
+            29,
+            78
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 49
+            }
+          }
+        },
+        {
+          "type": "Block",
+          "value": "*\n * @external {Array#push} https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push\n ",
+          "range": [
+            80,
+            205
+          ],
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 0
+            },
+            "end": {
+              "line": 7,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    0,
+    228
+  ],
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 9,
+      "column": 21
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "* @external {DFP} https://www.google.com/dfp ",
+      "range": [
+        29,
+        78
+      ],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 49
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * @external {Array#push} https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push\n ",
+      "range": [
+        80,
+        205
+      ],
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 3
+        }
+      }
+    }
+  ]
+}

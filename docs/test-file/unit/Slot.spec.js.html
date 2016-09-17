@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">unit/Slot.spec.js | gpt-mock API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CommandArray.js~CommandArray.html">CommandArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GPT.js~GPT.html">GPT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeFrameConfig.js~SafeFrameConfig.html">SafeFrameConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Service.js~Service.html">Service</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Size.js~Size.html">Size</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SlotId.js~SlotId.html">SlotId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array#push</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://www.google.com/dfp">DFP</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">events</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/ImpressionViewableEvent.js~ImpressionViewableEvent.html">ImpressionViewableEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotOnloadEvent.js~SlotOnloadEvent.html">SlotOnloadEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotRenderEndedEvent.js~SlotRenderEndedEvent.html">SlotRenderEndedEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotVisibilityChangedEvent.js~SlotVisibilityChangedEvent.html">SlotVisibilityChangedEvent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">unit/Slot.spec.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import GPT from &apos;../../src/GPT&apos;;
+import Slot from &apos;../../src/Slot&apos;;
+import Service from &apos;../../src/Service&apos;;
+import ResponseInformation from &apos;../../src/ResponseInformation&apos;;
+import SafeFrameConfig from &apos;../../src/SafeFrameConfig&apos;;
+import SlotOnloadEvent from &apos;../../src/events/SlotOnloadEvent&apos;;
+import SlotRenderEndedEvent from &apos;../../src/events/SlotRenderEndedEvent&apos;;
+import ImpressionViewableEvent from &apos;../../src/events/ImpressionViewableEvent&apos;;
+import SlotVisibilityChangedEvent from &apos;../../src/events/SlotVisibilityChangedEvent&apos;;
+
+/** @test {Slot} */
+describe(&apos;Slot&apos;, () =&gt; {
+  const adUnitPath = &apos;/Test/12345&apos;;
+  const optDiv = &apos;gpt-div-123&apos;;
+  const optDivNull = null;
+  const size = [728, 90];
+  const gt = new GPT();
+  const clickUrl = &apos;http://www.google.com/&apos;;
+  const advertiserId = &apos;adv&apos;;
+  const campaignId = &apos;camp&apos;;
+  const lineItemId = 123;
+  const creativeId = 456;
+  const labelIds = [&apos;label1&apos;, &apos;label2&apos;];
+  const info = new ResponseInformation(advertiserId, campaignId, lineItemId,
+    creativeId, labelIds);
+
+  /** @test {Slot#constructor} */
+  describe(&apos;#constructor&apos;, () =&gt; {
+    it(&apos;constructs&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot).to.be.ok();
+    });
+  });
+
+  /** @test {Slot#getName} */
+  describe(&apos;#getName&apos;, () =&gt; {
+    it(&apos;returns the adUnitPath&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getName()).to.be(adUnitPath);
+    });
+  });
+
+  /** @test {Slot#getDefinedId} */
+  describe(&apos;#getDefinedId&apos;, () =&gt; {
+    it(&apos;returns the instance&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv, 123);
+      expect(slot.getDefinedId()).to.be(123);
+    });
+  });
+
+  /** @test {Slot#getAdUnitPath} */
+  describe(&apos;#getAdUnitPath&apos;, () =&gt; {
+    it(&apos;returns the adUnitPath&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getAdUnitPath()).to.be(adUnitPath);
+    });
+  });
+
+  /** @test {Slot#getSlotElementId} */
+  describe(&apos;#getSlotElementId&apos;, () =&gt; {
+    it(&apos;returns the optDiv&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getSlotElementId()).to.be(optDiv);
+    });
+
+    it(&apos;returns a generated ID if necessary&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDivNull);
+      expect(slot.getSlotElementId()).to.be(`gpt_unit_${adUnitPath}_0`);
+    });
+  });
+
+  /** @test {Slot#getServices} */
+  describe(&apos;#getServices&apos;, () =&gt; {
+    it(&apos;returns the services&apos;, () =&gt; {
+      const service = new Service(gt, &apos;test&apos;);
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      expect(slot.getServices()).to.be.an(&apos;array&apos;);
+      expect(slot.getServices()).to.be.eql([service]);
+    });
+  });
+
+  /** @test {Slot#getSizes} */
+  describe(&apos;#getSizes&apos;, () =&gt; {
+    it(&apos;returns the sizes&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getSizes()).to.be.an(&apos;array&apos;);
+      expect(slot.getSizes()).to.have.length(1);
+      const [size1] = slot.getSizes();
+      expect(size1).to.be.ok();
+      expect(size1.getWidth()).to.be(size[0]);
+      expect(size1.getHeight()).to.be(size[1]);
+    });
+  });
+
+  /** @test {Slot#getOutOfPage} */
+  describe(&apos;#getOutOfPage&apos;, () =&gt; {
+    it(&apos;returns the outOfPage status&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getOutOfPage()).to.be.a(&apos;boolean&apos;);
+      expect(slot.getOutOfPage()).to.be(false);
+      slot._options.outOfPage = true;
+      expect(slot.getOutOfPage()).to.be(true);
+    });
+  });
+
+  /** @test {Slot#display} */
+  describe(&apos;#display&apos;, () =&gt; {
+    it(&apos;returns undefined&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.display()).to.be(undefined);
+    });
+
+    it(&apos;marks the slot as displayed&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.display();
+      expect(slot._options.displayed).to.be(true);
+    });
+
+    it(&apos;fires event listeners&apos;, () =&gt; {
+      const service = new Service(gt, &apos;test&apos;);
+      const onImpressionViewableEvent = sinon.spy();
+      const onSlotOnloadEvent = sinon.spy();
+      const onSlotRenderEndedEvent = sinon.spy();
+      const onSlotVisibilityChangedEvent = sinon.spy();
+
+      service.addEventListener(&apos;googletag.events.ImpressionViewableEvent&apos;,
+        onImpressionViewableEvent);
+      service.addEventListener(&apos;googletag.events.SlotOnloadEvent&apos;,
+        onSlotOnloadEvent);
+      service.addEventListener(&apos;googletag.events.SlotRenderEndedEvent&apos;,
+        onSlotRenderEndedEvent);
+      service.addEventListener(&apos;googletag.events.SlotVisibilityChangedEvent&apos;,
+        onSlotVisibilityChangedEvent);
+
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+
+      slot.display();
+      expect(onImpressionViewableEvent.calledOnce).to.be(true);
+      expect(onSlotOnloadEvent.calledOnce).to.be(true);
+      expect(onSlotRenderEndedEvent.calledOnce).to.be(true);
+      expect(onSlotVisibilityChangedEvent.calledOnce).to.be(true);
+    });
+  });
+
+  /** @test {Slot#getAttributeKeys} */
+  describe(&apos;#getAttributeKeys&apos;, () =&gt; {
+    it(&apos;returns the attribute keys&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getAttributeKeys()).to.be.an(&apos;array&apos;);
+      expect(slot.getAttributeKeys()).to.be.empty();
+      slot.set(&apos;attr1&apos;, &apos;value1&apos;);
+      expect(slot.getAttributeKeys()).to.not.be.empty();
+      expect(slot.getAttributeKeys()).to.eql([&apos;attr1&apos;]);
+    });
+  });
+
+  /** @test {Slot#_getAttributes} */
+  describe(&apos;#_getAttributes&apos;, () =&gt; {
+    it(&apos;returns the attribute map&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.set(&apos;attr1&apos;, &apos;value1&apos;);
+      expect(slot._getAttributes()).to.eql({
+        attr1: &apos;value1&apos;
+      });
+    });
+  });
+
+  /** @test {Slot#get} */
+  describe(&apos;#get&apos;, () =&gt; {
+    it(&apos;returns null if attribute not set&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.get(&apos;attr1&apos;)).to.be(null);
+    });
+
+    it(&apos;returns the attribute value if set&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.set(&apos;attr1&apos;, &apos;value1&apos;);
+      expect(slot.get(&apos;attr1&apos;)).to.be(&apos;value1&apos;);
+    });
+  });
+
+  /** @test {Slot#set} */
+  describe(&apos;#set&apos;, () =&gt; {
+    it(&apos;returns the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.set(&apos;attr1&apos;, &apos;value1&apos;)).to.eql(slot);
+    });
+
+    it(&apos;saves the value&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.set(&apos;attr1&apos;, &apos;value1&apos;);
+      expect(slot.get(&apos;attr1&apos;)).to.be(&apos;value1&apos;);
+    });
+  });
+
+  /** @test {Slot#getTargeting} */
+  describe(&apos;#getTargeting&apos;, () =&gt; {
+    it(&apos;returns the null is not set&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.be.empty();
+    });
+
+    it(&apos;returns the value (as an array) if set&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setTargeting(&apos;kv1&apos;, &apos;value&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.eql([&apos;value&apos;]);
+    });
+  });
+
+  /** @test {Slot#getTargetingKeys} */
+  describe(&apos;#getTargetingKeys&apos;, () =&gt; {
+    it(&apos;returns empty array if no keys&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getTargetingKeys()).to.be.an(&apos;array&apos;);
+      expect(slot.getTargetingKeys()).to.be.empty();
+    });
+
+    it(&apos;returns array of keys&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setTargeting(&apos;kv1&apos;, &apos;value1&apos;);
+      slot.setTargeting(&apos;kv2&apos;, &apos;value2&apos;);
+      expect(slot.getTargetingKeys()).to.be.an(&apos;array&apos;);
+      expect(slot.getTargetingKeys()).to.eql([&apos;kv1&apos;, &apos;kv2&apos;]);
+    });
+  });
+
+  /** @test {Slot#getTargetingMap} */
+  describe(&apos;getTargetingMap&apos;, () =&gt; {
+    it(&apos;returns the targeting map&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setTargeting(&apos;kv1&apos;, &apos;value1&apos;);
+      slot.setTargeting(&apos;kv2&apos;, &apos;value2&apos;);
+      expect(slot.getTargetingMap()).to.be.an(&apos;object&apos;);
+      expect(slot.getTargetingMap()).to.eql({
+        kv1: [&apos;value1&apos;],
+        kv2: [&apos;value2&apos;]
+      });
+    });
+  });
+
+  /** @test {Slot#setTargeting} */
+  describe(&apos;#setTargeting&apos;, () =&gt; {
+    it(&apos;returns the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.setTargeting(&apos;kv1&apos;, &apos;value1&apos;)).to.be(slot);
+    });
+
+    it(&apos;saves the value&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setTargeting(&apos;kv1&apos;, &apos;value&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.eql([&apos;value&apos;]);
+    });
+
+    it(&apos;saves the array value&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setTargeting(&apos;kv1&apos;, [&apos;value&apos;]);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.eql([&apos;value&apos;]);
+    });
+
+    it(&apos;overwrites the previous value&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setTargeting(&apos;kv1&apos;, &apos;value1&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.eql([&apos;value1&apos;]);
+      slot.setTargeting(&apos;kv1&apos;, &apos;value2&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.eql([&apos;value2&apos;]);
+    });
+  });
+
+  /** @test {Slot#updateTargetingFromMap} */
+  describe(&apos;#updateTargetingFromMap&apos;, () =&gt; {
+    it(&apos;returns the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.updateTargetingFromMap({})).to.be(slot);
+    });
+
+    it(&apos;copies the map values&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.updateTargetingFromMap({
+        kv1: &apos;value1&apos;,
+        kv2: &apos;value2&apos;
+      });
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.eql([&apos;value1&apos;]);
+      expect(slot.getTargeting(&apos;kv2&apos;)).to.be.an(&apos;array&apos;);
+      expect(slot.getTargeting(&apos;kv2&apos;)).to.eql([&apos;value2&apos;]);
+    });
+
+    it(&apos;overwrites existing the values&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setTargeting(&apos;kv1&apos;, &apos;value3&apos;);
+      slot.updateTargetingFromMap({
+        kv1: &apos;value1&apos;,
+        kv2: &apos;value2&apos;
+      });
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.eql([&apos;value1&apos;]);
+      expect(slot.getTargeting(&apos;kv2&apos;)).to.be.an(&apos;array&apos;);
+      expect(slot.getTargeting(&apos;kv2&apos;)).to.eql([&apos;value2&apos;]);
+    });
+  });
+
+  /** @test {Slot#clearTargeting} */
+  describe(&apos;#clearTargeting&apos;, () =&gt; {
+    it(&apos;returns the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.clearTargeting()).to.be(slot);
+    });
+
+    it(&apos;clears all targeting&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setTargeting(&apos;kv1&apos;, &apos;value1&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.eql([&apos;value1&apos;]);
+      slot.clearTargeting();
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(slot.getTargeting(&apos;kv1&apos;)).to.empty();
+    });
+  });
+
+  /** @test {Slot#addService} */
+  describe(&apos;#addService&apos;, () =&gt; {
+    it(&apos;returns the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      const service = new Service(gt, &apos;test&apos;);
+      expect(slot.addService(service)).to.be(slot);
+    });
+
+    it(&apos;adds service to list of services for the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      const service = new Service(gt, &apos;test&apos;);
+      slot.addService(service);
+      expect(slot._services).to.be.an(&apos;array&apos;);
+      expect(slot._services).to.have.length(1);
+      expect(slot._services[0]).to.be(service);
+    });
+
+    it(&apos;adds the slot to the service&apos;, sinon.test(function() {
+      const service = new Service(gt, &apos;test&apos;);
+      const slot = new Slot(adUnitPath, size, optDiv);
+      const mock = this.mock(service);
+      mock.expects(&apos;_addSlot&apos;).once().withArgs(slot);
+      slot.addService(service);
+    }));
+  });
+
+  /** @test {Slot#getCategoryExclusions} */
+  describe(&apos;#getCategoryExclusions&apos;, () =&gt; {
+    it(&apos;returns empty array if no exclusions&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getCategoryExclusions()).to.be.an(&apos;array&apos;);
+      expect(slot.getCategoryExclusions()).to.be.empty();
+    });
+
+    it(&apos;returns array of exclusions if set&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setCategoryExclusion(&apos;e1&apos;);
+      slot.setCategoryExclusion(&apos;e2&apos;);
+      expect(slot.getCategoryExclusions()).to.be.an(&apos;array&apos;);
+      expect(slot.getCategoryExclusions()).to.eql([&apos;e1&apos;, &apos;e2&apos;]);
+    });
+  });
+
+  /** @test {Slot#setCategoryExclusion} */
+  describe(&apos;#setCategoryExclusion&apos;, () =&gt; {
+    it(&apos;returns the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.setCategoryExclusion(&apos;e1&apos;)).to.be(slot);
+    });
+
+    it(&apos;appends to the exclusions&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getCategoryExclusions()).to.be.an(&apos;array&apos;);
+      expect(slot.getCategoryExclusions()).to.be.empty();
+      slot.setCategoryExclusion(&apos;e1&apos;);
+      expect(slot.getCategoryExclusions()).to.eql([&apos;e1&apos;]);
+      slot.setCategoryExclusion(&apos;e2&apos;);
+      expect(slot.getCategoryExclusions()).to.eql([&apos;e1&apos;, &apos;e2&apos;]);
+    });
+  });
+
+  /** @test {Slot#clearCategoryExclusions} */
+  describe(&apos;#clearCategoryExclusions&apos;, () =&gt; {
+    it(&apos;returns the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.clearCategoryExclusions()).to.be(slot);
+    });
+
+    it(&apos;clears the exclusions&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getCategoryExclusions()).to.be.an(&apos;array&apos;);
+      expect(slot.getCategoryExclusions()).to.be.empty();
+      slot.setCategoryExclusion(&apos;e1&apos;);
+      expect(slot.getCategoryExclusions()).to.eql([&apos;e1&apos;]);
+      slot.clearCategoryExclusions();
+      expect(slot.getCategoryExclusions()).to.be.empty();
+    });
+  });
+
+  /** @test {Slot#defineSizeMapping} */
+  describe(&apos;#defineSizeMapping&apos;, () =&gt; {
+    it(&apos;returns the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.defineSizeMapping([])).to.be(slot);
+    });
+
+    it(&apos;overwrites the previous size mapping&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot._sizeMapping).to.be(null);
+      slot.defineSizeMapping([]);
+      expect(slot._sizeMapping).to.eql([]);
+    });
+
+    it(&apos;throws an error on invalid size mapping&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot._sizeMapping).to.be(null);
+      expect(() =&gt; slot.defineSizeMapping(&apos;bob&apos;)).to.throwError();
+      expect(slot._sizeMapping).to.be(null);
+    });
+  });
+
+  /** @test {Slot#setClickUrl} */
+  describe(&apos;#setClickUrl&apos;, () =&gt; {
+    it(&apos;returns the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.setClickUrl(clickUrl)).to.be(slot);
+    });
+
+    it(&apos;saves the click URL&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setClickUrl(clickUrl);
+      expect(slot._clickUrl).to.be(clickUrl);
+    });
+  });
+
+  /** @test {Slot#getClickUrl} */
+  describe(&apos;#getClickUrl&apos;, () =&gt; {
+    it(&apos;returns null if no click URL&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getClickUrl()).to.be(null);
+    });
+
+    it(&apos;returns the previously set click URL&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setClickUrl(clickUrl);
+      expect(slot.getClickUrl()).to.be(clickUrl);
+    });
+  });
+
+  /** @test {Slot#getResponseInformation} */
+  describe(&apos;#getResponseInformation&apos;, () =&gt; {
+    it(&apos;returns null if no response information&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getResponseInformation()).to.be(null);
+    });
+
+    it(&apos;returns previous response information if set&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._responseInformation = info;
+      expect(slot.getResponseInformation()).to.be(info);
+    });
+  });
+
+  /** @test {Slot#setCollapseEmptyDiv} */
+  describe(&apos;#setCollapseEmptyDiv&apos;, () =&gt; {
+    it(&apos;returns the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot._options.collapseEmptyDiv).to.be(false);
+      expect(slot._options.collapseBeforeAdFetch).to.be(false);
+      expect(slot.setCollapseEmptyDiv(true)).to.be(slot);
+    });
+
+    it(&apos;saves the collapseEmptyDiv option&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setCollapseEmptyDiv(true);
+      expect(slot._options.collapseEmptyDiv).to.be(true);
+    });
+
+    it(&apos;saves the collapseBeforeAdFetch option&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setCollapseEmptyDiv(true, true);
+      expect(slot._options.collapseEmptyDiv).to.be(true);
+      expect(slot._options.collapseBeforeAdFetch).to.be(true);
+    });
+  });
+
+  /** @test {Slot#getCollapseEmptyDiv} */
+  describe(&apos;#getCollapseEmptyDiv&apos;, () =&gt; {
+    it(&apos;returns the collapseEmptyDiv options&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.getCollapseEmptyDiv()).to.be(false);
+      slot.setCollapseEmptyDiv(true);
+      expect(slot.getCollapseEmptyDiv()).to.be(true);
+    });
+  });
+
+  /** @test {Slot#setForceSafeFrame} */
+  describe(&apos;#setForceSafeFrame&apos;, () =&gt; {
+    it(&apos;returns the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.setForceSafeFrame(true)).to.be(slot);
+    });
+
+    it(&apos;saves the value&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setForceSafeFrame(true);
+      expect(slot._options.forceSafeFrame).to.be(true);
+    });
+  });
+
+  /** @test {Slot#setSafeFrameConfig} */
+  describe(&apos;#setSafeFrameConfig&apos;, () =&gt; {
+    it(&apos;returns the slot&apos;, () =&gt; {
+      const allowOverlayExpansion = true;
+      const allowPushExpansion = true;
+      const sandbox = true;
+      const config = new SafeFrameConfig(allowOverlayExpansion, allowPushExpansion, sandbox);
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot.setSafeFrameConfig(config)).to.be(slot);
+    });
+
+    it(&apos;saves the config&apos;, () =&gt; {
+      const allowOverlayExpansion = true;
+      const allowPushExpansion = true;
+      const sandbox = true;
+      const config = new SafeFrameConfig(allowOverlayExpansion, allowPushExpansion, sandbox);
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.setSafeFrameConfig(config);
+      expect(slot._options.safeFrameConfig).to.eql(config);
+    });
+  });
+
+  /** @test {Slot#fetchStarted} */
+  describe(&apos;#fetchStarted&apos;, () =&gt; {
+    it(&apos;clears the fetched option&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._options.fetched = true;
+      slot.fetchStarted();
+      expect(slot._options.fetched).to.be(false);
+    });
+  });
+
+  /** @test {Slot#fetchEnded} */
+  describe(&apos;#fetchEnded&apos;, () =&gt; {
+    it(&apos;sets the fetched option&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot._options.fetched).to.be(false);
+      slot.fetchStarted();
+      slot.fetchEnded();
+      expect(slot._options.fetched).to.be(true);
+    });
+  });
+
+  /** @test {Slot#loaded} */
+  describe(&apos;#loaded&apos;, () =&gt; {
+    it(&apos;broadcasts the event&apos;, () =&gt; {
+      const service = new Service(gt, &apos;test&apos;);
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      const spy = sinon.spy();
+      service.addEventListener(&apos;googletag.events.SlotOnloadEvent&apos;, spy);
+      slot.loaded();
+      expect(spy.called).to.be(true);
+      expect(spy.calledWith(new SlotOnloadEvent(service.getName(), slot))).to.be(true);
+    });
+  });
+
+  /** @test {Slot#renderStarted} */
+  describe(&apos;#renderStarted&apos;, () =&gt; {
+    it(&apos;clears the displayed option&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._options.displayed = true;
+      slot.renderStarted();
+      expect(slot._options.displayed).to.be(false);
+    });
+  });
+
+  /** @test {Slot#renderEnded} */
+  describe(&apos;#renderEnded&apos;, () =&gt; {
+    it(&apos;sets the displayed option&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.renderStarted();
+      slot.renderEnded();
+      expect(slot._options.displayed).to.be(true);
+    });
+
+    it(&apos;sets the response information&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot.renderStarted();
+      slot.renderEnded(info);
+      expect(slot._responseInformation).to.be(info);
+    });
+
+    it(&apos;broadcasts an empty event if null&apos;, () =&gt; {
+      const service = new Service(gt, &apos;test&apos;);
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      const spy = sinon.spy();
+      service.addEventListener(&apos;googletag.events.SlotRenderEndedEvent&apos;, spy);
+      slot.renderStarted();
+      slot.renderEnded(null);
+      expect(spy.called).to.be(true);
+      expect(spy.calledWith(new SlotRenderEndedEvent(service.getName(), slot,
+        null, null, true, slot.getSizes()[0]))).to.be(true);
+    });
+
+    it(&apos;broadcasts a non-empty event if info provided&apos;, () =&gt; {
+      const service = new Service(gt, &apos;test&apos;);
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      const spy = sinon.spy();
+      service.addEventListener(&apos;googletag.events.SlotRenderEndedEvent&apos;, spy);
+      slot.renderStarted();
+      slot.renderEnded(info);
+      expect(spy.called).to.be(true);
+      expect(spy.calledWith(new SlotRenderEndedEvent(service.getName(), slot,
+        info.creativeId, info.lineItemId, false, slot.getSizes()[0]))).to.be(true);
+    });
+  });
+
+  /** @test {Slot#impressionViewable} */
+  describe(&apos;#impressionViewable&apos;, () =&gt; {
+    it(&apos;broadcasts the event&apos;, () =&gt; {
+      const service = new Service(gt, &apos;test&apos;);
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      const spy = sinon.spy();
+      service.addEventListener(&apos;googletag.events.ImpressionViewableEvent&apos;, spy);
+      slot.impressionViewable();
+      expect(spy.called).to.be(true);
+      expect(spy.calledWith(new ImpressionViewableEvent(service.getName(), slot))).to.be(true);
+    });
+  });
+
+  /** @test {Slot#visibilityChanged} */
+  describe(&apos;#visibilityChanged&apos;, () =&gt; {
+    it(&apos;saves the in-view percentage and broadcasts event&apos;, () =&gt; {
+      const inViewPercentage = 23;
+      const service = new Service(gt, &apos;test&apos;);
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      const spy = sinon.spy();
+      service.addEventListener(&apos;googletag.events.SlotVisibilityChangedEvent&apos;, spy);
+      slot.visibilityChanged(inViewPercentage);
+      expect(slot._options.inViewPercentage).to.be(inViewPercentage);
+      expect(spy.called).to.be(true);
+      expect(spy.calledWith(new SlotVisibilityChangedEvent(service.getName(), slot, inViewPercentage))).to.be(true);
+    });
+
+    it(&apos;does not re-broadcast event if no change&apos;, () =&gt; {
+      const inViewPercentage = 23;
+      const service = new Service(gt, &apos;test&apos;);
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      const spy = sinon.spy();
+      slot.visibilityChanged(inViewPercentage);
+      service.addEventListener(&apos;googletag.events.SlotVisibilityChangedEvent&apos;, spy);
+      expect(slot._options.inViewPercentage).to.be(inViewPercentage);
+      slot.impressionViewable(inViewPercentage);
+      expect(slot._options.inViewPercentage).to.be(inViewPercentage);
+      expect(spy.called).to.be(false);
+    });
+  });
+
+  /** @test {Slot#_refresh} */
+  describe(&apos;#_refresh&apos;, () =&gt; {
+    it(&apos;fetches the slot&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot._options.fetched).to.be(false);
+      slot._refresh();
+      expect(slot._options.fetched).to.be(true);
+    });
+
+    it(&apos;increments a refresh counter&apos;, () =&gt; {
+      const slot = new Slot(adUnitPath, size, optDiv);
+      expect(slot._options.refreshed).to.be(0);
+      slot._refresh();
+      expect(slot._options.refreshed).to.be(1);
+    });
+  });
+
+  /** @test {Slot#_clear} */
+  describe(&apos;#_clear&apos;, () =&gt; {
+    it(&apos;clears the content&apos;, () =&gt; {
+      const content = &apos;CONTENT&apos;;
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._setContent(content);
+      slot._clear();
+      expect(slot._options.content).to.be(null);
+    });
+
+    it(&apos;marks the slot as not fetched&apos;, () =&gt; {
+      const content = &apos;CONTENT&apos;;
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._setContent(content);
+      slot._clear();
+      expect(slot._options.fetched).to.be(false);
+    });
+  });
+
+  /** @test {Slot#_setContent} */
+  describe(&apos;#_setContent&apos;, () =&gt; {
+    it(&apos;saves the content&apos;, () =&gt; {
+      const content = &apos;CONTENT&apos;;
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._setContent(content);
+      expect(slot._options.content).to.be(content);
+    });
+  });
+
+  /** @test {Slot#_getContent} */
+  describe(&apos;#_getContent&apos;, () =&gt; {
+    it(&apos;returns the content&apos;, () =&gt; {
+      const content = &apos;CONTENT&apos;;
+      const slot = new Slot(adUnitPath, size, optDiv);
+      slot._setContent(content);
+      expect(slot._getContent()).to.be(content);
+    });
+  });
+
+  /** @test {Slot#_removeServices} */
+  describe(&apos;#_removeServices&apos;, () =&gt; {
+    it(&apos;removes all the services&apos;, () =&gt; {
+      const service = new Service(gt, &apos;test&apos;);
+      const slot = new Slot(adUnitPath, size, optDiv).addService(service);
+      expect(slot.getServices()).to.be.an(&apos;array&apos;);
+      expect(slot.getServices()).to.be.eql([service]);
+      slot._removeServices();
+      expect(slot.getServices()).to.be.an(&apos;array&apos;);
+      expect(slot.getServices()).to.be.empty();
+    });
+  });
+
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.8)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,1820 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Size",
+            "range": [
+              125,
+              129
+            ],
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 7
+              },
+              "end": {
+                "line": 6,
+                "column": 11
+              }
+            }
+          },
+          "range": [
+            125,
+            129
+          ],
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 7
+            },
+            "end": {
+              "line": 6,
+              "column": 11
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "./Size",
+        "raw": "'./Size'",
+        "range": [
+          135,
+          143
+        ],
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 17
+          },
+          "end": {
+            "line": 6,
+            "column": 25
+          }
+        }
+      },
+      "range": [
+        118,
+        144
+      ],
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 26
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Array of two numbers representing [width, height].\n * @typedef {Array<number>} SingleSizeArray\n * @private\n ",
+          "range": [
+            0,
+            117
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Returns true if the given object is a {@link SingleSizeArray}.\n *\n * @private\n * @param {SingleSizeArray|*} obj The object to test\n ",
+          "range": [
+            146,
+            287
+          ],
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 0
+            },
+            "end": {
+              "line": 13,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "isSingleSizeArray",
+          "range": [
+            304,
+            321
+          ],
+          "loc": {
+            "start": {
+              "line": 14,
+              "column": 16
+            },
+            "end": {
+              "line": 14,
+              "column": 33
+            }
+          }
+        },
+        "params": [
+          {
+            "type": "Identifier",
+            "name": "obj",
+            "range": [
+              322,
+              325
+            ],
+            "loc": {
+              "start": {
+                "line": 14,
+                "column": 34
+              },
+              "end": {
+                "line": 14,
+                "column": 37
+              }
+            }
+          }
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "IfStatement",
+              "test": {
+                "type": "LogicalExpression",
+                "operator": "||",
+                "left": {
+                  "type": "LogicalExpression",
+                  "operator": "||",
+                  "left": {
+                    "type": "BinaryExpression",
+                    "operator": "==",
+                    "left": {
+                      "type": "Identifier",
+                      "name": "obj",
+                      "range": [
+                        335,
+                        338
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 6
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 9
+                        }
+                      }
+                    },
+                    "right": {
+                      "type": "Literal",
+                      "value": null,
+                      "raw": "null",
+                      "range": [
+                        342,
+                        346
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 13
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 17
+                        }
+                      }
+                    },
+                    "range": [
+                      335,
+                      346
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 15,
+                        "column": 6
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 17
+                      }
+                    }
+                  },
+                  "right": {
+                    "type": "UnaryExpression",
+                    "operator": "!",
+                    "argument": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "Identifier",
+                          "name": "Array",
+                          "range": [
+                            351,
+                            356
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 15,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 15,
+                              "column": 27
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "isArray",
+                          "range": [
+                            357,
+                            364
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 15,
+                              "column": 28
+                            },
+                            "end": {
+                              "line": 15,
+                              "column": 35
+                            }
+                          }
+                        },
+                        "range": [
+                          351,
+                          364
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 15,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 35
+                          }
+                        }
+                      },
+                      "arguments": [
+                        {
+                          "type": "Identifier",
+                          "name": "obj",
+                          "range": [
+                            365,
+                            368
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 15,
+                              "column": 36
+                            },
+                            "end": {
+                              "line": 15,
+                              "column": 39
+                            }
+                          }
+                        }
+                      ],
+                      "range": [
+                        351,
+                        369
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 22
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 40
+                        }
+                      }
+                    },
+                    "prefix": true,
+                    "range": [
+                      350,
+                      369
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 15,
+                        "column": 21
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 40
+                      }
+                    }
+                  },
+                  "range": [
+                    335,
+                    369
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 15,
+                      "column": 6
+                    },
+                    "end": {
+                      "line": 15,
+                      "column": 40
+                    }
+                  }
+                },
+                "right": {
+                  "type": "BinaryExpression",
+                  "operator": "!==",
+                  "left": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                      "type": "Identifier",
+                      "name": "obj",
+                      "range": [
+                        373,
+                        376
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 44
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 47
+                        }
+                      }
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "length",
+                      "range": [
+                        377,
+                        383
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 48
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 54
+                        }
+                      }
+                    },
+                    "range": [
+                      373,
+                      383
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 15,
+                        "column": 44
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 54
+                      }
+                    }
+                  },
+                  "right": {
+                    "type": "Literal",
+                    "value": 2,
+                    "raw": "2",
+                    "range": [
+                      388,
+                      389
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 15,
+                        "column": 59
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 60
+                      }
+                    }
+                  },
+                  "range": [
+                    373,
+                    389
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 15,
+                      "column": 44
+                    },
+                    "end": {
+                      "line": 15,
+                      "column": 60
+                    }
+                  }
+                },
+                "range": [
+                  335,
+                  389
+                ],
+                "loc": {
+                  "start": {
+                    "line": 15,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 15,
+                    "column": 60
+                  }
+                }
+              },
+              "consequent": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "Literal",
+                      "value": false,
+                      "raw": "false",
+                      "range": [
+                        404,
+                        409
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 16,
+                          "column": 11
+                        },
+                        "end": {
+                          "line": 16,
+                          "column": 16
+                        }
+                      }
+                    },
+                    "range": [
+                      397,
+                      410
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 17
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  391,
+                  414
+                ],
+                "loc": {
+                  "start": {
+                    "line": 15,
+                    "column": 62
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 3
+                  }
+                }
+              },
+              "alternate": null,
+              "range": [
+                331,
+                414
+              ],
+              "loc": {
+                "start": {
+                  "line": 15,
+                  "column": 2
+                },
+                "end": {
+                  "line": 17,
+                  "column": 3
+                }
+              }
+            },
+            {
+              "type": "VariableDeclaration",
+              "declarations": [
+                {
+                  "type": "VariableDeclarator",
+                  "id": {
+                    "type": "ArrayPattern",
+                    "elements": [
+                      {
+                        "type": "Identifier",
+                        "name": "w",
+                        "range": [
+                          425,
+                          426
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 19,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 10
+                          }
+                        }
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "h",
+                        "range": [
+                          428,
+                          429
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 19,
+                            "column": 12
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 13
+                          }
+                        }
+                      }
+                    ],
+                    "range": [
+                      424,
+                      430
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 19,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 14
+                      }
+                    }
+                  },
+                  "init": {
+                    "type": "Identifier",
+                    "name": "obj",
+                    "range": [
+                      433,
+                      436
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 19,
+                        "column": 17
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 20
+                      }
+                    }
+                  },
+                  "range": [
+                    424,
+                    436
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 19,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 20
+                    }
+                  }
+                }
+              ],
+              "kind": "const",
+              "range": [
+                418,
+                437
+              ],
+              "loc": {
+                "start": {
+                  "line": 19,
+                  "column": 2
+                },
+                "end": {
+                  "line": 19,
+                  "column": 21
+                }
+              }
+            },
+            {
+              "type": "ReturnStatement",
+              "argument": {
+                "type": "LogicalExpression",
+                "operator": "&&",
+                "left": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "isInteger",
+                    "range": [
+                      447,
+                      456
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 20,
+                        "column": 9
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 18
+                      }
+                    }
+                  },
+                  "arguments": [
+                    {
+                      "type": "Identifier",
+                      "name": "w",
+                      "range": [
+                        457,
+                        458
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 20,
+                          "column": 19
+                        },
+                        "end": {
+                          "line": 20,
+                          "column": 20
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    447,
+                    459
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 20,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 20,
+                      "column": 21
+                    }
+                  }
+                },
+                "right": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "Identifier",
+                    "name": "isInteger",
+                    "range": [
+                      463,
+                      472
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 20,
+                        "column": 25
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 34
+                      }
+                    }
+                  },
+                  "arguments": [
+                    {
+                      "type": "Identifier",
+                      "name": "h",
+                      "range": [
+                        473,
+                        474
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 20,
+                          "column": 35
+                        },
+                        "end": {
+                          "line": 20,
+                          "column": 36
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    463,
+                    475
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 20,
+                      "column": 25
+                    },
+                    "end": {
+                      "line": 20,
+                      "column": 37
+                    }
+                  }
+                },
+                "range": [
+                  447,
+                  475
+                ],
+                "loc": {
+                  "start": {
+                    "line": 20,
+                    "column": 9
+                  },
+                  "end": {
+                    "line": 20,
+                    "column": 37
+                  }
+                }
+              },
+              "range": [
+                440,
+                476
+              ],
+              "loc": {
+                "start": {
+                  "line": 20,
+                  "column": 2
+                },
+                "end": {
+                  "line": 20,
+                  "column": 38
+                }
+              }
+            }
+          ],
+          "range": [
+            327,
+            478
+          ],
+          "loc": {
+            "start": {
+              "line": 14,
+              "column": 39
+            },
+            "end": {
+              "line": 21,
+              "column": 1
+            }
+          }
+        },
+        "generator": false,
+        "expression": false,
+        "range": [
+          295,
+          478
+        ],
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 7
+          },
+          "end": {
+            "line": 21,
+            "column": 1
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Returns true if the given object is a {@link SingleSizeArray}.\n *\n * @private\n * @param {SingleSizeArray|*} obj The object to test\n ",
+            "range": [
+              146,
+              287
+            ],
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 0
+              },
+              "end": {
+                "line": 13,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Returns a {@link Size} instance from the {@link SingleSizeArray}.\n *\n * @private\n * @param {SingleSizeArray|*} obj The object to convert.\n * @returns {?Size} The {@link Size} instance or null if the object is not\n * a {@link SingleSizeArray}.\n ",
+            "range": [
+              480,
+              733
+            ],
+            "loc": {
+              "start": {
+                "line": 23,
+                "column": 0
+              },
+              "end": {
+                "line": 30,
+                "column": 3
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        288,
+        478
+      ],
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 0
+        },
+        "end": {
+          "line": 21,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Returns true if the given object is a {@link SingleSizeArray}.\n *\n * @private\n * @param {SingleSizeArray|*} obj The object to test\n ",
+          "range": [
+            146,
+            287
+          ],
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 0
+            },
+            "end": {
+              "line": 13,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Returns a {@link Size} instance from the {@link SingleSizeArray}.\n *\n * @private\n * @param {SingleSizeArray|*} obj The object to convert.\n * @returns {?Size} The {@link Size} instance or null if the object is not\n * a {@link SingleSizeArray}.\n ",
+          "range": [
+            480,
+            733
+          ],
+          "loc": {
+            "start": {
+              "line": 23,
+              "column": 0
+            },
+            "end": {
+              "line": 30,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "FunctionDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "toSize",
+          "range": [
+            750,
+            756
+          ],
+          "loc": {
+            "start": {
+              "line": 31,
+              "column": 16
+            },
+            "end": {
+              "line": 31,
+              "column": 22
+            }
+          }
+        },
+        "params": [
+          {
+            "type": "Identifier",
+            "name": "obj",
+            "range": [
+              757,
+              760
+            ],
+            "loc": {
+              "start": {
+                "line": 31,
+                "column": 23
+              },
+              "end": {
+                "line": 31,
+                "column": 26
+              }
+            }
+          }
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "IfStatement",
+              "test": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "Identifier",
+                  "name": "isSingleSizeArray",
+                  "range": [
+                    770,
+                    787
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 32,
+                      "column": 6
+                    },
+                    "end": {
+                      "line": 32,
+                      "column": 23
+                    }
+                  }
+                },
+                "arguments": [
+                  {
+                    "type": "Identifier",
+                    "name": "obj",
+                    "range": [
+                      788,
+                      791
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 32,
+                        "column": 24
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 27
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  770,
+                  792
+                ],
+                "loc": {
+                  "start": {
+                    "line": 32,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 32,
+                    "column": 28
+                  }
+                }
+              },
+              "consequent": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "VariableDeclaration",
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "id": {
+                          "type": "ArrayPattern",
+                          "elements": [
+                            {
+                              "type": "Identifier",
+                              "name": "w",
+                              "range": [
+                                807,
+                                808
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 33,
+                                  "column": 11
+                                },
+                                "end": {
+                                  "line": 33,
+                                  "column": 12
+                                }
+                              }
+                            },
+                            {
+                              "type": "Identifier",
+                              "name": "h",
+                              "range": [
+                                810,
+                                811
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 33,
+                                  "column": 14
+                                },
+                                "end": {
+                                  "line": 33,
+                                  "column": 15
+                                }
+                              }
+                            }
+                          ],
+                          "range": [
+                            806,
+                            812
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 33,
+                              "column": 10
+                            },
+                            "end": {
+                              "line": 33,
+                              "column": 16
+                            }
+                          }
+                        },
+                        "init": {
+                          "type": "Identifier",
+                          "name": "obj",
+                          "range": [
+                            815,
+                            818
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 33,
+                              "column": 19
+                            },
+                            "end": {
+                              "line": 33,
+                              "column": 22
+                            }
+                          }
+                        },
+                        "range": [
+                          806,
+                          818
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 33,
+                            "column": 10
+                          },
+                          "end": {
+                            "line": 33,
+                            "column": 22
+                          }
+                        }
+                      }
+                    ],
+                    "kind": "const",
+                    "range": [
+                      800,
+                      819
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 33,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 33,
+                        "column": 23
+                      }
+                    }
+                  },
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "NewExpression",
+                      "callee": {
+                        "type": "Identifier",
+                        "name": "Size",
+                        "range": [
+                          835,
+                          839
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 34,
+                            "column": 15
+                          },
+                          "end": {
+                            "line": 34,
+                            "column": 19
+                          }
+                        }
+                      },
+                      "arguments": [
+                        {
+                          "type": "Identifier",
+                          "name": "w",
+                          "range": [
+                            840,
+                            841
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 34,
+                              "column": 20
+                            },
+                            "end": {
+                              "line": 34,
+                              "column": 21
+                            }
+                          }
+                        },
+                        {
+                          "type": "Identifier",
+                          "name": "h",
+                          "range": [
+                            843,
+                            844
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 34,
+                              "column": 23
+                            },
+                            "end": {
+                              "line": 34,
+                              "column": 24
+                            }
+                          }
+                        }
+                      ],
+                      "range": [
+                        831,
+                        845
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 34,
+                          "column": 11
+                        },
+                        "end": {
+                          "line": 34,
+                          "column": 25
+                        }
+                      }
+                    },
+                    "range": [
+                      824,
+                      846
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 26
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  794,
+                  850
+                ],
+                "loc": {
+                  "start": {
+                    "line": 32,
+                    "column": 30
+                  },
+                  "end": {
+                    "line": 35,
+                    "column": 3
+                  }
+                }
+              },
+              "alternate": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "Literal",
+                      "value": null,
+                      "raw": "null",
+                      "range": [
+                        869,
+                        873
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 36,
+                          "column": 11
+                        },
+                        "end": {
+                          "line": 36,
+                          "column": 15
+                        }
+                      }
+                    },
+                    "range": [
+                      862,
+                      874
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 36,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 16
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  856,
+                  878
+                ],
+                "loc": {
+                  "start": {
+                    "line": 35,
+                    "column": 9
+                  },
+                  "end": {
+                    "line": 37,
+                    "column": 3
+                  }
+                }
+              },
+              "range": [
+                766,
+                878
+              ],
+              "loc": {
+                "start": {
+                  "line": 32,
+                  "column": 2
+                },
+                "end": {
+                  "line": 37,
+                  "column": 3
+                }
+              }
+            }
+          ],
+          "range": [
+            762,
+            880
+          ],
+          "loc": {
+            "start": {
+              "line": 31,
+              "column": 28
+            },
+            "end": {
+              "line": 38,
+              "column": 1
+            }
+          }
+        },
+        "generator": false,
+        "expression": false,
+        "range": [
+          741,
+          880
+        ],
+        "loc": {
+          "start": {
+            "line": 31,
+            "column": 7
+          },
+          "end": {
+            "line": 38,
+            "column": 1
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Returns a {@link Size} instance from the {@link SingleSizeArray}.\n *\n * @private\n * @param {SingleSizeArray|*} obj The object to convert.\n * @returns {?Size} The {@link Size} instance or null if the object is not\n * a {@link SingleSizeArray}.\n ",
+            "range": [
+              480,
+              733
+            ],
+            "loc": {
+              "start": {
+                "line": 23,
+                "column": 0
+              },
+              "end": {
+                "line": 30,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Returns true if the specified parameter is an integer.\n *\n * @private\n * @param {*} n The value to check\n * @returns {boolean} True if the value is an integer.\n ",
+            "range": [
+              882,
+              1052
+            ],
+            "loc": {
+              "start": {
+                "line": 40,
+                "column": 0
+              },
+              "end": {
+                "line": 46,
+                "column": 3
+              }
+            }
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        734,
+        880
+      ],
+      "loc": {
+        "start": {
+          "line": 31,
+          "column": 0
+        },
+        "end": {
+          "line": 38,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Returns a {@link Size} instance from the {@link SingleSizeArray}.\n *\n * @private\n * @param {SingleSizeArray|*} obj The object to convert.\n * @returns {?Size} The {@link Size} instance or null if the object is not\n * a {@link SingleSizeArray}.\n ",
+          "range": [
+            480,
+            733
+          ],
+          "loc": {
+            "start": {
+              "line": 23,
+              "column": 0
+            },
+            "end": {
+              "line": 30,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Returns true if the specified parameter is an integer.\n *\n * @private\n * @param {*} n The value to check\n * @returns {boolean} True if the value is an integer.\n ",
+          "range": [
+            882,
+            1052
+          ],
+          "loc": {
+            "start": {
+              "line": 40,
+              "column": 0
+            },
+            "end": {
+              "line": 46,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "FunctionDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "isInteger",
+        "range": [
+          1062,
+          1071
+        ],
+        "loc": {
+          "start": {
+            "line": 47,
+            "column": 9
+          },
+          "end": {
+            "line": 47,
+            "column": 18
+          }
+        }
+      },
+      "params": [
+        {
+          "type": "Identifier",
+          "name": "n",
+          "range": [
+            1072,
+            1073
+          ],
+          "loc": {
+            "start": {
+              "line": 47,
+              "column": 19
+            },
+            "end": {
+              "line": 47,
+              "column": 20
+            }
+          }
+        }
+      ],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ReturnStatement",
+            "argument": {
+              "type": "LogicalExpression",
+              "operator": "&&",
+              "left": {
+                "type": "BinaryExpression",
+                "operator": "===",
+                "left": {
+                  "type": "UnaryExpression",
+                  "operator": "typeof",
+                  "argument": {
+                    "type": "Identifier",
+                    "name": "n",
+                    "range": [
+                      1094,
+                      1095
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 48,
+                        "column": 17
+                      },
+                      "end": {
+                        "line": 48,
+                        "column": 18
+                      }
+                    }
+                  },
+                  "prefix": true,
+                  "range": [
+                    1087,
+                    1095
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 48,
+                      "column": 10
+                    },
+                    "end": {
+                      "line": 48,
+                      "column": 18
+                    }
+                  }
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": "number",
+                  "raw": "'number'",
+                  "range": [
+                    1100,
+                    1108
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 48,
+                      "column": 23
+                    },
+                    "end": {
+                      "line": 48,
+                      "column": 31
+                    }
+                  }
+                },
+                "range": [
+                  1087,
+                  1108
+                ],
+                "loc": {
+                  "start": {
+                    "line": 48,
+                    "column": 10
+                  },
+                  "end": {
+                    "line": 48,
+                    "column": 31
+                  }
+                }
+              },
+              "right": {
+                "type": "BinaryExpression",
+                "operator": "===",
+                "left": {
+                  "type": "BinaryExpression",
+                  "operator": "%",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "n",
+                    "range": [
+                      1114,
+                      1115
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 48,
+                        "column": 37
+                      },
+                      "end": {
+                        "line": 48,
+                        "column": 38
+                      }
+                    }
+                  },
+                  "right": {
+                    "type": "Literal",
+                    "value": 1,
+                    "raw": "1",
+                    "range": [
+                      1118,
+                      1119
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 48,
+                        "column": 41
+                      },
+                      "end": {
+                        "line": 48,
+                        "column": 42
+                      }
+                    }
+                  },
+                  "range": [
+                    1114,
+                    1119
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 48,
+                      "column": 37
+                    },
+                    "end": {
+                      "line": 48,
+                      "column": 42
+                    }
+                  }
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": 0,
+                  "raw": "0",
+                  "range": [
+                    1124,
+                    1125
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 48,
+                      "column": 47
+                    },
+                    "end": {
+                      "line": 48,
+                      "column": 48
+                    }
+                  }
+                },
+                "range": [
+                  1114,
+                  1125
+                ],
+                "loc": {
+                  "start": {
+                    "line": 48,
+                    "column": 37
+                  },
+                  "end": {
+                    "line": 48,
+                    "column": 48
+                  }
+                }
+              },
+              "range": [
+                1086,
+                1126
+              ],
+              "loc": {
+                "start": {
+                  "line": 48,
+                  "column": 9
+                },
+                "end": {
+                  "line": 48,
+                  "column": 49
+                }
+              }
+            },
+            "range": [
+              1079,
+              1127
+            ],
+            "loc": {
+              "start": {
+                "line": 48,
+                "column": 2
+              },
+              "end": {
+                "line": 48,
+                "column": 50
+              }
+            }
+          }
+        ],
+        "range": [
+          1075,
+          1129
+        ],
+        "loc": {
+          "start": {
+            "line": 47,
+            "column": 22
+          },
+          "end": {
+            "line": 49,
+            "column": 1
+          }
+        }
+      },
+      "generator": false,
+      "expression": false,
+      "range": [
+        1053,
+        1129
+      ],
+      "loc": {
+        "start": {
+          "line": 47,
+          "column": 0
+        },
+        "end": {
+          "line": 49,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Returns true if the specified parameter is an integer.\n *\n * @private\n * @param {*} n The value to check\n * @returns {boolean} True if the value is an integer.\n ",
+          "range": [
+            882,
+            1052
+          ],
+          "loc": {
+            "start": {
+              "line": 40,
+              "column": 0
+            },
+            "end": {
+              "line": 46,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    118,
+    1129
+  ],
+  "loc": {
+    "start": {
+      "line": 6,
+      "column": 0
+    },
+    "end": {
+      "line": 49,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * Array of two numbers representing [width, height].\n * @typedef {Array<number>} SingleSizeArray\n * @private\n ",
+      "range": [
+        0,
+        117
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * Returns true if the given object is a {@link SingleSizeArray}.\n *\n * @private\n * @param {SingleSizeArray|*} obj The object to test\n ",
+      "range": [
+        146,
+        287
+      ],
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 13,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * Returns a {@link Size} instance from the {@link SingleSizeArray}.\n *\n * @private\n * @param {SingleSizeArray|*} obj The object to convert.\n * @returns {?Size} The {@link Size} instance or null if the object is not\n * a {@link SingleSizeArray}.\n ",
+      "range": [
+        480,
+        733
+      ],
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 0
+        },
+        "end": {
+          "line": 30,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * Returns true if the specified parameter is an integer.\n *\n * @private\n * @param {*} n The value to check\n * @returns {boolean} True if the value is an integer.\n ",
+      "range": [
+        882,
+        1052
+      ],
+      "loc": {
+        "start": {
+          "line": 40,
+          "column": 0
+        },
+        "end": {
+          "line": 46,
+          "column": 3
+        }
+      }
+    }
+  ]
+}

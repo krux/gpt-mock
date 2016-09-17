@@ -1,0 +1,3548 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">Slot | gpt-mock API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CommandArray.js~CommandArray.html">CommandArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CompanionAdsService.js~CompanionAdsService.html">CompanionAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ContentService.js~ContentService.html">ContentService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GPT.js~GPT.html">GPT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PubAdsService.js~PubAdsService.html">PubAdsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeFrameConfig.js~SafeFrameConfig.html">SafeFrameConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Service.js~Service.html">Service</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Size.js~Size.html">Size</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SlotId.js~SlotId.html">SlotId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array#push</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://www.google.com/dfp">DFP</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">events</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/ImpressionViewableEvent.js~ImpressionViewableEvent.html">ImpressionViewableEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotOnloadEvent.js~SlotOnloadEvent.html">SlotOnloadEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotRenderEndedEvent.js~SlotRenderEndedEvent.html">SlotRenderEndedEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/SlotVisibilityChangedEvent.js~SlotVisibilityChangedEvent.html">SlotVisibilityChangedEvent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="header-notice">
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Slot from &apos;<span><a href="file/src/Slot.js.html#lineNumber12">gpt-mock/dist/Slot.js</a></span>&apos;</code></pre></div>
+  <span data-ice="access">public</span>
+  <span data-ice="kind">class</span>
+  
+  
+  
+  <span data-ice="source">| <span><a href="file/src/Slot.js.html#lineNumber12">source</a></span></span>
+</div>
+
+<div class="self-detail detail">
+  <h1 data-ice="name">Slot</h1>
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <div class="description" data-ice="description"><p>Slot is an object representing single ad slot on a page.</p>
+</div>
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber12">Slot</a></span></li>
+</ul>
+  </div>
+
+  
+</div>
+
+
+
+<div data-ice="constructorSummary"><h2>Constructor Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Constructor</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-constructor-constructor">constructor</a></span></span><span data-ice="signature">(adUnitPath: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, size: <span>GeneralSize</span>, optDiv: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, instance: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Creates a new <span><a href="class/src/Slot.js~Slot.html">Slot</a></span>.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+<div data-ice="methodSummary"><h2>Method Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Methods</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-addService">addService</a></span></span><span data-ice="signature">(service: <span><a href="class/src/Service.js~Service.html">Service</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Adds a service to this slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-clearCategoryExclusions">clearCategoryExclusions</a></span></span><span data-ice="signature">(): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Clears all slot-level ad category exclusion labels for this slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-clearTargeting">clearTargeting</a></span></span><span data-ice="signature">(): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Clears all custom slot-level targeting parameters for this slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-defineSizeMapping">defineSizeMapping</a></span></span><span data-ice="signature">(sizeMapping: <span>SizeMappingArray</span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Sets an array of mappings from a minimum viewport size to slot size for this slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-display">display</a></span></span><span data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Initiates rendering of this slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-fetchEnded">fetchEnded</a></span></span><span data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Informs the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> that its fetch has finished.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-fetchStarted">fetchStarted</a></span></span><span data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Informs the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> that its fetch has started.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-get">get</a></span></span><span data-ice="signature">(key: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns the value for the AdSense attribute associated with the given key.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getAdUnitPath">getAdUnitPath</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns the full path of the ad unit, with the network code and ad unit path.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getAttributeKeys">getAttributeKeys</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns the list of attribute keys set on this slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getCategoryExclusions">getCategoryExclusions</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns the ad category exclusion labels for this slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getClickUrl">getClickUrl</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Gets the click URL.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getCollapseEmptyDiv">getCollapseEmptyDiv</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Returns whether the slot div should be hiddne when there is no ad in the slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getDefinedId">getDefinedId</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Returns the instance of the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span>.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getName">getName</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Returns the name of the slot</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getOutOfPage">getOutOfPage</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Returns a flag indicating whether the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> is out of the page.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getResponseInformation">getResponseInformation</a></span></span><span data-ice="signature">(): <span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns the ad response information.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getServices">getServices</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/src/Service.js~Service.html">Service</a></span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Returns the enabled services.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getSizes">getSizes</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span>GeneralSize</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Returns the sizes.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getSlotElementId">getSlotElementId</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns the id of the slot element provided when the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> was defined.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getTargeting">getTargeting</a></span></span><span data-ice="signature">(key: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns a specific custom targeting parameter set on this slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getTargetingKeys">getTargetingKeys</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Returns the list of all custom targeting keys set on this slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-getTargetingMap">getTargetingMap</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Returns the current targeting key-value dictionary.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-impressionViewable">impressionViewable</a></span></span><span data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Notifies the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> that it&apos;s impression is viewable.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-loaded">loaded</a></span></span><span data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Informs the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> that it has been loaded.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-renderEnded">renderEnded</a></span></span><span data-ice="signature">(responseInformation: <span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Informs the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> that its rendering has finished.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-renderStarted">renderStarted</a></span></span><span data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        <div class="experimental" data-ice="experimental">this method is experimental.</div>
+        <div data-ice="description"><p>Informs the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> that its rendering has started.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-set">set</a></span></span><span data-ice="signature">(key: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, value: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Sets a value for an AdSense attribute on a particular ad slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-setCategoryExclusion">setCategoryExclusion</a></span></span><span data-ice="signature">(categoryExclusion: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Sets a slot-level ad category exclusion label on this slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-setClickUrl">setClickUrl</a></span></span><span data-ice="signature">(value: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Sets the click URL to which users will be redirected after clicking on the
+ad.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-setCollapseEmptyDiv">setCollapseEmptyDiv</a></span></span><span data-ice="signature">(collapse: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, optCollapseBeforeAdFetch: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Sets whether the slot div should be hidden when there is no ad in the slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-setForceSafeFrame">setForceSafeFrame</a></span></span><span data-ice="signature">(forceSafeFrame: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Configures whether ads in this slot should be forced to be rendered using
+a SafeFrame container</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-setSafeFrameConfig">setSafeFrameConfig</a></span></span><span data-ice="signature">(config: <span><a href="class/src/SafeFrameConfig.js~SafeFrameConfig.html">SafeFrameConfig</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Sets the slot-level preferences for SafeFrame configuration.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-setTargeting">setTargeting</a></span></span><span data-ice="signature">(key: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, value: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> | <span>!Array</span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Sets a custom targeting parameter for this slot.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-updateTargetingFromMap">updateTargetingFromMap</a></span></span><span data-ice="signature">(map: <span>Object&lt;string,string</span> | <span>!Array</span>&lt;<span>string&gt;</span>&gt;): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Sets custom targeting parameters for this passback slot, from a key:value
+map in a JSON object.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/Slot.js~Slot.html#instance-method-visibilityChanged">visibilityChanged</a></span></span><span data-ice="signature">(inViewPercentage: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Notifies the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> of its in view percentage.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+<div data-ice="constructorDetails"><h2 data-ice="title">Public Constructors</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-constructor-constructor">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">constructor</span><span data-ice="signature">(adUnitPath: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, size: <span>GeneralSize</span>, optDiv: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, instance: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>)</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber23">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Creates a new <span><a href="class/src/Slot.js~Slot.html">Slot</a></span>.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">adUnitPath</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Full path of the ad unit with the network code and unit code.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">size</td>
+      <td data-ice="type"><span>GeneralSize</span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>Width and height of the added slot. This is the
+size that is used in the ad request if no responsive size mapping is provided
+or the size of the viewport is smaller than the smallest size provided in the mapping.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">optDiv</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>ID of the div that will contain this ad unit.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">instance</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>= 0] The instance count of the slot.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber28">Slot #constructor</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+</div>
+
+<div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-addService">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">addService</span><span data-ice="signature">(service: <span><a href="class/src/Service.js~Service.html">Service</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber268">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Adds a service to this slot.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">service</td>
+      <td data-ice="type"><span><a href="class/src/Service.js~Service.html">Service</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The service to be added.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> object on which the method was called.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber327">Slot #addService</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-clearCategoryExclusions">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">clearCategoryExclusions</span><span data-ice="signature">(): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber314">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Clears all slot-level ad category exclusion labels for this slot.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> object on which the method was called.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber388">Slot #clearCategoryExclusions</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-clearTargeting">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">clearTargeting</span><span data-ice="signature">(): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber247">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Clears all custom slot-level targeting parameters for this slot.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> object on which the method was called.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber309">Slot #clearTargeting</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-defineSizeMapping">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">defineSizeMapping</span><span data-ice="signature">(sizeMapping: <span>SizeMappingArray</span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber328">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Sets an array of mappings from a minimum viewport size to slot size for this slot.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">sizeMapping</td>
+      <td data-ice="type"><span>SizeMappingArray</span></td>
+      <td data-ice="appendix"><ul><li>nullable: false</li></ul></td>
+      <td data-ice="description"><p>Array of size mappings. You can use
+<span><a href="class/src/SizeMappingBuilder.js~SizeMappingBuilder.html">SizeMappingBuilder</a></span> to create it. Each size mapping is an array of two elements:
+<span>SingleSizeArray</span> and <span>GeneralSize</span>.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> object on which the method was called.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  <div data-ice="throwWrap">
+    <h4>Throw:</h4>
+    <table>
+      <tbody>
+      
+      <tr class="throw" data-ice="throw">
+        <td><p data-ice="throwName"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span></p></td>
+        <td data-ice="throwDesc"><p>Size mapping has to be an array</p>
+</td>
+      </tr>
+</tbody>
+    </table>
+  </div>
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber406">Slot #defineSizeMapping</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-display">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">display</span><span data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber118">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Initiates rendering of this slot.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber107">Slot #display</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-fetchEnded">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">fetchEnded</span><span data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber444">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Informs the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> that its fetch has finished.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber549">Slot #fetchEnded</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-fetchStarted">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">fetchStarted</span><span data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber435">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Informs the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> that its fetch has started.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber539">Slot #fetchStarted</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-get">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">get</span><span data-ice="signature">(key: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber151">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns the value for the AdSense attribute associated with the given key.
+Note that if you intend to see service-level attributes inherited by this
+slot, you have to use the <span><a href="class/src/Service.js~Service.html#instance-method-get">PubAdsService#get</a></span> API.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">key</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Name of the attribute to look for.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> (nullable: true)</td>
+        <td class="return-desc" data-ice="returnDescription"><p>Current value for the attribute key, or null if the key
+is not present.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber169">Slot #get</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getAdUnitPath">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getAdUnitPath</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber72">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns the full path of the ad unit, with the network code and ad unit path.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>Ad unit path.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber52">Slot #getAdUnitPath</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getAttributeKeys">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getAttributeKeys</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber138">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns the list of attribute keys set on this slot. If you intend to see
+the keys of service-level attributes inherited by this <span><a href="class/src/Slot.js~Slot.html">Slot</a></span>, you have to
+use the <span><a href="class/src/Service.js~Service.html#instance-method-getAttributeKeys">PubAdsService#getAttributeKeys</a></span> API.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt; (nullable: false)</td>
+        <td class="return-desc" data-ice="returnDescription"><p>Array of attribute keys. Ordering is undefined.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber146">Slot #getAttributeKeys</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getCategoryExclusions">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getCategoryExclusions</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber294">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns the ad category exclusion labels for this slot.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt; (nullable: false)</td>
+        <td class="return-desc" data-ice="returnDescription"><p>The ad category exclusion labels for this slot.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber353">Slot #getCategoryExclusions</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getClickUrl">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getClickUrl</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber359">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Gets the click URL.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> (nullable: true)</td>
+        <td class="return-desc" data-ice="returnDescription"><p>The click URL</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber442">Slot #getClickUrl</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getCollapseEmptyDiv">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getCollapseEmptyDiv</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber397">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Returns whether the slot div should be hiddne when there is no ad in the slot.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>true to collapse the slot if no ad is returned.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber493">Slot #getCollapseEmptyDiv</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getDefinedId">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getDefinedId</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber63">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Returns the instance of the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span>.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The instance</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber44">Slot #getDefinedId</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getName">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getName</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber53">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Returns the name of the slot</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>Ad unit path.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber36">Slot #getName</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getOutOfPage">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getOutOfPage</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber111">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Returns a flag indicating whether the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> is out of the page.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+        
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber96">Slot #getOutOfPage</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getResponseInformation">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getResponseInformation</span><span data-ice="signature">(): <span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber370">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns the ad response information. This is based on the last ad response
+for the slot. If this is called when the slot has no ad, null will be
+returned.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span> (nullable: true)</td>
+        
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber456">Slot #getResponseInformation</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getServices">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getServices</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/src/Service.js~Service.html">Service</a></span>&gt;</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber91">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Returns the enabled services.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/src/Service.js~Service.html">Service</a></span>&gt;</td>
+        <td class="return-desc" data-ice="returnDescription"><p>The list of enabled services.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber73">Slot #getServices</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getSizes">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getSizes</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span>GeneralSize</span>&gt;</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber101">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Returns the sizes.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span>GeneralSize</span>&gt;</td>
+        <td class="return-desc" data-ice="returnDescription"><p>The list of sizes.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber83">Slot #getSizes</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getSlotElementId">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getSlotElementId</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber81">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns the id of the slot element provided when the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> was defined.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>Slot element id.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber60">Slot #getSlotElementId</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getTargeting">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getTargeting</span><span data-ice="signature">(key: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber189">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns a specific custom targeting parameter set on this slot.
+Service-level targeting parameters are not included.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">key</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The targeting key to look for.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt; (nullable: false)</td>
+        <td class="return-desc" data-ice="returnDescription"><p>The values associated with this key, or an empty
+array if there is no such key.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber197">Slot #getTargeting</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getTargetingKeys">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getTargetingKeys</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber199">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Returns the list of all custom targeting keys set on this slot. Service-level
+targeting keys are not included.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt; (nullable: false)</td>
+        <td class="return-desc" data-ice="returnDescription"><p>Array of targeting keys. Ordering is undefined.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber213">Slot #getTargetingKeys</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getTargetingMap">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">getTargetingMap</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;&gt;</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber258">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Returns the current targeting key-value dictionary.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;&gt;</td>
+        <td class="return-desc" data-ice="returnDescription"><p>the targeting map.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber230">Slot getTargetingMap</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-impressionViewable">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">impressionViewable</span><span data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber502">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Notifies the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> that it&apos;s impression is viewable.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  <div data-ice="emitWrap">
+    <h4>Emit:</h4>
+    <table>
+      <tbody>
+      
+      <tr class="emit" data-ice="emit">
+        <td><p data-ice="emitName"><span><a href="class/src/events/ImpressionViewableEvent.js~ImpressionViewableEvent.html">ImpressionViewableEvent</a></span></p></td>
+        
+      </tr>
+</tbody>
+    </table>
+  </div>
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber624">Slot #impressionViewable</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-loaded">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">loaded</span><span data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber454">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Informs the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> that it has been loaded.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  <div data-ice="emitWrap">
+    <h4>Emit:</h4>
+    <table>
+      <tbody>
+      
+      <tr class="emit" data-ice="emit">
+        <td><p data-ice="emitName"><span><a href="class/src/events/SlotOnloadEvent.js~SlotOnloadEvent.html">SlotOnloadEvent</a></span></p></td>
+        
+      </tr>
+</tbody>
+    </table>
+  </div>
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber560">Slot #loaded</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-renderEnded">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">renderEnded</span><span data-ice="signature">(responseInformation: <span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span>)</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber477">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Informs the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> that its rendering has finished.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">responseInformation</td>
+      <td data-ice="type"><span><a href="class/src/ResponseInformation.js~ResponseInformation.html">ResponseInformation</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>nullable: true</li></ul></td>
+      <td data-ice="description"><p>The response information.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  
+
+  <div data-ice="emitWrap">
+    <h4>Emit:</h4>
+    <table>
+      <tbody>
+      
+      <tr class="emit" data-ice="emit">
+        <td><p data-ice="emitName"><span><a href="class/src/events/SlotRenderEndedEvent.js~SlotRenderEndedEvent.html">SlotRenderEndedEvent</a></span></p></td>
+        
+      </tr>
+</tbody>
+    </table>
+  </div>
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber583">Slot #renderEnded</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-renderStarted">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">renderStarted</span><span data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber466">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  <div class="experimental" data-ice="experimental">this method is experimental.</div>
+  <div data-ice="description"><p>Informs the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> that its rendering has started.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber573">Slot #renderStarted</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-set">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">set</span><span data-ice="signature">(key: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, value: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber166">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Sets a value for an AdSense attribute on a particular ad slot. This will
+override any values set at the service level for this key. See the AdSense
+Attributes for a list of available keys and values. Calling this method
+more than once for the same key will override previously set values for
+that key. All values must be set before any display call.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">key</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The name of the attribute.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">value</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Attribute value.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> object on which the method was called.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber183">Slot #set</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-setCategoryExclusion">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">setCategoryExclusion</span><span data-ice="signature">(categoryExclusion: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber304">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Sets a slot-level ad category exclusion label on this slot.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">categoryExclusion</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The ad category exclusion label to add.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> object on which the method was called.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber370">Slot #setCategoryExclusion</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-setClickUrl">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">setClickUrl</span><span data-ice="signature">(value: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber348">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Sets the click URL to which users will be redirected after clicking on the
+ad. The <span><a href="https://www.google.com/dfp">DFP</a></span> servers still record a click even if the click URL is replaced,
+but any landing page URL associated with the creative that is served is
+overridden. Subsequent calls overwrite the value. This works only for
+non-SRA requests</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">value</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The click URL to set.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The slot object on which the method was called.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber428">Slot #setClickUrl</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-setCollapseEmptyDiv">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">setCollapseEmptyDiv</span><span data-ice="signature">(collapse: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, optCollapseBeforeAdFetch: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber383">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Sets whether the slot div should be hidden when there is no ad in the slot.
+This overrides the service-level settings.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">collapse</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Whether to collapse the slot if no ad is returned.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">optCollapseBeforeAdFetch</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>Whether to collapse the slot
+even before an ad is fetched. Ignored if collapse is not true.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> object on which the method was called.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber470">Slot #setCollapseEmptyDiv</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-setForceSafeFrame">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">setForceSafeFrame</span><span data-ice="signature">(forceSafeFrame: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber411">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Configures whether ads in this slot should be forced to be rendered using
+a SafeFrame container</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">forceSafeFrame</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>true to force all ads in this slot to be
+rendered in SafeFrames and false to opt-out of a page-level setting (if
+present). Setting this to false when not specified at page-level, won&apos;t
+change anything.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> object on which the method was called.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber503">Slot #setForceSafeFrame</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-setSafeFrameConfig">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">setSafeFrameConfig</span><span data-ice="signature">(config: <span><a href="class/src/SafeFrameConfig.js~SafeFrameConfig.html">SafeFrameConfig</a></span>): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber425">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Sets the slot-level preferences for SafeFrame configuration. Any unrecognized
+keys in the config object will be ignored. The entire config will be ignored
+if an invalid value is passed for a recognized key. These slot level
+preferences, if specified, will override any page level preferences.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">config</td>
+      <td data-ice="type"><span><a href="class/src/SafeFrameConfig.js~SafeFrameConfig.html">SafeFrameConfig</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The configuration object.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> object on which the method was called.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber517">Slot #setSafeFrameConfig</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-setTargeting">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">setTargeting</span><span data-ice="signature">(key: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, value: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> | <span>!Array</span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber213">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Sets a custom targeting parameter for this slot. Calling this method
+multiple times for the same key will overwrite old values. Values set here
+will overwrite targeting parameters set on service level. These keys are
+defined in your <span><a href="https://www.google.com/dfp">DFP</a></span> account.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">key</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Targeting parameter key.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">value</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> | <span>!Array</span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;</td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Targeting parameter value or array of values.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> object on which the method was called.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber244">Slot #setTargeting</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-updateTargetingFromMap">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">updateTargetingFromMap</span><span data-ice="signature">(map: <span>Object&lt;string,string</span> | <span>!Array</span>&lt;<span>string&gt;</span>&gt;): <span><a href="class/src/Slot.js~Slot.html">Slot</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber233">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Sets custom targeting parameters for this passback slot, from a key:value
+map in a JSON object. A badly formatted input will be rejected. This is the
+same as calling @{link Slot#setTargeting} for all the key values
+of the object. In case of overwriting, only the last value will be kept.
+Values set here will overwrite targeting parameters set on service level.
+These keys are defined in your <span><a href="https://www.google.com/dfp">DFP</a></span> account.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">map</td>
+      <td data-ice="type"><span>Object&lt;string,string</span> | <span>!Array</span>&lt;<span>string&gt;</span>&gt;</td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Targeting parameter key:value map.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tr>
+        <td class="return-type" data-ice="returnType"><span><a href="class/src/Slot.js~Slot.html">Slot</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>The <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> object on which the method was called.</p>
+</td>
+      </tr>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber276">Slot #updateTargetingFromMap</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-visibilityChanged">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">visibilityChanged</span><span data-ice="signature">(inViewPercentage: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>)</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/Slot.js.html#lineNumber516">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Notifies the <span><a href="class/src/Slot.js~Slot.html">Slot</a></span> of its in view percentage.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">inViewPercentage</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The percentage (0-100) of the ad&apos;s area that is visible.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  
+
+  <div data-ice="emitWrap">
+    <h4>Emit:</h4>
+    <table>
+      <tbody>
+      
+      <tr class="emit" data-ice="emit">
+        <td><p data-ice="emitName"><span><a href="class/src/events/SlotVisibilityChangedEvent.js~SlotVisibilityChangedEvent.html">SlotVisibilityChangedEvent</a></span></p></td>
+        
+      </tr>
+</tbody>
+    </table>
+  </div>
+
+  
+
+  
+
+  
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/unit/Slot.spec.js.html#lineNumber637">Slot #visibilityChanged</a></span></li>
+</ul>
+  </div>
+
+  
+  
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.8)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
