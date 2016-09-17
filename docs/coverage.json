@@ -1,7 +1,7 @@
 {
   "coverage": "100%",
-  "expectCount": 164,
-  "actualCount": 164,
+  "expectCount": 171,
+  "actualCount": 171,
   "files": {
     "src/CommandArray.js": {
       "expectCount": 3,
@@ -81,6 +81,11 @@
     "src/events/SlotVisibilityChangedEvent.js": {
       "expectCount": 5,
       "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/TargetingMap.js": {
+      "expectCount": 7,
+      "actualCount": 7,
       "undocumentLines": []
     }
   }

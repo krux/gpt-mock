@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/SafeFrameConfig.js | gpt-mock API Document</title>
+  <title data-ice="title">src/TargetingMap.js | gpt-mock API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -55,54 +55,74 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/SafeFrameConfig.js</h1>
+<div class="content" data-ice="content"><h1 data-ice="title">src/TargetingMap.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
- * Configuration object for SafeFrame containers.
+ * Manages setting and retrieving targeting.
+ *
+ * @experimental
  */
-export default class SafeFrameConfig {
+export default class TargetingMap {
   /**
-   * Creates a new {@link SafeFrameConfig}
-   *
-   * @param {boolean} allowOverlayExpansion true to allow expansion by overlay and false otherwise.
-   * @param {boolean} allowPushExpansion true to allow expansion by push and false otherwise.
-   * @param {boolean} sandbox true if SafeFrame should use the HTML5 sandbox
-   * attribute to prevent top level navigation.
+   * Creates a new {@link TargetingMap} instance.
    */
-  constructor(allowOverlayExpansion, allowPushExpansion, sandbox) {
-    this._allowOverlayExpansion = allowOverlayExpansion;
-    this._allowPushExpansion = allowPushExpansion;
-    this._sandbox = sandbox;
+  constructor() {
+    this._targeting = {};
   }
 
   /**
-   * true to allow expansion by overlay and false otherwise.
+   * Sets custom targeting parameters for a given key.
    *
-   * @type {boolean}
+   * @param {string} key Targeting parameter key.
+   * @param {string|!Array&lt;string&gt;} value Targeting parameter value or array of values.
    */
-  get allowOverlayExpansion() {
-    return this._allowOverlayExpansion;
+  set(key, value) {
+    if (Array.isArray(value)) {
+      this._targeting[key] = value;
+    } else {
+      this._targeting[key] = [value];
+    }
   }
 
   /**
-   * true to allow expansion by push and false otherwise.
+   * Returns a specific targeting parameter that has been set.
    *
-   * @type {boolean}
+   * @param {string} key The targeting key to look for.
+   * @returns {!Array&lt;string&gt;} The values associated with this key, or an empty
+   * array if there is no such key.
    */
-  get allowPushExpansion() {
-    return this._allowPushExpansion;
+  get(key) {
+    return this._targeting[key] || [];
   }
 
   /**
-   * true if SafeFrame should use the HTML5 sandbox
-   * attribute to prevent top level navigation. The only valid value is true (cannot
-   * be forced to false). Note that the sandbox attribute disables plugins (e.g. Flash)
-   * and creatives that attempt to navigate the top level page instead of opening
-   * in a new window.
+   * Returns the list of all targeting keys that have been set.
    *
-   * @type {boolean} boolean
+   * @returns {!Array&lt;string&gt;} Array of targeting keys. Ordering is undefined.
    */
-  get sandbox() {
-    return this._sandbox;
+  keys() {
+    return Object.keys(this._targeting);
+  }
+
+  /**
+   * Clears custom targeting parameters for a given key.
+   *
+   * @param {string} [key] Targeting parameter key.
+   */
+  clear(key) {
+    if (key == null) {
+      this._targeting = {};
+    } else {
+      delete this._targeting[key];
+    }
+  }
+
+  /**
+   * Returns the current targeting key-value dictionary.
+   *
+   * @returns {Object&lt;string, Array&lt;string&gt;&gt;} the targeting map.
+   */
+  all() {
+    return Object.assign({}, this._targeting);
   }
 }
 </code></pre>

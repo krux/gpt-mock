@@ -811,7 +811,7 @@
               "trailingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n   * Returns whether the {@link Size} is empty.\n   *\n   * @experimental\n   * @type {boolean} True if the size is empty.\n   ",
+                  "value": "*\n   * Returns whether the {@link Size} is empty.\n   *\n   * @experimental\n   * @type {boolean} true if the size is empty.\n   ",
                   "range": [
                     698,
                     827
@@ -1069,7 +1069,7 @@
               "leadingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n   * Returns whether the {@link Size} is empty.\n   *\n   * @experimental\n   * @type {boolean} True if the size is empty.\n   ",
+                  "value": "*\n   * Returns whether the {@link Size} is empty.\n   *\n   * @experimental\n   * @type {boolean} true if the size is empty.\n   ",
                   "range": [
                     698,
                     827
@@ -3042,7 +3042,7 @@
     },
     {
       "type": "Block",
-      "value": "*\n   * Returns whether the {@link Size} is empty.\n   *\n   * @experimental\n   * @type {boolean} True if the size is empty.\n   ",
+      "value": "*\n   * Returns whether the {@link Size} is empty.\n   *\n   * @experimental\n   * @type {boolean} true if the size is empty.\n   ",
       "range": [
         698,
         827

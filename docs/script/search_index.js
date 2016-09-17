@@ -96,6 +96,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "gpt-mock/dist/targetingmap.js~targetingmap",
+    "class/src/TargetingMap.js~TargetingMap.html",
+    "<span>TargetingMap</span> <span class=\"search-result-import-path\">gpt-mock/dist/TargetingMap.js</span>",
+    "class"
+  ],
+  [
     "builtinexternal/ecmascriptexternal.js~array",
     "external/index.html",
     "BuiltinExternal/ECMAScriptExternal.js~Array",
@@ -3498,6 +3504,102 @@ window.esdocSearchIndex = [
     "test"
   ],
   [
+    "targetingmap src/targetingmap.js~targetingmap,targetingmap",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber4",
+    "TargetingMap",
+    "test"
+  ],
+  [
+    "targetingmap#clear src/targetingmap.js~targetingmap#clear,targetingmap#clear",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber80",
+    "TargetingMap #clear",
+    "test"
+  ],
+  [
+    "",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber81",
+    "TargetingMap #clear clears all targeting",
+    "test"
+  ],
+  [
+    "",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber96",
+    "TargetingMap #clear clears specific targeting",
+    "test"
+  ],
+  [
+    "targetingmap#get src/targetingmap.js~targetingmap#get,targetingmap#get",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber6",
+    "TargetingMap #get",
+    "test"
+  ],
+  [
+    "",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber7",
+    "TargetingMap #get returns empty array if not set",
+    "test"
+  ],
+  [
+    "",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber13",
+    "TargetingMap #get returns the value (as an array) if set",
+    "test"
+  ],
+  [
+    "targetingmap#keys src/targetingmap.js~targetingmap#keys,targetingmap#keys",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber22",
+    "TargetingMap #keys",
+    "test"
+  ],
+  [
+    "",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber29",
+    "TargetingMap #keys returns array of keys",
+    "test"
+  ],
+  [
+    "",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber23",
+    "TargetingMap #keys returns empty array if no keys",
+    "test"
+  ],
+  [
+    "targetingmap#set src/targetingmap.js~targetingmap#set,targetingmap#set",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber53",
+    "TargetingMap #set",
+    "test"
+  ],
+  [
+    "",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber68",
+    "TargetingMap #set overwrites the previous value",
+    "test"
+  ],
+  [
+    "",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber61",
+    "TargetingMap #set saves the array value",
+    "test"
+  ],
+  [
+    "",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber54",
+    "TargetingMap #set saves the value",
+    "test"
+  ],
+  [
+    "targetingmap#all src/targetingmap.js~targetingmap#all,targetingmap#all",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber39",
+    "TargetingMap all",
+    "test"
+  ],
+  [
+    "",
+    "test-file/unit/TargetingMap.spec.js.html#lineNumber40",
+    "TargetingMap all returns the targeting map",
+    "test"
+  ],
+  [
     "src/commandarray.js",
     "file/src/CommandArray.js.html",
     "src/CommandArray.js",
@@ -4398,6 +4500,48 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/targetingmap.js",
+    "file/src/TargetingMap.js.html",
+    "src/TargetingMap.js",
+    "file"
+  ],
+  [
+    "src/targetingmap.js~targetingmap#all",
+    "class/src/TargetingMap.js~TargetingMap.html#instance-method-all",
+    "src/TargetingMap.js~TargetingMap#all",
+    "method"
+  ],
+  [
+    "src/targetingmap.js~targetingmap#clear",
+    "class/src/TargetingMap.js~TargetingMap.html#instance-method-clear",
+    "src/TargetingMap.js~TargetingMap#clear",
+    "method"
+  ],
+  [
+    "src/targetingmap.js~targetingmap#constructor",
+    "class/src/TargetingMap.js~TargetingMap.html#instance-constructor-constructor",
+    "src/TargetingMap.js~TargetingMap#constructor",
+    "method"
+  ],
+  [
+    "src/targetingmap.js~targetingmap#get",
+    "class/src/TargetingMap.js~TargetingMap.html#instance-method-get",
+    "src/TargetingMap.js~TargetingMap#get",
+    "method"
+  ],
+  [
+    "src/targetingmap.js~targetingmap#keys",
+    "class/src/TargetingMap.js~TargetingMap.html#instance-method-keys",
+    "src/TargetingMap.js~TargetingMap#keys",
+    "method"
+  ],
+  [
+    "src/targetingmap.js~targetingmap#set",
+    "class/src/TargetingMap.js~TargetingMap.html#instance-method-set",
+    "src/TargetingMap.js~TargetingMap#set",
+    "method"
+  ],
+  [
     "src/events/impressionviewableevent.js",
     "file/src/events/ImpressionViewableEvent.js.html",
     "src/events/ImpressionViewableEvent.js",
@@ -4653,6 +4797,12 @@ window.esdocSearchIndex = [
     "unit/slotid.spec.js",
     "test-file/unit/SlotId.spec.js.html",
     "unit/SlotId.spec.js",
+    "testFile"
+  ],
+  [
+    "unit/targetingmap.spec.js",
+    "test-file/unit/TargetingMap.spec.js.html",
+    "unit/TargetingMap.spec.js",
     "testFile"
   ],
   [

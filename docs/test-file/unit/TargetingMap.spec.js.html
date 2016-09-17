@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/SafeFrameConfig.js | gpt-mock API Document</title>
+  <title data-ice="title">unit/TargetingMap.spec.js | gpt-mock API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -55,56 +55,118 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/SafeFrameConfig.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
- * Configuration object for SafeFrame containers.
- */
-export default class SafeFrameConfig {
-  /**
-   * Creates a new {@link SafeFrameConfig}
-   *
-   * @param {boolean} allowOverlayExpansion true to allow expansion by overlay and false otherwise.
-   * @param {boolean} allowPushExpansion true to allow expansion by push and false otherwise.
-   * @param {boolean} sandbox true if SafeFrame should use the HTML5 sandbox
-   * attribute to prevent top level navigation.
-   */
-  constructor(allowOverlayExpansion, allowPushExpansion, sandbox) {
-    this._allowOverlayExpansion = allowOverlayExpansion;
-    this._allowPushExpansion = allowPushExpansion;
-    this._sandbox = sandbox;
-  }
+<div class="content" data-ice="content"><h1 data-ice="title">unit/TargetingMap.spec.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import TargetingMap from &apos;../../src/TargetingMap&apos;;
 
-  /**
-   * true to allow expansion by overlay and false otherwise.
-   *
-   * @type {boolean}
-   */
-  get allowOverlayExpansion() {
-    return this._allowOverlayExpansion;
-  }
+/** @test {TargetingMap} */
+describe(&apos;TargetingMap&apos;, () =&gt; {
+  /** @test {TargetingMap#get} */
+  describe(&apos;#get&apos;, () =&gt; {
+    it(&apos;returns empty array if not set&apos;, () =&gt; {
+      const map = new TargetingMap();
+      expect(map.get(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.be.empty();
+    });
 
-  /**
-   * true to allow expansion by push and false otherwise.
-   *
-   * @type {boolean}
-   */
-  get allowPushExpansion() {
-    return this._allowPushExpansion;
-  }
+    it(&apos;returns the value (as an array) if set&apos;, () =&gt; {
+      const map = new TargetingMap();
+      map.set(&apos;kv1&apos;, &apos;value&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.eql([&apos;value&apos;]);
+    });
+  });
 
-  /**
-   * true if SafeFrame should use the HTML5 sandbox
-   * attribute to prevent top level navigation. The only valid value is true (cannot
-   * be forced to false). Note that the sandbox attribute disables plugins (e.g. Flash)
-   * and creatives that attempt to navigate the top level page instead of opening
-   * in a new window.
-   *
-   * @type {boolean} boolean
-   */
-  get sandbox() {
-    return this._sandbox;
-  }
-}
+  /** @test {TargetingMap#keys} */
+  describe(&apos;#keys&apos;, () =&gt; {
+    it(&apos;returns empty array if no keys&apos;, () =&gt; {
+      const map = new TargetingMap();
+      expect(map.keys()).to.be.an(&apos;array&apos;);
+      expect(map.keys()).to.be.empty();
+    });
+
+    it(&apos;returns array of keys&apos;, () =&gt; {
+      const map = new TargetingMap();
+      map.set(&apos;kv1&apos;, &apos;value1&apos;);
+      map.set(&apos;kv2&apos;, &apos;value2&apos;);
+      expect(map.keys()).to.be.an(&apos;array&apos;);
+      expect(map.keys()).to.eql([&apos;kv1&apos;, &apos;kv2&apos;]);
+    });
+  });
+
+  /** @test {TargetingMap#all} */
+  describe(&apos;all&apos;, () =&gt; {
+    it(&apos;returns the targeting map&apos;, () =&gt; {
+      const map = new TargetingMap();
+      map.set(&apos;kv1&apos;, &apos;value1&apos;);
+      map.set(&apos;kv2&apos;, &apos;value2&apos;);
+      expect(map.all()).to.be.an(&apos;object&apos;);
+      expect(map.all()).to.eql({
+        kv1: [&apos;value1&apos;],
+        kv2: [&apos;value2&apos;]
+      });
+    });
+  });
+
+  /** @test {TargetingMap#set} */
+  describe(&apos;#set&apos;, () =&gt; {
+    it(&apos;saves the value&apos;, () =&gt; {
+      const map = new TargetingMap();
+      map.set(&apos;kv1&apos;, &apos;value&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.eql([&apos;value&apos;]);
+    });
+
+    it(&apos;saves the array value&apos;, () =&gt; {
+      const map = new TargetingMap();
+      map.set(&apos;kv1&apos;, [&apos;value&apos;]);
+      expect(map.get(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.eql([&apos;value&apos;]);
+    });
+
+    it(&apos;overwrites the previous value&apos;, () =&gt; {
+      const map = new TargetingMap();
+      map.set(&apos;kv1&apos;, &apos;value1&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.eql([&apos;value1&apos;]);
+      map.set(&apos;kv1&apos;, &apos;value2&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.eql([&apos;value2&apos;]);
+    });
+  });
+
+  /** @test {TargetingMap#clear} */
+  describe(&apos;#clear&apos;, () =&gt; {
+    it(&apos;clears all targeting&apos;, () =&gt; {
+      const map = new TargetingMap();
+      map.set(&apos;kv1&apos;, &apos;value1&apos;);
+      map.set(&apos;kv2&apos;, &apos;value2&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.eql([&apos;value1&apos;]);
+      expect(map.get(&apos;kv2&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv2&apos;)).to.eql([&apos;value2&apos;]);
+      map.clear();
+      expect(map.get(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.empty();
+      expect(map.get(&apos;kv2&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv2&apos;)).to.empty();
+    });
+
+    it(&apos;clears specific targeting&apos;, () =&gt; {
+      const map = new TargetingMap();
+      map.set(&apos;kv1&apos;, &apos;value1&apos;);
+      map.set(&apos;kv2&apos;, &apos;value2&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.eql([&apos;value1&apos;]);
+      expect(map.get(&apos;kv2&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv2&apos;)).to.eql([&apos;value2&apos;]);
+      map.clear(&apos;kv2&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv1&apos;)).to.eql([&apos;value1&apos;]);
+      expect(map.get(&apos;kv2&apos;)).to.be.an(&apos;array&apos;);
+      expect(map.get(&apos;kv2&apos;)).to.empty();
+    });
+  });
+});
 </code></pre>
 
 </div>
