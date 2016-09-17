@@ -1,0 +1,27 @@
+{
+  "title": "gpt-mock",
+  "destination": "./docs",
+  "lint": true,
+  "manual": {
+    "overview": ["./manual/Overview.md"],
+    "installation": ["./manual/Installation.md"],
+    "example": ["./manual/Example.md"]
+  },
+  "test": {
+    "type": "mocha",
+    "source": "./test/unit"
+  },
+  "plugins": [
+    {
+      "name": "esdoc-importpath-plugin",
+      "option": {
+        "replaces": [
+          {
+            "from": "^src/",
+            "to": "dist/"
+          }
+        ]
+      }
+    }
+  ]
+}

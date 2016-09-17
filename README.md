@@ -8,7 +8,6 @@
 [![Dependencies](https://img.shields.io/david/dev/krux/gpt-mock.svg)](./package.json)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Gitter](https://badges.gitter.im/krux/gpt-mock.svg)](https://gitter.im/krux/gpt-mock)
 
 A test library to mock out the Google Publisher Tag library.
 
@@ -75,7 +74,7 @@ worked on, please [file a new issue](https://github.com/krux/gpt-mock/issues/new
 
 We ♥ [forks and pull requests](https://help.github.com/articles/using-pull-requests).
 
-Please see [CONTRIBUTING.md](CONTRIBUTING.md) for full details.
+Please see [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for full details.
 
 ## Environment
 

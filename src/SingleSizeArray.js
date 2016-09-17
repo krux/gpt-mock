@@ -1,16 +1,18 @@
 /**
  * Array of two numbers representing [width, height].
  * @typedef {Array<number>} SingleSizeArray
+ * @private
  */
 import Size from './Size';
 
 /**
  * Returns true if the given object is a {@link SingleSizeArray}.
  *
+ * @private
  * @param {SingleSizeArray|*} obj The object to test
  */
 export function isSingleSizeArray(obj) {
-  if (!Array.isArray(obj) || obj.length !== 2) {
+  if (obj == null || !Array.isArray(obj) || obj.length !== 2) {
     return false;
   }
 
@@ -21,8 +23,10 @@ export function isSingleSizeArray(obj) {
 /**
  * Returns a {@link Size} instance from the {@link SingleSizeArray}.
  *
+ * @private
  * @param {SingleSizeArray|*} obj The object to convert.
- * @returns {?Size} The Size instance or null if the object is not a {@link SingleSizeArray}.
+ * @returns {?Size} The {@link Size} instance or null if the object is not
+ * a {@link SingleSizeArray}.
  */
 export function toSize(obj) {
   if (isSingleSizeArray(obj)) {
@@ -33,6 +37,13 @@ export function toSize(obj) {
   }
 }
 
+/**
+ * Returns true if the specified parameter is an integer.
+ *
+ * @private
+ * @param {*} n The value to check
+ * @returns {boolean} True if the value is an integer.
+ */
 function isInteger(n) {
   return (typeof n === 'number') && (n % 1 === 0);
 }

@@ -1,6 +1,8 @@
 import SizeMappingBuilder from '../../src/SizeMappingBuilder';
 
+/** @test {SizeMappingBuilder} */
 describe('SizeMappingBuilder', () => {
+  /** @test {SizeMappingBuilder#constructor} */
   describe('#constructor', () => {
     it('constructs', () => {
       const builder = new SizeMappingBuilder();
@@ -11,6 +13,7 @@ describe('SizeMappingBuilder', () => {
     });
   });
 
+  /** @test {SizeMappingBuilder#addSize} */
   describe('#addSize', () => {
     it('returns the builder', () => {
       const builder = new SizeMappingBuilder();
@@ -48,6 +51,7 @@ describe('SizeMappingBuilder', () => {
     });
   });
 
+  /** @test {SizeMappingBuilder#build} */
   describe('#build', () => {
     it('returns null if no addSize call', () => {
       const builder = new SizeMappingBuilder();

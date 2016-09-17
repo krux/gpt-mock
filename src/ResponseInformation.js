@@ -3,13 +3,13 @@
  */
 export default class ResponseInformation {
   /**
-   * Creates a new ResponseInformation.
+   * Creates a new {@link ResponseInformation}.
    *
    * @param {string} advertiserId The ID of the advertiser.
    * @param {string} campaignId The ID of the campaign.
    * @param {?number} lineItemId The ID of the line item.
    * @param {?number} creativeId The ID of the creative.
-   * @param {?Array<number>=} labelIds The label IDs of the creative.
+   * @param {?Array<number>} [labelIds] The label IDs of the creative.
    */
   constructor(advertiserId, campaignId, lineItemId, creativeId, labelIds) {
     this._advertiserId = advertiserId;
@@ -22,7 +22,7 @@ export default class ResponseInformation {
   /**
    * The ID of the advertiser.
    *
-   * @returns {string}
+   * @type {string}
    */
   get advertiserId() {
     return this._advertiserId;
@@ -31,7 +31,7 @@ export default class ResponseInformation {
   /**
    * The ID of the campaign.
    *
-   * @returns {string}
+   * @type {string}
    */
   get campaignId() {
     return this._campaignId;
@@ -40,7 +40,7 @@ export default class ResponseInformation {
   /**
    * The ID of the line item.
    *
-   * @returns {?number}
+   * @type {?number}
    */
   get lineItemId() {
     return this._lineItemId;
@@ -49,7 +49,7 @@ export default class ResponseInformation {
   /**
    * The ID of the creative.
    *
-   * @returns {?number}
+   * @type {?number}
    */
   get creativeId() {
     return this._creativeId;
@@ -58,7 +58,7 @@ export default class ResponseInformation {
   /**
    * The label IDs of the creative.
    *
-   * @returns {?Array.<number>}
+   * @type {?Array<number>}
    */
   get labelIds() {
     return this._labelIds;

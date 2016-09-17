@@ -1,6 +1,13 @@
 import GPT from '../../src/GPT';
+import Slot from '../../src/Slot';
 
+/** @test {GPT} */
 describe('GPT', () => {
+  const adUnitPath = '/Test/12345';
+  const size = [728, 90];
+  const optDiv = 'div-1';
+
+  /** @test {GPT#constructor} */
   describe('#constructor', () => {
     it('constructs', () => {
       const gpt = new GPT();
@@ -8,6 +15,7 @@ describe('GPT', () => {
     });
   });
 
+  /** @test {GPT#getVersion} */
   describe('#getVersion', () => {
     it('returns current version', () => {
       const gpt = new GPT();
@@ -15,6 +23,7 @@ describe('GPT', () => {
     });
   });
 
+  /** @test {GPT#companionAds} */
   describe('#companionAds', () => {
     it('returns the service', () => {
       const gpt = new GPT();
@@ -23,6 +32,7 @@ describe('GPT', () => {
     });
   });
 
+  /** @test {GPT#content} */
   describe('#content', () => {
     it('returns the service', () => {
       const gpt = new GPT();
@@ -31,6 +41,7 @@ describe('GPT', () => {
     });
   });
 
+  /** @test {GPT#pubads} */
   describe('#pubads', () => {
     it('returns the service', () => {
       const gpt = new GPT();
@@ -39,6 +50,7 @@ describe('GPT', () => {
     });
   });
 
+  /** @test {GPT#enableServices} */
   describe('#enableServices', () => {
     it('returns undefined', () => {
       const gpt = new GPT();
@@ -52,6 +64,7 @@ describe('GPT', () => {
     });
   });
 
+  /** @test {GPT#sizeMapping} */
   describe('#sizeMapping', () => {
     it('returns a new builder', () => {
       const gpt = new GPT();
@@ -63,11 +76,8 @@ describe('GPT', () => {
     });
   });
 
+  /** @test {GPT#defineSlot} */
   describe('#defineSlot', () => {
-    const adUnitPath = '/Test/12345';
-    const size = [728, 90];
-    const optDiv = null;
-
     it('returns a slot', () => {
       const gpt = new GPT();
       const slot = gpt.defineSlot(adUnitPath, size, optDiv);
@@ -86,10 +96,8 @@ describe('GPT', () => {
     });
   });
 
+  /** @test {GPT#defineOutOfPageSlot} */
   describe('#defineOutOfPageSlot', () => {
-    const adUnitPath = '/Test/12345';
-    const optDiv = null;
-
     it('returns a new slot', () => {
       const gpt = new GPT();
       const slot = gpt.defineOutOfPageSlot(adUnitPath, optDiv);
@@ -109,10 +117,8 @@ describe('GPT', () => {
     });
   });
 
+  /** @test {GPT#destroySlots} */
   describe('#destroySlots', () => {
-    const adUnitPath = '/Test/12345';
-    const optDiv = null;
-
     it('returns true if no slots', () => {
       const gpt = new GPT();
 
@@ -152,15 +158,39 @@ describe('GPT', () => {
 
       expect(gpt._slots).to.be.eql([slot1]);
     });
+
+    it('returns false if slot does not exist', () => {
+      const gpt = new GPT();
+
+      expect(gpt._slots).to.be.an('array');
+      expect(gpt._slots).to.be.empty();
+      const slot1 = gpt.defineOutOfPageSlot(adUnitPath, optDiv);
+      const slot2 = gpt.defineOutOfPageSlot(adUnitPath, optDiv);
+      expect(slot1).to.be.ok();
+      expect(slot2).to.be.ok();
+      expect(gpt._slots).to.have.length(2);
+      expect(gpt._slots).to.eql([slot1, slot2]);
+
+      expect(gpt.destroySlots([new Slot(adUnitPath, [], optDiv)])).to.be(false);
+    });
   });
 
+  /** @test {GPT#display} */
   describe('#display', () => {
     it('returns undefined', () => {
       const gpt = new GPT();
       expect(gpt.display('div')).to.be(undefined);
     });
+
+    it('displays the slot', () => {
+      const gpt = new GPT();
+      const slot = gpt.defineSlot(adUnitPath, [], optDiv).addService(gpt.pubads());
+      gpt.display(optDiv);
+      expect(slot._options.displayed).to.be(true);
+    });
   });
 
+  /** @test {GPT#openConsole} */
   describe('#openConsole', () => {
     it('returns undefined', () => {
       const gpt = new GPT();
@@ -168,6 +198,7 @@ describe('GPT', () => {
     });
   });
 
+  /** @test {GPT#disablePublisherConsole} */
   describe('#disablePublisherConsole', () => {
     it('returns undefined', () => {
       const gpt = new GPT();
@@ -175,6 +206,7 @@ describe('GPT', () => {
     });
   });
 
+  /** @test {GPT#setAdIframeTitle} */
   describe('#setAdIframeTitle', () => {
     const title = 'Advertisement';
     it('returns undefined', () => {
@@ -189,6 +221,7 @@ describe('GPT', () => {
     });
   });
 
+  /** @test {GPT#_loaded} */
   describe('#_loaded', () => {
     it('returns undefined', () => {
       const gpt = new GPT();

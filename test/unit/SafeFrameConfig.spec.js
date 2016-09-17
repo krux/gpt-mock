@@ -1,6 +1,8 @@
 import SafeFrameConfig from '../../src/SafeFrameConfig';
 
+/** @test {SafeFrameConfig} */
 describe('SafeFrameConfig', () => {
+  /** @test {SafeFrameConfig#constructor} */
   describe('#constructor', () => {
     it('constructs and sets readonly properties', () => {
       const allowOverlayExpansion = true;

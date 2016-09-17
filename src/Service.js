@@ -3,14 +3,14 @@
  */
 export default class Service {
   /**
-   * Creates a new Service.
+   * Creates a new {@link Service}.
    *
-   * @param {GPT} gt The containing GPT instance.
+   * @param {GPT} gpt The containing {@link GPT} instance.
    * @param {string} name The name of the service
    */
-  constructor(gt, name) {
+  constructor(gpt, name) {
     this._name = name;
-    this._gt = gt;
+    this._gpt = gpt;
     this._enabled = false;
     this._used = false;
     this._listeners = {};
@@ -21,8 +21,9 @@ export default class Service {
   }
 
   /**
-   * UNDOCUMENTED - Returns the name of the service.
+   * Returns the name of the service.
    *
+   * @experimental
    * @returns {string} The name of the service
    */
   getName() {
@@ -30,8 +31,9 @@ export default class Service {
   }
 
   /**
-   * UNDOCUMENTED - Returns a version string.
+   * Returns a version string.
    *
+   * @experimental
    * @returns {string} The version string.
    */
   getVersion() {
@@ -39,17 +41,25 @@ export default class Service {
   }
 
   /**
-   * UNDOCUMENTED - Returns the slots with this service enabled.
+   * Returns the slots with this service enabled.
    *
+   * @experimental
    * @returns {Array<Slot>} The slots
    */
   getSlots() {
     return this._slots.slice(0);
   }
 
+  /**
+   * Adds the given slot to this service.
+   *
+   * @param {Slot} slot The slot to add
+   * @returns {Slot}
+   * @private
+   */
   _addSlot(slot) {
     if (this._slots.indexOf(slot) === -1) {
-      this._gt._addSlot(slot);
+      this._gpt._addSlot(slot);
 
       this._slots.push(slot);
       this._slotCounter = this._slotCounter + 1;
@@ -62,20 +72,27 @@ export default class Service {
     return slot;
   }
 
+  /**
+   * Removes the given slot from the service.
+   *
+   * @param {Slot} slot The slot to remove
+   * @private
+   */
   _removeSlot(slot) {
     const index = this._slots.indexOf(slot);
     if (index !== -1) {
       this._slots.splice(index, 1);
-      this._gt.removeSlot(slot);
-      const id = `${slot.getAdUnitPath()}_${index}`;
+      this._gpt._removeSlot(slot);
+      const id = `${slot.getAdUnitPath()}_${index + 1}`;
       delete this._slotIdMap[id];
     }
   }
 
   /**
-   * UNDOCUMENTED - Returns a map of ID's to slots.
+   * Returns a map of ID's to slots.
    *
-   * @returns {Object<string, Slot>} The map of ID's to slots.
+   * @experimental
+   * @returns {object} The map of ID's to slots.
    */
   getSlotIdMap() {
     return Object.assign({}, this._slotIdMap);
@@ -83,7 +100,7 @@ export default class Service {
 
   /**
    * Registers a listener that allows you to set up and call a JavaScript
-   * function when a specific GPT event happens on the page. The following
+   * function when a specific {@link GPT} event happens on the page. The following
    * events are supported:
    * * googletag.events.ImpressionViewableEvent
    * * googletag.events.SlotOnloadEvent
@@ -94,7 +111,7 @@ export default class Service {
    *
    * @param {string} eventType A string representing the type of event generated
    * by GPT. Event types are case sensitive.
-   * @param {function(Object)} listener Function that takes a single event object argument.
+   * @param {function(event: object)} listener Function that takes a single event object argument.
    * @returns {Service} The service object on which the method was called.
    */
   addEventListener(eventType, listener) {
@@ -103,8 +120,16 @@ export default class Service {
     return this;
   }
 
-  _fireEvent(event) {
-    for (let listener of (this._listeners[event.name] || [])) {
+  /**
+   * Fires the specified eventType, calling all registered listeners with the
+   * specified event object.
+   *
+   * @param {string} eventType The event type to fire.
+   * @param {object} event The event object to pass to listeners.
+   * @private
+   */
+  _fireEvent(eventType, event) {
+    for (let listener of (this._listeners[eventType] || [])) {
       listener(event);
     }
   }
@@ -139,7 +164,7 @@ export default class Service {
    *
    * @param {string} key The name of the attribute.
    * @param {string} value Attribute value.
-   * @returns {*} The service object on which the method was called.
+   * @returns {Service} The service object on which the method was called.
    */
   set(key, value) {
     this._attributes[key] = value;
@@ -152,19 +177,21 @@ export default class Service {
    *
    * @param {string} adUnitPath Ad unit path of slot to be rendered.
    * @param {GeneralSize} size Width and height of the slot.
-   * @param {string=} optDiv ID of the div containing the slot.
-   * @param {string=} optClickUrl The click URL to use on this slot.
+   * @param {string} [optDiv] ID of the div containing the slot.
+   * @param {string} [optClickUrl] The click URL to use on this slot.
    */
   display(adUnitPath, size, optDiv, optClickUrl) {
     this._used = true;
     this.enable();
-    this._gt.defineSlot(adUnitPath, size, optDiv).addService(this).setClickUrl(optClickUrl);
+    this._gpt.defineSlot(adUnitPath, size, optDiv).addService(this).setClickUrl(optClickUrl);
   }
 
+  /**
+   * Enables the service.
+   *
+   * @experimental
+   */
   enable() {
     this._enabled = true;
-    this._onEnable();
   }
-
-  _onEnable() {}
 }

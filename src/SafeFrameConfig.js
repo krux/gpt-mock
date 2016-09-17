@@ -3,7 +3,7 @@
  */
 export default class SafeFrameConfig {
   /**
-   * Creates a new SafeFrameConfig
+   * Creates a new {@link SafeFrameConfig}
    *
    * @param {boolean} allowOverlayExpansion true to allow expansion by overlay and false otherwise.
    * @param {boolean} allowPushExpansion true to allow expansion by push and false otherwise.
@@ -19,7 +19,7 @@ export default class SafeFrameConfig {
   /**
    * true to allow expansion by overlay and false otherwise.
    *
-   * @returns {boolean}
+   * @type {boolean}
    */
   get allowOverlayExpansion() {
     return this._allowOverlayExpansion;
@@ -28,7 +28,7 @@ export default class SafeFrameConfig {
   /**
    * true to allow expansion by push and false otherwise.
    *
-   * @returns {boolean}
+   * @type {boolean}
    */
   get allowPushExpansion() {
     return this._allowPushExpansion;
@@ -41,7 +41,7 @@ export default class SafeFrameConfig {
    * and creatives that attempt to navigate the top level page instead of opening
    * in a new window.
    *
-   * @returns {boolean} boolean
+   * @type {boolean} boolean
    */
   get sandbox() {
     return this._sandbox;

@@ -15,14 +15,20 @@ export default class SlotOnloadEvent {
     this._slot = slot;
   }
 
-  get name() {
+  /**
+   * Name of the event.
+   *
+   * @private
+   * @type {string}
+   */
+  get _name() {
     return 'googletag.events.SlotOnloadEvent';
   }
 
   /**
    * Name of the service that rendered the slot.
    *
-   * @returns {string}
+   * @type {string}
    */
   get serviceName() {
     return this._serviceName;
@@ -31,7 +37,7 @@ export default class SlotOnloadEvent {
   /**
    * The slot in which the creative was loaded.
    *
-   * @returns {!Slot}
+   * @type {!Slot}
    */
   get slot() {
     return this._slot;

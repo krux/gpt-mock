@@ -13,6 +13,7 @@ import eslint from 'gulp-eslint';
 import jscs from 'gulp-jscs';
 import header from 'gulp-header';
 import esdoc from 'gulp-esdoc';
+import esdocConfig from './esdoc.json';
 
 const DIST = 'dist';
 
@@ -68,9 +69,7 @@ gulp.task('build', build(webpackConfig));
 
 gulp.task('doc', () => {
   return gulp.src('./src')
-    .pipe(esdoc({
-      destination: './doc'
-    }));
+    .pipe(esdoc(esdocConfig));
 });
 
 gulp.task('lint', ['lint:eslint', 'lint:jscs']);

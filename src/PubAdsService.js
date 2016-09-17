@@ -2,13 +2,14 @@ import Service from './Service';
 import Slot from './Slot';
 
 /**
- * Publisher Ads service. This service is used to fetch and show ads from your DFP account.
+ * Publisher Ads service. This service is used to fetch and show ads from your
+ * {@link DFP} account.
  */
 export default class PubAdsService extends Service {
   /**
    * Creates a new PubAdsService.
    *
-   * @param {GPT} gt The containing GPT instance.
+   * @param {GPT} gt The containing {@link GPT} instance.
    */
   constructor(gt) {
     super(gt, PubAdsService._name);
@@ -34,12 +35,24 @@ export default class PubAdsService extends Service {
     this._correlator = Math.random();
   }
 
+  /**
+   * The name of the service.
+   *
+   * @private
+   * @type {string}
+   */
   static get _name() {
     return 'publisher_ads';
   }
 
-  _onEnable() {
-    this._gt.pubadsReady = true;
+  /**
+   * Enables the service.
+   *
+   * @override
+   */
+  enable() {
+    super.enable();
+    this._gpt.pubadsReady = true;
   }
 
   /**
@@ -48,12 +61,12 @@ export default class PubAdsService extends Service {
    *
    * For proper behavior across all browsers, calling refresh must be preceded
    * by a call to display the ad slot. If the call to display is omitted, refresh
-   * may behave unexpectedly. If desired, the disableInitialLoad method can be
+   * may behave unexpectedly. If desired, the {@link PubAdsService#disableInitialLoad} method can be
    * used to stop display from fetching an ad.
    *
-   * @param {Array<!Slot>=} optSlots The slots to refresh. Array is optional;
+   * @param {Array<!Slot>} [optSlots] The slots to refresh. Array is optional;
    * all slots will be refreshed if it is unspecified.
-   * @param {{changeCorrelator: boolean}=} optOptions Configuration options
+   * @param {{changeCorrelator: boolean}} [optOptions] Configuration options
    * associated with this refresh call. changeCorrelator specifies whether or
    * not a new correlator is to be generated for fetching ads. Our ad servers
    * maintain this correlator value briefly (currently for 30 seconds, but
@@ -78,7 +91,7 @@ export default class PubAdsService extends Service {
    * Removes the ads from the given slots and replaces them with blank
    * content. The slots will be marked as unfetched.
    *
-   * @param {Array<!Slot>=} optSlots The array of slots to clear. Array is
+   * @param {Array<!Slot>} [optSlots] The array of slots to clear. Array is
    * optional; all slots will be cleared if it is unspecified.
    * @returns {boolean} Returns true if slots have been cleared, false otherwise.
    */
@@ -100,9 +113,9 @@ export default class PubAdsService extends Service {
   }
 
   /**
-   * Constructs an out-of-page passback slot. A passback is where a GPT snippet
+   * Constructs an out-of-page passback slot. A passback is where a {@link GPT} snippet
    * is used as a creative in an ad serving system. The ad serving system could
-   * be DFP or a third party. In this case, the ads are always requested
+   * be {@link DFP} or a third party. In this case, the ads are always requested
    * synchronously in non-single request mode.
    *
    * @param {string} adUnitPath The ad unit path of the slot to use as a passback.
@@ -121,8 +134,8 @@ export default class PubAdsService extends Service {
   }
 
   /**
-   * Constructs a passback slot. A passback is where a GPT snippet is used as a
-   * creative in an ad serving system. The ad serving system could be DFP or a
+   * Constructs a passback slot. A passback is where a {@link GPT} snippet is used as a
+   * creative in an ad serving system. The ad serving system could be {@link DFP} or a
    * third party. In this case, the ads are always requested synchronously in
    * non-single request mode.
    *
@@ -143,9 +156,9 @@ export default class PubAdsService extends Service {
 
   /**
    * Disables requests for ads on page load, but allows ads to be requested with
-   * a GPT#pubads().refresh() call. This should be set prior to enabling
+   * a {@link PubAdsService#refresh} call. This should be set prior to enabling
    * the service. Async mode must be used; otherwise it will be impossible to
-   * request ads using `refresh`.
+   * request ads using {@link PubAdsService#refresh}.
    */
   disableInitialLoad() {
     this._options.initialLoad = false;
@@ -172,8 +185,8 @@ export default class PubAdsService extends Service {
 
   /**
    * Enables single request mode for fetching multiple ads at the same time.
-   * This requires all pubads slots to be defined and added to the pubads
-   * service prior to enabling the service. Single request mode must be set
+   * This requires all pubads slots to be defined and added to the {@link PubAdsService}
+   * prior to enabling the service. Single request mode must be set
    * before the service is enabled.
    *
    * @returns {boolean} Returns true if single request mode was enabled and false
@@ -192,7 +205,7 @@ export default class PubAdsService extends Service {
   /**
    * Enables sync rendering mode to enable blocking fetching and rendering of ads.
    * This mode must be set before the service is enabled. Synchronous rendering
-   * also requires that the GPT JavaScript be loaded synchronously.
+   * also requires that the {@link GPT} JavaScript be loaded synchronously.
    *
    * @returns {boolean} Returns true if sync rendering mode was enabled and false
    * if it is impossible to enable sync rendering mode because the method was
@@ -208,7 +221,7 @@ export default class PubAdsService extends Service {
   }
 
   /**
-   * Signals to GPT that video ads will be present on the page. This enables
+   * Signals to {@link GPT} that video ads will be present on the page. This enables
    * competitive exclusion constraints on display and video ads. If the video
    * content is known, call setVideoContent in order to be able to use content
    * exclusion for display ads.
@@ -220,7 +233,7 @@ export default class PubAdsService extends Service {
   /**
    * Sets custom targeting parameters for a given key that apply to all pubads
    * service ad slots. Calling this multiple times for the same key will
-   * overwrite old values. These keys are defined in your DFP account.
+   * overwrite old values. These keys are defined in your {@link DFP} account.
    *
    * @param {string} key Targeting parameter key.
    * @param {string|!Array<string>} value Targeting parameter value or array of values.
@@ -271,14 +284,14 @@ export default class PubAdsService extends Service {
    * page when there is no ad content to display. This mode must be set before
    * the service is enabled.
    *
-   * @param {boolean=} optCollapseBeforeAdFetch Whether to collapse the slots
+   * @param {boolean} [optCollapseBeforeAdFetch=false] Whether to collapse the slots
    * even before the ads are fetched. This parameter is optional; if not
    * provided, false will be used as the default value.
    * @returns {boolean} Returns true if div collapse mode was enabled and false
    * if it is impossible to enable collapse mode because the method was called
    * after the service was enabled.
    */
-  collapseEmptyDivs(optCollapseBeforeAdFetch) {
+  collapseEmptyDivs(optCollapseBeforeAdFetch = false) {
     if (this._enabled) {
       return false;
     } else {
@@ -300,7 +313,8 @@ export default class PubAdsService extends Service {
   }
 
   /**
-   * Clears all page-level ad category exclusion labels. This is useful if you want to refresh the slot.
+   * Clears all page-level ad category exclusion labels.
+   * This is useful if you want to refresh the slot.
    *
    * @returns {PubAdsService} The service object on which the method was called.
    */
@@ -309,19 +323,16 @@ export default class PubAdsService extends Service {
     return this;
   }
 
-  _getCategoryExclusions() {
-    return this._categoryExclusions.slice(0);
-  }
-
   /**
    * Enables/disables centering of ads. This mode must be set before the service
-   * is enabled. Centering is disabled by default. In legacy gpt_mobile.js,
-   * centering is enabled by default.
+   * is enabled. Centering is disabled by default.
    *
    * @param {boolean} centerAds true to center ads, false to left-align them.
    */
   setCentering(centerAds) {
-    this._options.centerAds = centerAds;
+    if (!this._enabled) {
+      this._options.centerAds = centerAds;
+    }
   }
 
   /**
@@ -337,7 +348,8 @@ export default class PubAdsService extends Service {
   }
 
   /**
-   * Configures whether all ads on the page should be forced to be rendered using a SafeFrame container.
+   * Configures whether all ads on the page should be forced to be rendered using
+   * a SafeFrame container.
    *
    * @param {boolean} forceSafeFrame true to force all ads on the page to be
    * rendered in SafeFrames and false to change the previous setting to false.
@@ -351,12 +363,12 @@ export default class PubAdsService extends Service {
 
   /**
    * Passes location information from websites so you can geo-target line items
-   * to specific locations. DFP will not use location data unless this feature
+   * to specific locations. {@link DFP} will not use location data unless this feature
    * has been enabled for your network.
    *
    * @param {string|number} latitudeOrAddress Latitude or freeform address.
-   * @param {number=} optLongitude The longitude (if a latitude was provided as first argument).
-   * @param {number=} optRadius The radius in millimeters. Will be rounded to closest integer.
+   * @param {number} [optLongitude] The longitude (if a latitude was provided as first argument).
+   * @param {number} [optRadius] The radius in millimeters. Will be rounded to closest integer.
    * Only used when passing the latitude and longitude.
    * @returns {PubAdsService} The service object on which the method was called.
    */
@@ -429,7 +441,7 @@ export default class PubAdsService extends Service {
    * Sets the video content information to be sent along with the ad requests for
    * targeting and content exclusion purposes. Video ads will be automatically
    * enabled when this method is called. For videoContentId and videoCmsId, use
-   * the values that are provided to the DFP content ingestion service.
+   * the values that are provided to the {@link DFP} content ingestion service.
    *
    * @param {string} videoContentId The video content ID.
    * @param {string} videoCmsId The video CMS ID.

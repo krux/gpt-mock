@@ -5,7 +5,7 @@
  */
 export default class CommandArray {
   /**
-   * Creates a new CommandArray.
+   * Creates a new {@link CommandArray}.
    *
    * @param {Array<function()>} commands The commands to execute
    */
@@ -21,11 +21,13 @@ export default class CommandArray {
    *
    * @param {function()} f A JavaScript function to be executed.
    * @returns {number} The number of commands processed so far. This is
-   * compatible with Array.push's return value (the current length of the array).
+   * compatible with {@link Array#push}'s return value (the current length of the array).
    */
   push(f) {
-    f();
-    this._count += 1;
+    if (f != null && typeof f === 'function') {
+      f();
+      this._count += 1;
+    }
     return this._count;
   }
 }
