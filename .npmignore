@@ -5,6 +5,7 @@
 .jscsrc
 .travis.yml
 build/**
+docs/**
 CLA.md
 CONTRIBUTING.md
 gulpfile.babel.js
